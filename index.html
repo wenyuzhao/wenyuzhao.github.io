@@ -17,7 +17,9 @@
       http.onreadystatechange = function() {
         if(this.readyState == 4)
         if(this.status == 200)
-        alert(this.responseText);
+        var s = this.responseText;
+        var j = eval('('+s+')');
+        alert(j.str);
       }
       http.send();
     </script>
