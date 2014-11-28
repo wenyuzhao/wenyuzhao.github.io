@@ -11,6 +11,16 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <title>Wenyuzhao.GitHub.io by wenyuzhao</title>
+    <script>
+      var http = new XMLHttpRequest();
+      http.open('GET',"json/manifest.json",true);
+      http.onreadystatechange = function() {
+        if(this.readyState == 4)
+        if(this.status == 200)
+        alert(this.responseText);
+      }
+      http.send();
+    </script>
   </head>
 
   <body>
