@@ -1,0 +1,6 @@
+﻿<div class="blog">
+	<p class="blog" id="title">@#BEGIN#@0@#END#@</p>
+	<pre class="blog" id="context">@#BEGIN#@1@#END#@</pre>
+	<p class="blog" id="time">@#BEGIN#@2@#END#@</p>
+	<img class="blog" src='../img/plus.png' onclick="if(this.parentNode.childNodes[3].style.display=='none'){this.src='../img/up.png';this.parentNode.childNodes[3].style.display='block';}else{this.src='../img/plus.png';this.parentNode.childNodes[3].style.display='none';}"/>
+</div>

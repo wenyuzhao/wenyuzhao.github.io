@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body {
+	font-family: 微软雅黑 Light;
+}
+
+#plane {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 30%;
+	
+	background: red;
+	/*box-shadow: 10px 10px 5px #888888;*/
+
+	animation:planeInAnimation 3s;
+	-moz-animation:planeInAnimation 3s;
+	-webkit-animation:planeInAnimation 3s;
+	-o-animation:planeInAnimation 3s;
+
+}
+
+@keyframes planeInAnimation {
+	from {left:-30%;}
+	to {left:0%;}
+}
+@-moz-keyframes planeInAnimation {
+	from {left:-30%;}
+	to {left:0%;}
+}
+@-webkit-keyframes planeInAnimation {
+	from {left:-30%;}
+	to {left:0%;}
+}
+@-o-keyframes planeInAnimation {
+	from {left:-30%;}
+	to {left:0%;}
+}
+
+#quickButton {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 50px;
+	right: -50px;
+	cursor: hand;
+}
+
+#right {
+	position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index:-1;
+	width:65%;
+	height:100%;
+	background:white;
+}
+
+
+#planeText {
+	position: absolute;
+	right: 0px;
+	top:35%;
+	font-size:100px;
+	color:white;
+}
+
+#rightText1 {
+	position: absolute;
+	left: 10px;
+	top:15%;
+	font-size:70px;
+	color:red;
+}
+
+#rightText2 {
+	position: absolute;
+	left: 0px;
+	top:35%;
+	font-size:100px;
+	color:red;
+}
+</style>
+</head>
+<body>
+
+<div id="plane">
+<img id="quickButton" src="img/icon.png" onclick="window.location.href = 'index.html'"/>
+<p id="planeText">404&nbsp;</p>
+</div>
+<div id="right">
+<p id="rightText1">&nbsp;未找到网页:(</p>
+<p id="rightText2">&nbsp;Not found.</p>
+</div>
+
+</body>
+</html>
+</html>

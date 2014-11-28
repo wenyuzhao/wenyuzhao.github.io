@@ -1,0 +1,13 @@
+﻿<h1 style="position:absolute;top:50px;left:10px;color:white;">@赵文宇</h1>
+<pre style="position:absolute;top:40%;left:10px;color:white;font-size:20px;font-family:微软雅黑 Light;">
+#include &lt;stdio.h&gt;
+void main()
+{ 
+    double world;
+    unsigned letter;
+    short stay;
+    long memories;
+    printf("I miss you.\n");
+    //Powered by <a href="http://www.guokr.com/group/60/">HelloWorld@Guokr</a>
+}
+</pre>
