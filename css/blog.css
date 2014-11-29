@@ -29,6 +29,8 @@ pre.blog {
 	margin: 10px;
 	display: none;
 	font-family: 微软雅黑 Light;
+	word-wrap:break-word;
+	word-break:normal;
 }
 img.blog {
 	position: absolute;
