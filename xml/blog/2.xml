@@ -1,9 +1,0 @@
-<div class="blog">
-	<p class="blog" id="title">测试2 文字</p>
-	<pre class="blog" id="context">
-		这是劳资的一小步，
-		也是劳资的一大步。
-	</pre>
-	<p class="blog" id="time">2014/11/26</p>
-	<img class="blog" src='img/plus.png'/>
-</div>
