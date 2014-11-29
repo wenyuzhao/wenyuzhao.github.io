@@ -1,7 +1,7 @@
 ﻿{
 "title":"GitHUb",
 "tag":"GitHub",
-"content":"<a href='https://github.com/wenyuzhao'><img width='300' height='300' src='img/Octocat.jpg'/></a>
+"content":"<a href='https://github.com/wenyuzhao'><img width='300px' height='300px' src='img/Octocat.jpg'/></a>
 给github打个小广告，上面这位是github的章鱼猫
 点击这张图片转到托管我网站源代码的代码仓库",
 "date":"Sat Nov 29 2014"
