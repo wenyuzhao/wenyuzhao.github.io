@@ -10,7 +10,6 @@
 	height: 100%;
 	width: 30%;
 	background: #0066cc;
-	box-shadow: 5px 5px 5px #888888;
 
 	animation:planeInAnimation 3s;
 	-moz-animation:planeInAnimation 3s;
@@ -44,7 +43,6 @@
 	right: -50px;
 	cursor: pointer;
 	border-radius: 50%;
-	box-shadow: 5px 5px 5px #888888;
 }
 
 #right {
