@@ -7,10 +7,10 @@ h5 { font-size: 6vw; font-weight: lighter; }
 h6 { font-size: 5vw; font-weight: lighter; }
 img {max-width: 96vw;}
 
-a:link    { color:#000000; }	/* 未被访问的链接 */
-a:visited { color:#333333; }	/* 已被访问的链接 */
-a:hover   { color:#000000; }	/* 鼠标指针移动到链接上 */
-a:active  { color:#c0c0c0; }	/* 正在被点击的链接 */
+a:link    { color: #000000; }	/* 未被访问的链接 */
+a:visited { color: #333333; }	/* 已被访问的链接 */
+a:hover   { color: #ffffff; background-color: rgb(128,0,128); }	/* 鼠标指针移动到链接上 */
+a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 
 #navigator_container {
 	position: relative;
