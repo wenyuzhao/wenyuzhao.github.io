@@ -1,0 +1,79 @@
+﻿body { font-family: 微软雅黑 Light; font-size: 3vh; margin:0px; padding:0px; font-weight: lighter; }
+h1 { font-size: 8vh; font-weight: lighter; }
+h2 { font-size: 7vh; font-weight: lighter; }
+h3 { font-size: 6vh; font-weight: lighter; }
+h4 { font-size: 5vh; font-weight: lighter; }
+h5 { font-size: 4vh; font-weight: lighter; }
+h6 { font-size: 3vh; font-weight: lighter; }
+img { max-width: 59vw; }
+
+a:link {color:#000000;}		/* 未被访问的链接 */
+a:visited {color:#333333;}	/* 已被访问的链接 */
+a:hover {color:#ffffff;}	/* 鼠标指针移动到链接上 */
+a:active {color:#ffffff;}	/* 正在被点击的链接 */
+
+#navigator_container {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	height: 100vh;
+	width: 30vw;
+	background: #0066cc;
+
+	animation:planeInAnimation 3s;
+	-moz-animation:planeInAnimation 3s;
+	-webkit-animation:planeInAnimation 3s;
+	-o-animation:planeInAnimation 3s;
+
+}
+
+@keyframes planeInAnimation { from { left:-30%; } to { left:0%; } }
+@-moz-keyframes planeInAnimation { from { left:-30%; } to { left:0%; } }
+@-webkit-keyframes planeInAnimation { from { left:-30%; } to { left:0%; } }
+@-o-keyframes planeInAnimation { from { left:-30%; } to { left:0%; } }
+
+#floatButton {
+	position: absolute;
+	width: 15vh;
+	height: 15vh;
+	right: -7.5vh;
+	top: 13.5vh;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+#navigator {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	overflow: hidden;
+	color: white;
+}
+
+
+#buttons h4 {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	background-color: white;
+	color: #0066cc;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#content {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 1vw;
+}
+

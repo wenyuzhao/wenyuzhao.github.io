@@ -1,0 +1,58 @@
+body { font-family: 微软雅黑 Light; font-size: 5vw; margin:0px; padding:0px; overflow-x: hidden;}
+h1 { font-size: 10vw; font-weight: lighter; }
+h2 { font-size: 9vw; font-weight: lighter; }
+h3 { font-size: 8vw; font-weight: lighter; }
+h4 { font-size: 7vw; font-weight: lighter; }
+h5 { font-size: 6vw; font-weight: lighter; }
+h6 { font-size: 5vw; font-weight: lighter; }
+img {max-width: 96vw;}
+
+a:link {color:#000000;}		/* 未被访问的链接 */
+a:visited {color:#333333;}	/* 已被访问的链接 */
+a:hover {color:#ffffff;}	/* 鼠标指针移动到链接上 */
+a:active {color:#ffffff;}	/* 正在被点击的链接 */
+
+#navigator_container {
+	position: relative;
+	height: 30vh;
+	width: 100vw;
+	background: #0066cc;
+
+	animation:planeInAnimation 3s;
+	-moz-animation:planeInAnimation 3s;
+	-webkit-animation:planeInAnimation 3s;
+	-o-animation:planeInAnimation 3s;
+
+}
+
+@keyframes planeInAnimation { from { top:-30vh; } to { top:0vh; } }
+@-moz-keyframes planeInAnimation { from { top:-30vh; } to { top:0vh; } }
+@-webkit-keyframes planeInAnimation { from { top:-30vh; } to { top:0vh; } }
+@-o-keyframes planeInAnimation { from { top:-30vh; } to { top:0vh; } }
+
+#floatButton {
+	position: absolute;
+	width: 20vw;
+	height: 20vw;
+	bottom: -10vw;
+	right: 10vw;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+#navigator {
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	color: white;
+}
+
+#content {
+	position: relative;
+	width: 96vw;
+	margin-top: 20vw;
+	margin: 2vw;
+}
+

@@ -1,21 +1,19 @@
-﻿<html>
-	<head>
-		<title>赵文宇</title>
-		<link href="favicon.ico" rel="shortcut icon" type="image/ico"/>
-		<link href="css/frame.css" rel="stylesheet"/>
-		<link href="css/blog.css" rel="stylesheet"/>
-		<script type="text/javascript" src="js/frame.js"></script>
-		<script type="text/javascript" src="js/blog.js"></script>
-	</head>
-<body>
+---
+layout: default
+title: Blog of Wenyu Zhao
+---
+<script type="text/javascript" src="{{ site.baseurl }}/javascripts/index.js"></script>
+<h2>Blog of Wenyu Zhao</h2>
+<h1>Latest Articles</h1>
 
-<div id="plane">
-	<img id="quickButton" src="img/icon.png" onclick="onQuickButtonClick()"/>
+<div class="blog_post_titles">
+
+	{% for post in site.posts %}
+
+		<a href="{{ site.baseurl }}{{ post.url }}">
+			<p class="blog_post_title" onmouseover="title_mouseover(this)" onmouseout="title_mouseout(this)">{{ post.date | date_to_string }}   {{ post.title }}</p>
+		</a>
+
+	{% endfor %}
+
 </div>
-
-<div id="right">
-
-</div>
-
-</body>
-</html>
