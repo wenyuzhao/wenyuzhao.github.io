@@ -1,4 +1,4 @@
-var site_baseurl = "/testsite";
+
 function $(id) { return document.getElementById(id); }
 function importCSS(id, url) { var links = document.getElementsByTagName('link'); for(var i=0;i<links.length;i++) { if(links[i].id == id) { links[i].href = url; return; } } var head = document.getElementsByTagName('head')[0]; var css = document.createElement("link"); css.rel = "stylesheet"; css.href = url; css.type = 'text/css'; css.id = id; head.appendChild(css); }
 function importJS(id, url) { var scripts = document.getElementsByTagName('script'); for(var i=0;i<scripts.length;i++) { if(scripts[i].id == id) { scripts[i].href = url; return; } } var script = document.createElement("script"); script.type = "text/javascript"; script.src = url; script.id = id; document.body.appendChild(script); }
@@ -15,14 +15,14 @@ function loadXML(url,callback) {
 }
 function resize() {
 	if(window.innerWidth >= window.innerHeight) {
-		importCSS("frame_css", site_baseurl + "/stylesheets/frame.css");
-		importCSS("blog_css", site_baseurl + "/stylesheets/blog.css");
-		importCSS("pygment_trac_css", site_baseurl + "/stylesheets/pygment_trac.css");
+		importCSS("frame_css", "/stylesheets/frame.css");
+		importCSS("blog_css", "/stylesheets/blog.css");
+		importCSS("pygment_trac_css", "/stylesheets/pygment_trac.css");
 	}
 	else {
-		importCSS("frame_css", site_baseurl + "/stylesheets/frame_m.css");
-		importCSS("blog_css", site_baseurl + "/stylesheets/blog_m.css");
-		importCSS("pygment_trac_css", site_baseurl + "/stylesheets/pygment_trac_m.css");
+		importCSS("frame_css", "/stylesheets/frame_m.css");
+		importCSS("blog_css", "/stylesheets/blog_m.css");
+		importCSS("pygment_trac_css", "/stylesheets/pygment_trac_m.css");
 	}
 }
 /*
@@ -33,7 +33,7 @@ else window.addEventListener('onresize', resise, false);*/
 resize();
 window.onload = function() {
 	if(window.innerWidth < window.innerHeight)
-		$('navigator').innerHTML = "<h1 style='margin-top: 10vw;' onclick=\"window.location.href='"+site_baseurl+"/index.html'\">Blog of Wenyu Zhao</h1>";
+		$('navigator').innerHTML = "<h1 style='margin-top: 10vw;' onclick=\"window.location.href='/blog.html'\">Blog of Wenyu Zhao</h1>";
 };
 
 function onFloatButtonClick() {
