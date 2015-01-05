@@ -54,7 +54,7 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 }
 
 
-.Button {
+#navigator .Button {
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 0px;
@@ -64,7 +64,7 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	text-align: center;
 	cursor: pointer;
 }
-h4:hover {
+#navigator .Button:hover {
 	background-color: rgb(128, 0, 128);
 	color: white;
 }
