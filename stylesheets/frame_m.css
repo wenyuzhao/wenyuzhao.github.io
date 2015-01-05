@@ -61,9 +61,8 @@ a:active  { color: white; }	/* 正在被点击的链接 */
 #content {
 	position: relative;
 	width: 96vw;
-	margin-top: 300px;
 	margin: 2vw;
-	padding: 0;
+	margin-top: 20vw;
 }
 
 
