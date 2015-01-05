@@ -9,8 +9,9 @@ img { max-width: 59vw; }
 
 a:link    { color: #000000; }	/* 未被访问的链接 */
 a:visited { color: #333333; }	/* 已被访问的链接 */
-a:hover   { color: #ffffff; background: rgb(128,0,128); }	/* 鼠标指针移动到链接上 */
+a:hover   { color: #ffffff; }	/* 鼠标指针移动到链接上 */
 a:active  { color: #ffffff; }	/* 正在被点击的链接 */
+.Button a { text-decoration:none; }
 
 #navigator_container {
 	position: fixed;
@@ -69,7 +70,7 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	color: white;
 }
 
-/*.Button {
+#content .Button {
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 0px;
@@ -79,10 +80,10 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	text-align: center;
 	cursor: pointer;
 }
-.NavigatorButton:hover {
+#content .Button:hover {
 	background-color: rgb(128, 0, 128);
 	color: white;
-}*/
+}
 
 #content {
 	position: fixed;
