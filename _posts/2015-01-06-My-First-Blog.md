@@ -20,7 +20,10 @@ The last one is that I uses Jekyll to build my blog and website. Just to coding 
 
 The source code of this website is in <https://github.com/wenyuzhao/wenyuzhao.github.io>
 
-PS:
+####PS:
+
 0. The image "hello, world" in the homepage is made by myself, using [this website](http://jayweeks.com/sketchy-structures-html5-canvas/).
+
 1. The sentence in the homepage, below the "hello, world" image is from a chinese book called "The Crazy Programmer", written by JueYing.
+
 2. Welcome to comment after articles.
