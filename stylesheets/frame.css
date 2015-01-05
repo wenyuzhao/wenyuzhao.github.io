@@ -7,11 +7,17 @@ h5 { font-size: 4vh; font-weight: lighter; }
 h6 { font-size: 3vh; font-weight: lighter; }
 img { max-width: 59vw; }
 
-a:link    { color: #000000; }	/* 未被访问的链接 */
-a:visited { color: #333333; }	/* 已被访问的链接 */
-a:hover   { color: #ffffff; }	/* 鼠标指针移动到链接上 */
-a:active  { color: #ffffff; }	/* 正在被点击的链接 */
-.Button a { text-decoration:none; }
+a { text-decoration:none; color: #0066cc; }
+a:link    { color: #0066cc; }	/* 未被访问的链接 */
+a:visited { color: #000000; background: rgb(128,0,128); }	/* 已被访问的链接 */
+a:hover   { color: #000000; }	/* 鼠标指针移动到链接上 */
+a:active  { color: #000000; }	/* 正在被点击的链接 */
+
+#content .Button a { margin: 5px; text-decoration:none; color: white; }
+#content .Button a:link    { color: white; }	/* 未被访问的链接 */
+#content .Button a:visited { color: #000000; background: rgb(128,0,128); }	/* 已被访问的链接 */
+#content .Button a:hover   { color: #000000; }	/* 鼠标指针移动到链接上 */
+#content .Button a:active  { color: #000000; }	/* 正在被点击的链接 */
 
 #navigator_container {
 	position: fixed;
@@ -75,12 +81,12 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	margin-top: 5px;
 	margin-bottom: 5px;
 	background-color: #0066cc;
-	color: #0066cc;
+	color: white;
 	border-radius: 5px;
 	text-align: center;
 	cursor: pointer;
 	display:inline;
-	padding: 5px;
+	padding: 0px;
 }
 #content .Button:hover {
 	background-color: rgb(128, 0, 128);
