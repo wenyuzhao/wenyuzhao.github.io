@@ -50,6 +50,7 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	color: white;
 }
 
+
 #content {
 	position: relative;
 	width: 96vw;
@@ -57,3 +58,18 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	margin: 2vw;
 }
 
+
+#content .Button {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	background-color: #0066cc;
+	color: #0066cc;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+#content .Button:hover {
+	background-color: rgb(128, 0, 128);
+	color: white;
+}

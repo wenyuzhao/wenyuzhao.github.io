@@ -74,7 +74,7 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 0px;
-	background-color: white;
+	background-color: #0066cc;
 	color: #0066cc;
 	border-radius: 5px;
 	text-align: center;
