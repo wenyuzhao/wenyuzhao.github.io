@@ -57,8 +57,8 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 
 #navigator .Button {
 	position: relative;
-	margin-top: 10px;
-	margin-bottom: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	background-color: white;
 	color: #0066cc;
 	border-radius: 5px;
@@ -72,13 +72,14 @@ a:active  { color: #ffffff; }	/* 正在被点击的链接 */
 
 #content .Button {
 	position: relative;
-	margin-top: 10px;
-	margin-bottom: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	background-color: #0066cc;
 	color: #0066cc;
 	border-radius: 5px;
 	text-align: center;
 	cursor: pointer;
+	display:inline;
 }
 #content .Button:hover {
 	background-color: rgb(128, 0, 128);
