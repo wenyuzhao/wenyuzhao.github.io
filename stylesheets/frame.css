@@ -67,7 +67,7 @@ a:active  { color: #000000; }	/* 正在被点击的链接 */
 	margin-bottom: 5px;
 	background-color: white;
 	color: #0066cc;
-	border-radius: 5px;
+	border-radius: 1vh;
 	text-align: center;
 	cursor: pointer;
 }
