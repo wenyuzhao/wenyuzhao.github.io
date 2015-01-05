@@ -7,7 +7,7 @@
 	margin-right: 0px;
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 1vh;
 }
 .highlight .c   { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
