@@ -1,3 +1,8 @@
+---
+layout: default
+title: My First Blog
+---
+
 #My First Blog
 ###6 January 2015
 
