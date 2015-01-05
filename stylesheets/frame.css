@@ -103,5 +103,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 1vw;
+	word-wrap: break-word;
+	max-width: 60vw;
 }
 
