@@ -1,0 +1,21 @@
+#My First Blog
+###6 January 2015
+
+This is my first blog except the previous one "test".
+
+For the internationalization, both my blog and my website will written in English.
+
+In the past few days, I reprogrammed my blog and added some new functions.
+
+The first is called "Response type layout". I uses vh/vw as length unit so that webpage can have the best performance and appearance. Percentage is also used to describe length. What's more, the webpage will load different CSS files for PC and mobliephone. It has different appearence in divices which window.innerWidth >= window.innerHeight or window.innerWidth < window.innerHeight. So in this way I hope my webpage can perform better in mobilephones.
+
+The second function is "Message Board". Github.io only provides a static website server. So I had to use the third party plugin to achieve the message board function. The plugin is called "Disqus". Just insert a section of code given by the Disqus to the html file and you will have a comment board. This function can help people comment after blog articles.
+
+The last one is that I uses Jekyll to build my blog and website. Just to coding easier in github.io.
+
+The source code of this website is in <https://github.com/wenyuzhao/wenyuzhao.github.io>
+
+PS:
+0. The image "hello, world" in the homepage is made by myself, using [this website](http://jayweeks.com/sketchy-structures-html5-canvas/).
+1. The sentence in the homepage, below the "hello, world" image is from a chinese book called "The Crazy Programmer", written by JueYing.
+2. Welcome to comment after articles.
