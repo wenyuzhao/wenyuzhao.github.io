@@ -1,4 +1,4 @@
-﻿body { font-family: 微软雅黑 Light; font-size: 3vh; margin:0px; padding:0px; font-weight: lighter; }
+﻿body { font-family: Arial; font-size: 3vh; margin:0px; padding:0px; font-weight: lighter; }
 h1 { font-size: 8vh; font-weight: lighter; }
 h2 { font-size: 7vh; font-weight: lighter; }
 h3 { font-size: 6vh; font-weight: lighter; }
@@ -10,10 +10,10 @@ img { max-width: 59vw; }
 a { text-decoration:none; color: #0066cc; }
 a:link    { color: #0066cc; }	/* 未被访问的链接 */
 a:visited { color: #0066cc; }	/* 已被访问的链接 */
-a:hover   { color: white; background: rgb(128,0,128); }	/* 鼠标指针移动到链接上 */
+a:hover   { color: white; }	/* 鼠标指针移动到链接上 */
 a:active  { color: white; }	/* 正在被点击的链接 */
 
-#content .Button a { margin: 5px; text-decoration:none; color: white; }
+#content .Button a { text-decoration:none; color: white; }
 #content .Button a:link    { color: white; }	/* 未被访问的链接 */
 #content .Button a:visited { color: white; background: rgb(128,0,128); }	/* 已被访问的链接 */
 #content .Button a:hover   { color: white; }	/* 鼠标指针移动到链接上 */
