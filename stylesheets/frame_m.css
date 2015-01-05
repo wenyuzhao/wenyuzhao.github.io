@@ -14,7 +14,7 @@ a:visited { color: #0066cc; }	/* 已被访问的链接 */
 a:hover   { color: white; background: rgb(128,0,128); }	/* 鼠标指针移动到链接上 */
 a:active  { color: white; }	/* 正在被点击的链接 */
 
-#content .Button a { padding: 0px; margin: 1vh; margin-left: 100vw; margin-right: 100vw; text-decoration:none; color: white; }
+#content .Button a { padding: 0px; margin: 1vh; text-decoration:none; color: white; }
 #content .Button a:link    { color: white; }	/* 未被访问的链接 */
 #content .Button a:visited { color: white; }	/* 已被访问的链接 */
 #content .Button a:hover   { color: white; }	/* 鼠标指针移动到链接上 */
@@ -61,7 +61,7 @@ a:active  { color: white; }	/* 正在被点击的链接 */
 #content {
 	position: relative;
 	width: 96vw;
-	margin-top: 30vh;
+	margin-top: 300px;
 	margin: 2vw;
 	padding: 0;
 }
