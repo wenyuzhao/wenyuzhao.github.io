@@ -63,6 +63,8 @@ a:active  { color: white; }	/* 正在被点击的链接 */
 	width: 96vw;
 	margin: 2vw;
 	margin-top: 20vw;
+	word-wrap: break-word;
+	max-width: 96vw;
 }
 
 
