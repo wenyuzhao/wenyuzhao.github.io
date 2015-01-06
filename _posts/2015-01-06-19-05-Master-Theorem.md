@@ -16,15 +16,39 @@ It was two days ago when I took an online course called [Algorithm Analysis](htt
 
 In the analysis of algorithms, the master theorem provides a solution in asymptotic terms (using Big O notation) for recurrence relations of types that occur in the analysis of many divide and conquer algorithms.
 
-This explanation might be very complicated. In brief, Master Theorem is a theorem to calculate complexity. Is it more familiar?
+In brief, Master Theorem is a theorem to calculate complexity.
 
-For example: 
+In this program:
 
-The time complexity of Mergesort is Θ(nlogn).
+```javascript
+function T( n /*size of problem*/) {
 
-The lower bound of sorting algorithm based on comparision is Θ(nlogn).
+  if(n < 1) return;
+  
+  /*Do work of amount f(n)*/
+  
+   T(n/b);
+   T(n/b);
+   ...
+   /*repeat for a total of a times*/
+   ...
+   T(n/b);
+   
+   return;
+   
+}
+```
 
-###How can I use Master Theroem?
+From this program we can get a recursive formula:
+
+\\(T(x)=aT(\frac{n}{b})+f(n)\\)
+
+  a means the quantity of subproblem
+  b means the size of each subproblem
+
+What Master Theorem can do is calculate the time complexity of the recursive function above.
+
+###How to use Master Theroem?
 
 Master Theroem is used to calculate the formula of complexity. You just need to ignore lower order terms.
 
@@ -49,6 +73,10 @@ If it exists an ![](http://upload.wikimedia.org/math/e/7/7/e778429d8769714354b19
 If ![](http://upload.wikimedia.org/math/6/7/a/67ad62611c82b235d6cf0b0cedab740b.png) for some constant c < 1 and sufficiently large n,
 
 Then ![](http://upload.wikimedia.org/math/4/7/5/4753885194212a420f0126c6896f0ad9.png)
+
+T(n) = \Theta\left( n^{\log_b a} \right)
+
+###Proof
 
 ###The End.
 
