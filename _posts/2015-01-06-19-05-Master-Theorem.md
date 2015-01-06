@@ -58,22 +58,22 @@ There are three cases of Master Theroem:
 Case 1: 
 If it exists an \\(\epsilon>0\\) and \\(f(n)=O(n^{\log_ba-\epsilon})\\)
 
-Then \\(T(n)=O(n^{\log_ba})\\)
+Then \\(T(n)=\Theta(n^{\log_ba})\\)
 
 Case 2:
-If it exists an \\(k\ge0\\) and \\(f(n)=\theta(n^{\log_ba}\log^kn)\\)
+If it exists an \\(k\ge0\\) and \\(f(n)=\Theta(n^{\log_ba}\log^kn)\\)
 
-Then \\(T(n)=\theta(n^{\log_ba}\log^{k+1}n)\\)
+Then \\(T(n)=\Theta(n^{\log_ba}\log^{k+1}n)\\)
 
 Case 3:
 
-If it exists an \\(\epsilon>0\\) and \\(f(n)=\omega(n^{\log_ba+\epsilon})\\)
+If it exists an \\(\epsilon>0\\) and \\(f(n)=\Omega(n^{\log_ba+\epsilon})\\)
 
 And it exists an \\(c<1\\) and sufficiently large \\(n\\),
 
 so that \\(af(\frac{n}{b})\le cf(n)\\)
 
-Then \\(T(n)=\theta(f(n))\\)
+Then \\(T(n)=\Theta(f(n))\\)
 
 ###Proof
 
