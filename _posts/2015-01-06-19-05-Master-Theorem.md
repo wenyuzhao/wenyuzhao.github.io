@@ -41,8 +41,8 @@ function T( n /*size of problem*/) {
 
 From this program we can get a recursive formula:
 
-\\(T(n)=aT(\frac{n}{b})+f(n)\\)
-\\((a\ge1, b>1)\\)
+$$T(n)=aT(\frac{n}{b})+f(n)$$
+$$(a\ge1, b>1)$$
 
   a means the quantity of subproblem
   b means the size of each subproblem
