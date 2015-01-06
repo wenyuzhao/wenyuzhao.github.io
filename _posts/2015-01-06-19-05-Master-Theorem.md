@@ -55,13 +55,12 @@ Master Theroem is used to calculate the formula of complexity. You just need to 
 There are three cases of Master Theroem:
 
 Case 1: 
-If it exists an \\(\epsilon>0\\) so that \\(T(n)=\theta(n^{\log_b{a}-\epsilon})\\)
-If ![](http://upload.wikimedia.org/math/7/9/a/79a7ecad7f97f19240be140f505ddbed.png)
+If it exists an \\(\epsilon>0\\) so that \\(f(n)=O(n^{\log_ba-\epsilon})\\)
 
-Then ![](http://upload.wikimedia.org/math/8/3/5/83551c0953b5c391e3fdeb90b81deee2.png)
+Then \\(T(n)=O(n^{\log_ba})\\)
 
-Case 2: If k>0, k++
-
+Case 2:
+If it exists an \\(k\geqslant0\\) so that \\(f(n)=O(n^{\log_ba}\log^kn)\\)
 If ![](http://upload.wikimedia.org/math/5/e/c/5ec7448a407893b0364e72e624e56a26.png)
 
 Then ![](http://upload.wikimedia.org/math/f/4/b/f4bebc5698e39bdae898ce959e9e5428.png)
