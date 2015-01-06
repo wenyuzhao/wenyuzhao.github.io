@@ -16,7 +16,7 @@ It was two days ago when I took an online course called [Algorithm Analysis](htt
 
 In the analysis of algorithms, the master theorem provides a solution in asymptotic terms (using Big O notation) for recurrence relations of types that occur in the analysis of many divide and conquer algorithms.
 
-This explanation might be very complicated. In brief, Master Theorem is a theorem about Big Theta notation. Is it more familiar? It is a way to describe the complexity of a algorithm.
+This explanation might be very complicated. In brief, Master Theorem is a theorem to calculate complexity. Is it more familiar?
 
 For example: 
 
@@ -26,7 +26,7 @@ The lower bound of sorting algorithm based on comparision is Θ(nlogn).
 
 ###How can I use Master Theroem?
 
-Master Theroem is used to simplify the formula of complexity. You just need to ignore lower order terms.
+Master Theroem is used to calculate the formula of complexity. You just need to ignore lower order terms.
 
 There are three cases of Master Theroem:
 
