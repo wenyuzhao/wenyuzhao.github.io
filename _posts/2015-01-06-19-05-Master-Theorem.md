@@ -77,6 +77,8 @@ Then \\(T(n)=\Theta(f(n))\\)
 
 ###Proof
 
+Please wait, I'm lazy
+
 ###The End.
 
 That's all for Master Theorem. Quite easy to understand.
