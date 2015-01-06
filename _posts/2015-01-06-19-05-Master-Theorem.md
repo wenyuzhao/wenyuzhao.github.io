@@ -12,7 +12,7 @@ Ok, go back to the topic.
 
 ###What is Master Theroem?
 
-It was two days ago when I took an online course called [Algorithm Analysis](https://www.coursera.org/course/algo) in [Coursera.org](https://www.coursera.org/) that I saw the academic word "Master Theroem". Then I googled at once. Below is the [explanation from Wikipedia](http://en.wikipedia.org/wiki/Master_theorem):
+It was two days ago when I took an online course called [Algorithm Analysis](https://www.coursera.org/course/algo) in [Coursera.org](https://www.coursera.org/) that I saw the academic word "Master Theroem" at the first time. Then I googled at once. Below is the [explanation from Wikipedia](http://en.wikipedia.org/wiki/Master_theorem):
 
 In the analysis of algorithms, the master theorem provides a solution in asymptotic terms (using Big O notation) for recurrence relations of types that occur in the analysis of many divide and conquer algorithms.
 
