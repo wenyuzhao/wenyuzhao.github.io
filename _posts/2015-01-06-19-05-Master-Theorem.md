@@ -42,6 +42,7 @@ function T( n /*size of problem*/) {
 From this program we can get a recursive formula:
 
 \\(T(n)=aT(\frac{n}{b})+f(n)\\)
+\\((a\ge1, b>1)\\)
 
   a means the quantity of subproblem
   b means the size of each subproblem
@@ -55,25 +56,24 @@ Master Theroem is used to calculate the formula of complexity. You just need to 
 There are three cases of Master Theroem:
 
 Case 1: 
-If it exists an \\(\epsilon>0\\) so that \\(f(n)=O(n^{\log_ba-\epsilon})\\)
+If it exists an \\(\epsilon>0\\) and \\(f(n)=O(n^{\log_ba-\epsilon})\\)
 
 Then \\(T(n)=O(n^{\log_ba})\\)
 
 Case 2:
-If it exists an \\(k\geqslant0\\) so that \\(f(n)=O(n^{\log_ba}\log^kn)\\)
-If ![](http://upload.wikimedia.org/math/5/e/c/5ec7448a407893b0364e72e624e56a26.png)
+If it exists an \\(k\ge0\\) and \\(f(n)=\theta(n^{\log_ba}\log^kn)\\)
 
-Then ![](http://upload.wikimedia.org/math/f/4/b/f4bebc5698e39bdae898ce959e9e5428.png)
+Then \\(T(n)=\theta(n^{\log_ba}\log^{k+1}n)\\)
 
 Case 3:
 
-If it exists an ![](http://upload.wikimedia.org/math/e/7/7/e778429d8769714354b1994984a23fe5.png) so that ![](http://upload.wikimedia.org/math/1/5/5/155fcd52bbd5a31ed4d61bff0405bedd.png)
+If it exists an \\(\epsilon>0\\) and \\(f(n)=\omega(n^{\log_ba+\epsilon})\\)
 
-If ![](http://upload.wikimedia.org/math/6/7/a/67ad62611c82b235d6cf0b0cedab740b.png) for some constant c < 1 and sufficiently large n,
+And it exists an \\(c<1\\) and sufficiently large \\(n\\),
 
-Then ![](http://upload.wikimedia.org/math/4/7/5/4753885194212a420f0126c6896f0ad9.png)
+so that \\(af(\frac{n}{b})\le cf(n)\\)
 
-T(n) = \Theta\left( n^{\log_b a} \right)
+Then \\(T(n)=\theta(f(n))\\)
 
 ###Proof
 
