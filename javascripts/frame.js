@@ -33,7 +33,7 @@ else window.addEventListener('onresize', resise, false);*/
 resize();
 window.onload = function() {
 	if(window.innerWidth < window.innerHeight)
-		$('navigator').innerHTML = "<h1 style='margin-top: 10vw;' onclick=\"window.location.href='/blog.html'\">Blog of Wenyu Zhao</h1>";
+		$('navigator').innerHTML = "<h1 style='margin-top: 10vw;' onclick=\"window.location.href='/index.html'\">Wenyu Zhao</h1>";
 };
 
 function onFloatButtonClick() {
