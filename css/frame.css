@@ -53,10 +53,10 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 }
 
 #navigator p {
+	font-size: 7vh;
 	position: relative;
-	width: 90vw;
-	margin-left: 5vw;
-	margin-right: 5vw;
+	width: 94vw;
+	left: 3vw;
 	background: transparent;
 	color: white;
 }
@@ -70,7 +70,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	position: absolute;
 	font-size: 7vh;
 	bottom: 1vh;
-	left: 1vh;
+	left: 3vw;
 	color: white;
 	max-width: 90%;
 }
@@ -86,10 +86,10 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 
 #content {
 	position: fixed;
-	width: 90vw;
+	width: 94vw;
 	height: 90vh;
 	top: 10vh;
-	left: 5vw;
+	left: 3vw;
 	overflow: hidden;
 	overflow-y: auto;
 	border-radius: 1vw;
