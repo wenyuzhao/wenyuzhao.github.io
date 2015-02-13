@@ -50,7 +50,7 @@ $$
 \begin{equation}
   T(n)=
   \begin{cases}
-    n^d \log n &a>0\\
+    n^d \log n &a>0\\\\
     n^d \log n &a\le0
   \end{cases}
 \end{equation}
