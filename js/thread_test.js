@@ -1,8 +1,8 @@
 
-var i = 0;
+//var i = 0;
 
-var array = [];
+//var array = [];
 
 while ( 1 ) {
-	array.push( i++ );
+	//array.push( i++ );
 }
