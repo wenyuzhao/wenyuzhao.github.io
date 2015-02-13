@@ -50,7 +50,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	left: 1vw;
 	color: white;
 	max-width: 90%;
-	border-top: 1px solid #444444;
+	border-left: 1vw solid #444444;
 }
 
 #navigationBar #githubIcon {
