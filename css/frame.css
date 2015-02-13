@@ -47,11 +47,9 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	position: absolute;
 	font-size: 8vh;
 	bottom: 1vh;
-	left: 0vw;
-	height: 8vh;
+	left: 1vh;
 	color: white;
 	max-width: 90%;
-	border-left: 1vw solid white;
 }
 
 #navigationBar #githubIcon {
