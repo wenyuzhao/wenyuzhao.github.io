@@ -47,7 +47,8 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	position: absolute;
 	font-size: 7vh;
 	bottom: 1vh;
-	left: 1vw;
+	left: 0vw;
+	height: 8vh;
 	color: white;
 	max-width: 90%;
 	border-left: 1vw solid #444444;
