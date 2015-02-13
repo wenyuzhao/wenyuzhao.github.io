@@ -36,7 +36,7 @@ function T( n /*size of problem*/) {
 
 From this program we can get a recursive formula:
 
-$$T(n)\leaT(\frac{n}{b})+O(n^d)$$
+$$T(n)\le aT(\frac{n}{b})+O(n^d)$$
 
   \\(a\\) is the quantity of subproblem
   \\(b\\) is the size of each subproblem
@@ -51,6 +51,8 @@ $$
   T(n)=
   \begin{cases}
     n^d \log n &\mbox{if $r-j$ is odd}\\
+  \end{cases}
+  \begin{cases}
     r!\,(-1)^{(r-j)/2} &\mbox{if $r-j$ is even}
   \end{cases}
 \end{equation}
