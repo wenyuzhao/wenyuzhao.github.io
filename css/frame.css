@@ -86,10 +86,10 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 
 #content {
 	position: fixed;
-	width: 98vw;
+	width: 100vw;
 	height: 90vh;
 	top: 10vh;
-	left: 1vw;
+	left: 0;
 	overflow: hidden;
 	overflow-y: auto;
 	background-color: white;
