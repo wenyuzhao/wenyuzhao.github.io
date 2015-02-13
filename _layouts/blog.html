@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,6 +11,7 @@
 			@import url("{{ site.baseurl }}/css/frame_m.css") handheld;
 		</style>
 
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 		<script type="text/javascript" src="{{ site.baseurl }}/js/frame.js"></script>
 
 		<!--[if lt IE 9]>
@@ -33,6 +34,9 @@
 		<div id="content">
 
 			{{ content }}
+
+			<div id="disqus_thread"></div>
+			<script type="text/javascript" src="{{ site.baseurl }}/js/disqus_thread.js"></script>
 
 		</div>
 	</body>
