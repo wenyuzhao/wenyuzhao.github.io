@@ -53,7 +53,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 }
 
 #navigator p {
-	font-size: 5vh;
+	font-size: 7vh;
 	position: relative;
 	width: 98vw;
 	left: 1vw;
@@ -92,7 +92,6 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	left: 1vw;
 	overflow: hidden;
 	overflow-y: auto;
-	border-radius: 1vw;
 	background-color: white;
 	z-index: 0;
 }
