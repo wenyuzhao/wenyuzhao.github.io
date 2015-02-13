@@ -45,7 +45,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 
 #navigationBar #title {
 	position: absolute;
-	font-size: 7vh;
+	font-size: 8vh;
 	bottom: 1vh;
 	left: 0vw;
 	height: 8vh;
