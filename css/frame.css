@@ -86,7 +86,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	font-size: 7vh;
 	position: relative;
 	width: 98vw;
-	left: 1vw;
+	margin-left: 1vw;
 	background: transparent;
 	color: white;
 }
@@ -110,7 +110,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 
 }
 
-#content body, pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
+#content pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
 	word-wrap: break-word;
 	margin: default;
 	padding: default;
