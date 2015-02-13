@@ -28,7 +28,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 #navigationBar {
 	position: fixed;
 	width: 100%;
-	height: auto;
+	height: 40vh;
 	background-color: black;
 	left: 0;
 	bottom: 90vh;

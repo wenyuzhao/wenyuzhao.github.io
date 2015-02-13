@@ -8,7 +8,7 @@ var onFloatButtonClick = function () {
 };
 
 var navigationBar_onmouseover = function (ele) {
-	var v = 30/2000;
+	/*var v = 30/2000;
 	var b = 90;
 	( new Animation(
 		function () {
@@ -27,11 +27,11 @@ var navigationBar_onmouseover = function (ele) {
 				return false;
 			}
 		}
-	) ).run();
+	) ).run();*/
 }
 
 var navigationBar_onmouseout = function (ele) {
-	var v = 30/2000;
+	/*var v = 30/2000;
 	var b = 60;
 	( new Animation(
 		function () {
@@ -50,5 +50,5 @@ var navigationBar_onmouseout = function (ele) {
 				return false;
 			}
 		}
-	) ).run();
+	) ).run();*/
 }
