@@ -49,7 +49,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	bottom: 1vh;
 	left: 1vw;
 	color: white;
-	max-width: 90%;
+	max-width: 95%;
 }
 
 #navigationBar #githubIcon {
