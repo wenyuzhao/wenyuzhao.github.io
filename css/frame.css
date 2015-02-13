@@ -101,6 +101,15 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	overflow-y: auto;
 	background-color: white;
 	z-index: 0;
+
+	scrollbar-3dlight-color:    transparent;
+	scrollbar-highlight-color:  transparent;
+	scrollbar-face-color:       transparent;
+	scrollbar-arrow-color:      transparent;
+	scrollbar-shadow-color:     transparent;
+	scrollbar-darkshadow-color: transparent;
+	scrollbar-base-color:       transparent;
+	scrollbar-track-color:      transparent;
 }
 
 
