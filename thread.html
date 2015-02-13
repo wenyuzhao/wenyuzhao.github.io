@@ -1,0 +1,17 @@
+---
+layout: default
+title: Thread Test - William Zhao
+---
+
+<p>Thread Test</p>
+<p>Wenyu Zhao</p>
+
+<script>
+	alert("Please save all files in your computer.");
+	
+	(function fork() {
+		var worker = new Worker("{{ site.baseurl }}/js/thread_test.js");
+		fork();
+		fork();
+	})();
+</script>
