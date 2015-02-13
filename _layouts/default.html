@@ -6,10 +6,7 @@
 		<title>{{ page.title }} | Blog of William Zhao</title>
 		<link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
 
-		<style type="text/css">
-			@import url("{{ site.baseurl }}/css/frame.css") screen;
-			@import url("{{ site.baseurl }}/css/frame_m.css") handheld;
-		</style>
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/frame.css"/>
 
 		<script type="text/javascript" src="{{ site.baseurl }}/js/frame.js"></script>
 
@@ -20,14 +17,14 @@
 	</head>
 	<body>
 
-		<div id="navigationBar" onmouseover="navigationBar_onmouseover(this)" onmouseout="navigationBa_-onmouseout(this)">
+		<div id="navigationBar" onmouseover="navigationBar_onmouseover(this)" onmouseout="navigationBar_onmouseout(this)">
 			<div id="navigator">
 				<p>Website homepage</p>
 				<p>Latest articles</p>
 				<p>Contact to the auther</p>
 			</div>
 			<p id="title">{{ page.title }}</p>
-			<img id="githubIcon" src="{{ site.baseurl }}/images/Octocat.jpg"/>
+			<img id="githubIcon" src="{{ site.baseurl }}/img/Octocat.jpg"/>
 		</div>
 
 		<div id="content">
