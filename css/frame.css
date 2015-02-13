@@ -43,30 +43,6 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	bottom: 60vh;
 }
 
-
-#navigator {
-	position: absolute;
-	width: 100%;
-	height: 30vh;
-	bottom: 10vh;
-	left: 0;
-}
-
-#navigator p {
-	font-size: 7vh;
-	position: relative;
-	width: 98vw;
-	left: 1vw;
-	background: transparent;
-	color: white;
-}
-
-#navigator p:hover {
-	color: black;
-	background: white;
-	cursor: pointer;
-}
-
 #navigationBar #title {
 	position: absolute;
 	font-size: 7vh;
@@ -83,6 +59,35 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	bottom: 1vh;
 	right: 1vw;
 	border-radius: 50%;
+	cursor: pointer;
+}
+
+#navigator {
+	position: absolute;
+	width: 100%;
+	height: 30vh;
+	bottom: 10vh;
+	left: 0;
+}
+
+#navigator a { text-decoration:none; color: white; }
+#navigator a:link    { color: white; }
+#navigator a:visited { color: white; }
+#navigator a:hover   { color: black; }
+#navigator a:active  { color: black; }
+
+#navigator p {
+	font-size: 7vh;
+	position: relative;
+	width: 98vw;
+	left: 1vw;
+	background: transparent;
+	color: white;
+}
+
+#navigator p:hover {
+	color: black;
+	background: white;
 	cursor: pointer;
 }
 
