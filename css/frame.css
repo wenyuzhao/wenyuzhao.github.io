@@ -4,11 +4,11 @@
 
 
 
-body, pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
+/*body, pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
 	word-wrap: break-word;
-	/*margin: 0;*/
+	margin: 0;
 	padding: 0;
-}
+}*/
 
 body {
 	font-family: 微软雅黑 Light, Clockopia, Droid Sans, STHeiti-Light, Arial;
@@ -56,6 +56,8 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	left: 1vw;
 	color: white;
 	max-width: 95%;
+	margin: 0;
+	padding: 0;
 }
 
 #navigationBar #githubIcon {
@@ -74,6 +76,8 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	height: 30vh;
 	bottom: 10vh;
 	left: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #navigator a         { text-decoration:none; color: white; }
@@ -89,6 +93,8 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	margin-left: 1vw;
 	background: transparent;
 	color: white;
+	margin: 0;
+	padding: 0;
 }
 
 #navigator p:hover {
