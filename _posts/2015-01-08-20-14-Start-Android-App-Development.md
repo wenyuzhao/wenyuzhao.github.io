@@ -1,6 +1,6 @@
 ---
 title: Start Android App Development
-layout: default
+layout: blog
 ---
 
 #Start Android App Development

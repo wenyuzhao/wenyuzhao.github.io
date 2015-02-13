@@ -6,12 +6,18 @@
 		<title>{{ page.title }} | Blog of William Zhao</title>
 		<link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
 
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/frame.css"/>
+
+		<!--
 		<style type="text/css">
 			@import url("{{ site.baseurl }}/css/frame.css") screen;
 			@import url("{{ site.baseurl }}/css/frame_m.css") handheld;
 		</style>
+		-->
+
 
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 		<script type="text/javascript" src="{{ site.baseurl }}/js/frame.js"></script>
 
 		<!--[if lt IE 9]>
@@ -21,13 +27,13 @@
 	</head>
 	<body>
 
-		<div id="navigationBar" onmouseover="navigationBar_onmouseover(this)" onmouseout="navigationBa_-onmouseout(this)">
+		<div id="navigationBar">
 			<div id="navigator">
-				<p>Website homepage</p>
-				<p>Latest articles</p>
+				<a href="{{ site.baseurl }}/index.html"><p>Website homepage</p></a>
+				<a href="{{ site.baseurl }}/blog.html"><p>Blog - Latest articles</p></a>
 				<p>Contact to the auther</p>
 			</div>
-			<p id="title">{{ page.title }}</p>
+			<p id="title"> {{ page.title }}</p>
 			<img id="githubIcon" src="{{ site.baseurl }}/img/Octocat.jpg"/>
 		</div>
 

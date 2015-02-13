@@ -1,6 +1,6 @@
 ---
 title: Master Theorem
-layout: default
+layout: blog
 ---
 
 #The Master Theory - Introduction
