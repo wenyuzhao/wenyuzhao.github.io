@@ -50,10 +50,8 @@ $$
 \begin{equation}
   T(n)=
   \begin{cases}
-    n^d \log n &\mbox{if $r-j$ is odd}\\
-  \end{cases}
-  \begin{cases}
-    r!\,(-1)^{(r-j)/2} &\mbox{if $r-j$ is even}
+    n^d \log n &a>0\\
+    n^d \log n &a\le0
   \end{cases}
 \end{equation}
 $$
