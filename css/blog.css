@@ -184,6 +184,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		font-size: 7mm;
 		position: relative;
 		width: 98vw;
+		height: 10mm;
 		background: transparent;
 		color: white;
 	}
