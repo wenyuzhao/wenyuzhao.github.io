@@ -111,17 +111,9 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 
 #content p, h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
-	margin: 5px;
-	padding: 5px;
+	line-height: 200%;
 }
 
-#content h1:empty { margin: 0; padding: 0; }
-#content h2:empty { margin: 0; padding: 0; }
-#content h3:empty { margin: 0; padding: 0; }
-#content h4:empty { margin: 0; padding: 0; }
-#content h5:empty { margin: 0; padding: 0; }
-#content h6:empty { margin: 0; padding: 0; }
-#content p:empty  { margin: 0; padding: 0; }
 
 #content h1  { font-size: 6vh;   font-weight: lighter; }
 #content h2  { font-size: 5.5vh; font-weight: lighter; }
@@ -130,4 +122,4 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #content h5  { font-size: 4vh;   font-weight: lighter; }
 #content h6  { font-size: 3.5vh; font-weight: lighter; }
 #content p   { font-size: 3vh;   font-weight: lighter; }
-#content img { max-width: 60vw; height: auto; margin: 0; padding: 0; }
+#content img { max-width: 60vw;}
