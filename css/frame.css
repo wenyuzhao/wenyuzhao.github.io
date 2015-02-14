@@ -18,13 +18,6 @@ body {
 	font-weight: lighter;
 	background-color: #607D8B;
 }
-h1 { font-size: 8vh; font-weight: lighter; }
-h2 { font-size: 7vh; font-weight: lighter; }
-h3 { font-size: 6vh; font-weight: lighter; }
-h4 { font-size: 5vh; font-weight: lighter; }
-h5 { font-size: 4vh; font-weight: lighter; }
-h6 { font-size: 3vh; font-weight: lighter; }
-img { max-width: 100%; height: auto; }
 
 /*a { text-decoration:none; color: #0066cc; }
 a:link    { color: #0066cc; }
@@ -113,6 +106,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	background-color: white;
 	z-index: 0;
 	border-radius: 5px;
+	max-width: 60vw;
 }
 
 #content p, h1, h2, h3, h4, h5, h6 {
@@ -121,3 +115,11 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	padding: 5px;
 }
 
+#content h1  { font-size: 6vh;   font-weight: lighter; }
+#content h2  { font-size: 5.5vh; font-weight: lighter; }
+#content h3  { font-size: 5vh;   font-weight: lighter; }
+#content h4  { font-size: 4.5vh; font-weight: lighter; }
+#content h5  { font-size: 4vh;   font-weight: lighter; }
+#content h6  { font-size: 3.5vh; font-weight: lighter; }
+#content p   { font-size: 3vh;   font-weight: lighter; }
+#content img { max-width: inherit; height: auto; }
