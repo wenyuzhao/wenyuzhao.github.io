@@ -1,3 +1,22 @@
+::-webkit-scrollbar { width: 0px; }
+::scrollbar { width: 0px; }
+
+
+* {
+	word-wrap: break-word;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 微软雅黑 Light, Clockopia, Droid Sans, STHeiti-Light, Arial;
+	font-size: 3vh;
+	margin:0;
+	padding:0;
+	font-weight: lighter;
+	background-color: #607D8B;
+}
+
 #navigationBar {
 	position: fixed;
 	width: 100%;
@@ -76,3 +95,21 @@
 	z-index: 0;
 	border-radius: 0;
 }
+
+#content p, h1, h2, h3, h4, h5, h6 {
+	word-wrap: break-word;
+	line-height: 200%;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+#content h1  { font-size: 6vh;   font-weight: lighter; }
+#content h2  { font-size: 5.5vh; font-weight: lighter; }
+#content h3  { font-size: 5vh;   font-weight: lighter; }
+#content h4  { font-size: 4.5vh; font-weight: lighter; }
+#content h5  { font-size: 4vh;   font-weight: lighter; }
+#content h6  { font-size: 3.5vh; font-weight: lighter; }
+#content p   { font-size: 3vh;   font-weight: lighter; }
+#content img { max-width: 60vw; margin-left: -5px; }
+#content div#disqus_thread { margin-left: 5px; margin-right: 5px; }
