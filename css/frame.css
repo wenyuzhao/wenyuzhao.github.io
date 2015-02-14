@@ -115,5 +115,9 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	border-radius: 5px;
 }
 
-
+#content pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
+	word-wrap: break-word;
+	margin: 5px;
+	padding: 5px;
+}
 
