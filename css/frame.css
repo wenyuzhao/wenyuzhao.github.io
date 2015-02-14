@@ -1,7 +1,5 @@
-﻿::-webkit-scrollbar {
-	width: 5px;
-}
-
+﻿::-webkit-scrollbar { width: 0px; }
+::scrollbar { width: 0px; }
 
 
 * {
