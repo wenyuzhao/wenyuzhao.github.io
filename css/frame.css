@@ -111,6 +111,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	margin-left: 20vw;
 	background-color: white;
 	z-index: 0;
+	border-radius: 5px;
 }
 
 
