@@ -112,6 +112,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #content p, h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 	line-height: 200%;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 
@@ -122,4 +124,4 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #content h5  { font-size: 4vh;   font-weight: lighter; }
 #content h6  { font-size: 3.5vh; font-weight: lighter; }
 #content p   { font-size: 3vh;   font-weight: lighter; }
-#content img { max-width: 60vw;}
+#content img { max-width: 60vw; margin-left: -5px; }
