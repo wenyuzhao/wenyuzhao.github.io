@@ -125,3 +125,4 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #content h6  { font-size: 3.5vh; font-weight: lighter; }
 #content p   { font-size: 3vh;   font-weight: lighter; }
 #content img { max-width: 60vw; margin-left: -5px; }
+#content div#disqus_thread { margin-left: 5px; margin-right: 5px; }
