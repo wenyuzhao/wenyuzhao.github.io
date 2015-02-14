@@ -26,11 +26,11 @@ h5 { font-size: 4vh; font-weight: lighter; }
 h6 { font-size: 3vh; font-weight: lighter; }
 img { max-width: 100%; height: auto; }
 
-a { text-decoration:none; color: #0066cc; }
-a:link    { color: #0066cc; }	/* 未被访问的链接 */
-a:visited { color: #0066cc; }	/* 已被访问的链接 */
-a:hover   { color: white; background: rgb(128,0,128); }	/* 鼠标指针移动到链接上 */
-a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链接 */
+/*a { text-decoration:none; color: #0066cc; }
+a:link    { color: #0066cc; }
+a:visited { color: #0066cc; }
+a:hover   { color: white; background: rgb(128,0,128); }
+a:active  { color: white; background: rgb(128,0,128); }*/
 
 #navigationBar {
 	position: fixed;
@@ -115,7 +115,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	border-radius: 5px;
 }
 
-#content pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
+#content div, p, h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 	margin: 5px;
 	padding: 5px;
