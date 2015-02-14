@@ -1,6 +1,9 @@
 ---
 title: Start Android App Development
 layout: blog
+# others ...
+tags: 
+- Others
 ---
 
 #Start Android App Development

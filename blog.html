@@ -3,17 +3,26 @@ layout: default
 title: Blog of William Zhao
 ---
 <script type="text/javascript" src="{{ site.baseurl }}/javascripts/blog.js"></script>
-<h2>Blog of Wenyu Zhao</h2>
-<h1>Latest Articles</h1>
+<h1>Latest articles:</h1>
 
-<div class="blog_post_titles">
+{% for post in site.posts %}
 
-	{% for post in site.posts %}
+	<a href="{{ site.baseurl }}{{ post.url }}">
+		<p class="blog_post_title" onmouseover="title_mouseover(this)" onmouseout="title_mouseout(this)">{{ post.date | date_to_string }}   {{ post.title }}</p>
+	</a>
 
-		<a href="{{ site.baseurl }}{{ post.url }}">
-			<p class="blog_post_title" onmouseover="title_mouseover(this)" onmouseout="title_mouseout(this)">{{ post.date | date_to_string }}   {{ post.title }}</p>
-		</a>
+{% endfor %}
 
-	{% endfor %}
+<h1>Tags:</h1>
 
-</div>
+{% for t in site.tags %}
+  <h3>{{ t[0] }}  </h3> <!-- 输出标签 -->
+    <ul>
+      {% assign tag = t[0] %}
+      {% for post in site.tags[tag] %} <!-- site.tags.TAG里有含TAG标签的所有文章 -->
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> <!-- 输出文章的URL和标题 -->
+        </li>  
+      {% endfor %}
+    </ul>
+{% endfor %}

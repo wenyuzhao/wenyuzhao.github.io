@@ -1,6 +1,9 @@
 ---
 title: Master Theorem
 layout: blog
+# others ...
+tags: 
+- Algorithms
 ---
 
 #The Master Theory - Introduction
