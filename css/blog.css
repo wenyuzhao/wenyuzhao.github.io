@@ -127,10 +127,10 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	#navigationBar {
 		position: fixed;
 		width: 100%;
-		height: 32mm;
+		height: 40mm;
 		background-color: black;
 		left: 0;
-		top: -24mm;
+		top: -30mm;
 		transition: bottom 2s;
 		-moz-transition: bottom 2s;
 		-webkit-transition: bottom 2s;
@@ -143,8 +143,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 
 	#navigationBar #title {
 		position: absolute;
-		font-size: 5.6mm;
-		bottom: 0.8mm;
+		font-size: 7mm;
+		bottom: 1mm;
 		left: 1vw;
 		color: white;
 		max-width: 95%;
@@ -154,9 +154,9 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 
 	#navigationBar #githubIcon {
 		position: absolute;
-		height: 6.4mm;
-		width: 6.4mm;
-		bottom: 0.8mm;
+		height: 8mm;
+		width: 8mm;
+		bottom: 1mm;
 		right: 1vw;
 		border-radius: 50%;
 		cursor: pointer;
@@ -177,7 +177,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	#navigator a:active  { color: black; }
 
 	#navigator p {
-		font-size: 5.6mm;
+		font-size: 7mm;
 		position: relative;
 		width: 98vw;
 		background: transparent;
@@ -193,8 +193,9 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	#content {
 		position: relative;
 		width: 100vw;
+		max-width: 100vw;
 		height: auto;
-		margin-top: 0.8cm;
+		margin-top: 10mm;
 		margin-bottom: 0;
 		margin-left: 0;
 		background-color: white;
