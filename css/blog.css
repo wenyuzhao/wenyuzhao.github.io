@@ -101,28 +101,28 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	margin-left: 20vw;
 	background-color: white;
 	z-index: 0;
-	border-radius: 5mm;
+	border-radius: 2mm;
 	max-width: 60vw;
 }
 
 #content p, h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
-	margin-top: 3mm;
-	margin-bottom: 3mm;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-top: 5mm;
+	margin-bottom: 5mm;
+	margin-left: 2mm;
+	margin-right: 2mm;
 }
 
 
-#content h1  { font-size: 10mm;  font-weight: lighter; }
-#content h2  { font-size: 9mm;   font-weight: lighter; }
-#content h3  { font-size: 8mm;   font-weight: lighter; }
-#content h4  { font-size: 7mm;   font-weight: lighter; }
-#content h5  { font-size: 6mm;   font-weight: lighter; }
-#content h6  { font-size: 5mm;   font-weight: lighter; }
-#content p   { font-size: 4mm;   font-weight: lighter; }
-#content img { max-width: 60vw; margin-left: -5mm; }
-#content div#disqus_thread { margin-left: 5mm; margin-right: 5mm; }
+#content h1  { font-size: 11mm;  font-weight: lighter; }
+#content h2  { font-size: 10mm;   font-weight: lighter; }
+#content h3  { font-size: 9mm;   font-weight: lighter; }
+#content h4  { font-size: 8mm;   font-weight: lighter; }
+#content h5  { font-size: 7mm;   font-weight: lighter; }
+#content h6  { font-size: 6mm;   font-weight: lighter; }
+#content p   { font-size: 5mm;   font-weight: lighter; }
+#content img { max-width: 60vw; margin-left: -2mm; }
+#content div#disqus_thread { margin-left: 2mm; margin-right: 2mm; }
 
 
 
@@ -142,7 +142,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		z-index: 10;
 	}
 	#navigationBar:hover {
-		top: 0mm;
+		top: 0;
 	}
 
 	#navigationBar #title {
@@ -206,4 +206,23 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		z-index: 0;
 		border-radius: 0;
 	}
+
+	#content p, h1, h2, h3, h4, h5, h6 {
+		word-wrap: break-word;
+		margin-top: 5mm;
+		margin-bottom: 5mm;
+		margin-left: 2mm;
+		margin-right: 2mm;
+	}
+
+
+	#content h1  { font-size: 10mm;  font-weight: lighter; }
+	#content h2  { font-size: 9mm;   font-weight: lighter; }
+	#content h3  { font-size: 8mm;   font-weight: lighter; }
+	#content h4  { font-size: 7mm;   font-weight: lighter; }
+	#content h5  { font-size: 6mm;   font-weight: lighter; }
+	#content h6  { font-size: 5mm;   font-weight: lighter; }
+	#content p   { font-size: 4mm;   font-weight: lighter; }
+	#content img { max-width: 60vw; margin-left: -2mm; }
+	#content div#disqus_thread { margin-left: 2mm; margin-right: 2mm; }
 }
