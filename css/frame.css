@@ -1,14 +1,14 @@
-﻿::-webkit-scrollbar {
+﻿/*::-webkit-scrollbar {
 	width: 0;
-}
+}*/
 
 
 
-/*body, pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
+body, pre, code, div, p, h1, h2, h3, h4, h5, h6, a, img {
 	word-wrap: break-word;
 	margin: 0;
 	padding: 0;
-}*/
+}
 
 body {
 	font-family: 微软雅黑 Light, Clockopia, Droid Sans, STHeiti-Light, Arial;
@@ -16,7 +16,7 @@ body {
 	margin:0;
 	padding:0;
 	font-weight: lighter;
-	background-color: black
+	background-color: #607D8B;
 }
 h1 { font-size: 8vh; font-weight: lighter; }
 h2 { font-size: 7vh; font-weight: lighter; }
@@ -104,16 +104,13 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 }
 
 #content {
-	position: fixed;
-	width: 100vw;
-	height: 90vh;
-	top: 10vh;
-	left: 0;
-	overflow: hidden;
-	overflow-y: auto;
+	position: relative;
+	width: 60vw;
+	height: auto;
+	margin-top: 20vh;
+	margin-left: 20vw;
 	background-color: white;
 	z-index: 0;
-
 }
 
 
