@@ -104,7 +104,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 
 #content p, h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
-	line-height: 200%;
+	margin-top: 2mm;
+	margin-bottom: 2mm;
 	margin-left: 5px;
 	margin-right: 5px;
 }
