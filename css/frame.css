@@ -108,6 +108,7 @@ a:active  { color: white; background: rgb(128,0,128); }	/* 正在被点击的链
 	width: 60vw;
 	height: auto;
 	margin-top: 20vh;
+	margin-bottom: 20vh;
 	margin-left: 20vw;
 	background-color: white;
 	z-index: 0;
