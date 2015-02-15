@@ -154,19 +154,20 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	#navigationBar #title {
 		position: absolute;
 		font-size: 10.5mm;
-		bottom: 4mm;
+		bottom: 3mm;
 		left: 1vw;
 		color: white;
 		max-width: 95%;
 		margin: 0;
 		padding: 0;
+		height: 15mm;
 	}
 
 	#navigationBar #githubIcon {
 		position: absolute;
 		height: 13mm;
 		width: 13mm;
-		bottom: 4mm;
+		bottom: 3mm;
 		right: 1vw;
 		border-radius: 50%;
 		cursor: pointer;
@@ -187,10 +188,10 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	#navigator a:active  { color: black; }
 
 	#navigator p {
-		font-size: 7mm;
+		font-size: 10.5mm;
 		position: relative;
 		width: 92vw;
-		height: 10mm;
+		height: 15mm;
 		background: transparent;
 		color: white;
 	}
@@ -203,12 +204,12 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 
 	#content {
 		position: relative;
-		width: 100vw;
-		max-width: 100vw;
+		width: 94vw;
+		max-width: 94vw;
 		height: auto;
 		margin-top: 28mm;
 		margin-bottom: 10mm;
-		margin-left: 0;
+		margin-left: 3vw;
 		background-color: white;
 		z-index: 0;
 		border-radius: 3mm;
