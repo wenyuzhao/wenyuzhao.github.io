@@ -141,10 +141,10 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		left: 3vw;
 		top: -48mm;
 		border-radius: 3mm;
-		transition: top 2s;
-		-moz-transition: top 2s;
-		-webkit-transition: top 2s;
-		-o-transition: top 2s;
+		transition: top 1.5s;
+		-moz-transition: top 1.5s;
+		-webkit-transition: top 1.5s;
+		-o-transition: top 1.5s;
 		z-index: 10;
 	}
 	#navigationBar:hover {
@@ -158,7 +158,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		bottom: 0mm;
 		left: 1vw;
 		color: white;
-		width: 60vw;
+		width: 75%;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
