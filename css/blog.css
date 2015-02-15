@@ -163,6 +163,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		height: 15mm;
 		overflow: hidden;
 		overflow-x: auto;
+		white-space: nowrap;
 	}
 
 	#navigationBar #githubIcon {
@@ -198,6 +199,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		color: white;
 		overflow: hidden;
 		overflow-x: auto;
+		white-space: nowrap;
 	}
 
 	#navigator p:hover {
