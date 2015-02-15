@@ -161,6 +161,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		margin: 0;
 		padding: 0;
 		height: 15mm;
+		overflow: hidden;
+		overflow-x: auto;
 	}
 
 	#navigationBar #githubIcon {
@@ -194,6 +196,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		height: 15mm;
 		background: transparent;
 		color: white;
+		overflow: hidden;
+		overflow-x: auto;
 	}
 
 	#navigator p:hover {
