@@ -59,25 +59,7 @@ $$
   \end{cases}
 \end{equation}
 $$
-Case 1: 
-If it exists an \\(\epsilon>0\\) and \\(f(n)=O(n^{\log_ba-\epsilon})\\)
 
-Then \\(T(n)=\Theta(n^{\log_ba})\\)
-
-Case 2:
-If it exists an \\(k\ge0\\) and \\(f(n)=\Theta(n^{\log_ba}\log^kn)\\)
-
-Then \\(T(n)=\Theta(n^{\log_ba}\log^{k+1}n)\\)
-
-Case 3:
-
-If it exists an \\(\epsilon>0\\) and \\(f(n)=\Omega(n^{\log_ba+\epsilon})\\)
-
-And it exists an \\(c<1\\) and sufficiently large \\(n\\),
-
-so that \\(af(\frac{n}{b})\le cf(n)\\)
-
-Then \\(T(n)=\Theta(f(n))\\)
 
 ###Proof
 
@@ -86,5 +68,3 @@ Please wait, I'm lazy
 ###The End.
 
 That's all for Master Theorem. Quite easy to understand.
-
-Sorry for not giving more examples. Because I have to complite homeworks which the carzy teacher I met this afternoon left me. And welcome to comment^_^
