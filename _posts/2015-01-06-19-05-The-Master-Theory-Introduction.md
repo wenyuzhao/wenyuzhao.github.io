@@ -54,8 +54,8 @@ $$
   T(n)=
   \begin{cases}
     O(n^d) &a<b^d\\\\
-    O(n^d\log n) &a=b^d\\\\
-    O(n^(\log_b a)) &a>b^d
+    O(n^d) &a=b^d\\\\
+    O(n^d) &a>b^d
   \end{cases}
 \end{equation}
 $$
