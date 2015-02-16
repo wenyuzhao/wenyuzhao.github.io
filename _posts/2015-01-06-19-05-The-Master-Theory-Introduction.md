@@ -6,7 +6,7 @@ tags:
 - Algorithms
 ---
 
-#The Master Theory - Introduction
+#The Master Theory
 ###6 January 2015
 
 In this article I'm going to give a brief introduction about The Master Theory(also called Master Theorem).
@@ -53,8 +53,9 @@ $$
 \begin{equation}
   T(n)=
   \begin{cases}
-    n^d \log n &a>0\\\\
-    n^d \log n &a\le0
+    O(n^d) &a<b^d\\\\
+    O(n^d\log n) &a=b^d\\\\
+    O(n^{\log_b a}) &a>b^d
   \end{cases}
 \end{equation}
 $$
