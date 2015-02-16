@@ -28,10 +28,10 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #navigationBar {
 	position: fixed;
 	width: 100%;
-	height: 80mm;
+	height: 60mm;
 	background-color: black;
 	left: 0;
-	top: -60mm;
+	top: -45mm;
 	transition: top 2s;
 	-moz-transition: top 2s;
 	-webkit-transition: top 2s;
@@ -44,20 +44,22 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 
 #navigationBar #title {
 	position: absolute;
-	font-size: 14mm;
-	bottom: 2mm;
+	font-size: 10.5mm;
+	bottom: 1.5mm;
 	left: 1vw;
 	color: white;
 	max-width: 95%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+	overflow-x: auto;
 }
 
 #navigationBar #githubIcon {
 	position: absolute;
-	height: 16mm;
-	width: 16mm;
-	bottom: 2mm;
+	height: 12mm;
+	width: 12mm;
+	bottom: 1.5mm;
 	right: 1vw;
 	border-radius: 50%;
 	cursor: pointer;
@@ -66,7 +68,7 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #navigator {
 	position: absolute;
 	width: 98vw;
-	height: 60mm;
+	height: 45mm;
 	top: 0;
 	left: 1vw;
 }
@@ -78,10 +80,10 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #navigator a:active  { color: black; }
 
 #navigator p {
-	font-size: 14mm;
+	font-size: 10.5mm;
 	position: relative;
 	width: 98vw;
-	height: 20mm;
+	height: 15mm;
 	background: transparent;
 	color: white;
 }
@@ -96,8 +98,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 	position: relative;
 	width: 60vw;
 	height: auto;
-	margin-top: 40mm;
-	margin-bottom: 20mm;
+	margin-top: 30mm;
+	margin-bottom: 15mm;
 	margin-left: 20vw;
 	background-color: white;
 	z-index: 0;
