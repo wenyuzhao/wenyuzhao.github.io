@@ -54,7 +54,7 @@ $$
   T(n)=
   \begin{cases}
     O(n^d) &a=b^d\\\\
-    n^d \log n &a\le0
+    O(n^d\log n) &a>b^d
   \end{cases}
 \end{equation}
 $$
