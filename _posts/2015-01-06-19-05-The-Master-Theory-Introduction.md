@@ -55,7 +55,7 @@ $$
   \begin{cases}
     O(n^d) &a < b^d\\\\
     O(n^d\log n) &a = b^d\\\\
-    O(n^d\log n) &a > b^d
+    O(n^{\log n} ) &a > b^d
   \end{cases}
 \end{equation}
 $$
