@@ -218,9 +218,12 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 		margin-top: 28mm;
 		margin-bottom: 10mm;
 		margin-left: 3vw;
+		padding-top: 3mm;
+		padding-bottom: 3mm;
 		background-color: white;
 		z-index: 0;
 		border-radius: 3mm;
+		overflow: hidden;
 	}
 
 	#content p, h1, h2, h3, h4, h5, h6 {
