@@ -27,6 +27,6 @@ layout: blog
 
 ###在附赠福利一张~~
 
-![](/img/zwy.jpg)
+![](/img/zwy2.jpg)
 
 #还不跪谢劳资！！！
