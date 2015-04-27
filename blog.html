@@ -6,11 +6,11 @@ title: Blog of William Zhao
 <h1>Latest articles:</h1>
 
 {% for post in site.posts %}
-<li>
+<ul>
 	<a href="{{ site.baseurl }}{{ post.url }}">
 		{{ post.date | date_to_string }}   {{ post.title }}
 	</a>
-</li>
+</ul>
 {% endfor %}
 
 <h1>Tags:</h1>
