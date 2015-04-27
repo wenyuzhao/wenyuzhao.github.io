@@ -129,8 +129,8 @@ a:active  { color: white; background: rgb(128,0,128); }*/
 #content a         { text-decoration:none; color: #2196F3; }
 #content a:link    { color: #2196F3; }
 #content a:visited { color: #2196F3; }
-#content a:hover   { background-color: #2196F3; color: white; }
-#content a:active  { background-color: #9C27B0; color: white; }
+#content a:hover   { background: #2196F3; color: white; }
+#content a:active  { background: #9C27B0; color: white; }
 
 
 @media screen and (max-width: 200mm) {
