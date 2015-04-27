@@ -8,7 +8,7 @@ title: Blog of William Zhao
 {% for post in site.posts %}
 
 	<a href="{{ site.baseurl }}{{ post.url }}">
-		<p class="blog_post_title" onmouseover="title_mouseover(this)" onmouseout="title_mouseout(this)">{{ post.date | date_to_string }}   {{ post.title }}</p>
+		{{ post.date | date_to_string }}   {{ post.title }}
 	</a>
 
 {% endfor %}
