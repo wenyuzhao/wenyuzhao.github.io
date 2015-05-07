@@ -8,7 +8,7 @@ tags:
 
 ###Smile Query Language###
 
-'''sql
+```sql
 
 select memories
 
@@ -27,4 +27,4 @@ where you like me
 
 or everything is not real;
 
-'''
+```
