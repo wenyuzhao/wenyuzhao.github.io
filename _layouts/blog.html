@@ -23,11 +23,9 @@
 		<!--[if lt IE 9]>
 			<script src="{{ site.baseurl }}/js/html5.js"></script>
 		<![endif]-->
-		{% for import in page.import %}
-			{% if import == "latex" %}
-				{% include latex.html %}
-			{% endif %}
-		{% endfor %}
+		{% if page.import contains "latex" %}
+			{% include latex.html %}
+		{% endif %}
 
 	</head>
 	<body>
