@@ -4,7 +4,7 @@ layout: blog
 import:
 - disqus
 tags: 
-- Others
+- others
 ---
 
 #Start Android App Development
