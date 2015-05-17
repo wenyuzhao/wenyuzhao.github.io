@@ -24,9 +24,6 @@
 			<script src="{{ site.baseurl }}/js/html5.js"></script>
 		<![endif]-->
 		
-		{% if page.import contains "disqus" %}
-			{% include disqus.html %}
-		{% endif %}
 		
 		{% if page.import contains "latex" %}
 			{% include latex.html %}
@@ -50,7 +47,10 @@
 		<div id="content">
 
 			{{ content }}
-
+			
+			{% if page.import contains "disqus" %}
+				{% include disqus.html %}
+			{% endif %}
 		</div>
 	</body>
 </html>
