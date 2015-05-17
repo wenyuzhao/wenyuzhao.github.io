@@ -1,6 +1,6 @@
 ---
 title: Start Android App Development
-layout: blog
+layout: blog_comment
 # others ...
 tags: 
 - Others
