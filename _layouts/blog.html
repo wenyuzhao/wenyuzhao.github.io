@@ -23,9 +23,13 @@
 		<!--[if lt IE 9]>
 			<script src="{{ site.baseurl }}/js/html5.js"></script>
 		<![endif]-->
+		
+		{% if page.import contains "disqus" %}
+			{% include disqus.html %}
+		{% endif %}
+		
 		{% if page.import contains "latex" %}
 			{% include latex.html %}
-			1
 		{% endif %}
 
 	</head>
