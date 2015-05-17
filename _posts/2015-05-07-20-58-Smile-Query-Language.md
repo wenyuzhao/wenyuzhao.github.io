@@ -1,6 +1,6 @@
 ---
 title: Smile Query Language
-layout: blog
+layout: blog_comment
 # others ...
 tags: 
 - Poetry
