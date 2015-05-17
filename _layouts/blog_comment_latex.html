@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<title>{{ page.title }} | Blog of William Zhao</title>
+		<link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
+
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/blog.css"/>
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/blog.css"/>
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/pygment_trac.css"/>
+
+		<!--
+		<style type="text/css">
+			@import url("{{ site.baseurl }}/css/frame.css") screen;
+			@import url("{{ site.baseurl }}/css/frame_m.css") handheld;
+		</style>
+		-->
+
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+		<script type="text/javascript" src="{{ site.baseurl }}/js/frame.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="{{ site.baseurl }}/js/html5.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<div id="navigationBar">
+			<div id="navigator">
+				<a href="{{ site.baseurl }}/index.html"><p>Website homepage</p></a>
+				<a href="{{ site.baseurl }}/blog.html"><p>Blog homepage</p></a>
+				<p>Contact to the auther</p>
+			</div>
+			<p id="title">{{ page.title }}</p>
+			<a href="https://github.com/wenyuzhao/wenyuzhao.github.io">
+				<img id="githubIcon" src="{{ site.baseurl }}/img/Octocat.jpg"/>
+			</a>
+		</div>
+
+		<div id="content">
+
+			{{ content }}
+
+			<div id="disqus_thread"></div>
+			<script type="text/javascript" src="{{ site.baseurl }}/js/disqus_thread.js"></script>
+
+		</div>
+	</body>
+</html>
