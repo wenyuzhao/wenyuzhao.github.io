@@ -23,6 +23,11 @@
 		<!--[if lt IE 9]>
 			<script src="{{ site.baseurl }}/js/html5.js"></script>
 		<![endif]-->
+		{% if page.import %}
+			{% if "latex" in page.import %}
+				{% include latex.html %}
+			{% endif %}
+		{% endif %}
 
 	</head>
 	<body>
