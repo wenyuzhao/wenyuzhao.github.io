@@ -1,6 +1,6 @@
 ---
 title: Smile Query Language
-layout: blog_comment
+layout: blog
 import:
 - disqus
 tags: 
