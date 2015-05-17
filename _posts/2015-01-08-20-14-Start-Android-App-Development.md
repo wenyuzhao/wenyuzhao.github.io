@@ -1,7 +1,8 @@
 ---
 title: Start Android App Development
-layout: blog_comment
-# others ...
+layout: blog
+import:
+- disqus
 tags: 
 - Others
 ---
