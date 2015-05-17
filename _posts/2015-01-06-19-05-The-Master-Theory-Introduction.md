@@ -1,6 +1,6 @@
 ---
 title: Master Theorem
-layout: blog
+layout: blog_comment_latex
 # others ...
 tags: 
 - Algorithms
