@@ -1,9 +1,10 @@
 ---
 title: Smile Query Language
 layout: blog_comment
-# others ...
+import:
+- disqus
 tags: 
-- Poetry
+- poetry
 ---
 
 ###Smile Query Language###
