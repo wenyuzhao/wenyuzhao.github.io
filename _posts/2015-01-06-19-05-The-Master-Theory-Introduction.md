@@ -1,9 +1,11 @@
 ---
 title: Master Theorem
-layout: blog_comment_latex
-# others ...
+layout: blog
+import:
+- disqus
+- latex
 tags: 
-- Algorithms
+- algorithms
 ---
 
 #The Master Theory
