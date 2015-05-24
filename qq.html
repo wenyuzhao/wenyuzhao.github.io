@@ -23,6 +23,7 @@ var re = new RegExp("对方未开通空间");
 var callback = function(url) {
   result = re.test(this.innerHTML);
   if(result) log(url);
+  console.log(url);
 }
 
 for(var i=0;i<10000;i++) {
