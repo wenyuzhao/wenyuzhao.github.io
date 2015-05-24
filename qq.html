@@ -24,6 +24,7 @@ var callback = function(url) {
   result = re.test(this.innerHTML);
   if(result) log(url);
   console.log(url);
+  concole.log({'html':this.innerHTML});
 }
 
 for(var i=0;i<10000;i++) {
