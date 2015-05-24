@@ -2,8 +2,9 @@
 function log(s) { document.writeln(s); }
 document.domain = 'qq.com';
 function get(url, callback) {
-  var ifr = document.createElement('iframe');
+  var ifr = document.createElement('script');
   ifr.src = url;
+  ifr.onload = callback(ifr, url);
   return ifr;
 }
 
@@ -20,11 +21,11 @@ try {
 eles = [];
 oks = [];
 var re = new RegExp("对方未开通空间");
-var callback = function(url) {
-  result = re.test(this.innerHTML);
+var callback = function(ele, url) {
+  result = re.test(ele.innerHTML);
   if(result) log(url);
   console.log(url);
-  console.log({'html':this.innerHTML});
+  console.log({'html':ele.innerHTML});
 }
 
 for(var i=0;i<10000;i++) {
