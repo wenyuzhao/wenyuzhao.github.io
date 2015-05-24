@@ -1,10 +1,10 @@
 <script>
 function log(s) { document.writeln(s); }
+document.domain = 'qq.com';
 function get(url, callback) {
-  var ele = document.createElement("script");
-  ele.src = url;
-  ele.onload = callback(url);
-  return ele;
+  var ifr = document.createElement('iframe');
+  ifr.src = url;
+  return ifr;
 }
 
 function fmtnum(n, length){ 
