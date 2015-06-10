@@ -26,6 +26,7 @@ body {
 	background-size: 100vw 100vh;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	-webkit-backface-visibility: hidden;
 }
 
 a         { text-decoration:none; color: #2196F3; }
