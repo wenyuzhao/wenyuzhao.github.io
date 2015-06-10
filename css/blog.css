@@ -16,7 +16,7 @@ body {
 	margin:0;
 	padding:0;
 	font-weight: lighter;
-	background:url(img/bg.jpg);
+	background:url(../img/bg.jpg);
 	background-size: 100vw 100vh;
 	background-repeat:no-repeat;
 }
@@ -47,7 +47,7 @@ a:active  { color: white; background: #2196F3; }
 	margin-left: 20vw;
 	background: transparent;
 	color: #2196F3;
-	font-size: 20vh;
+	font-size: 10vh;
 }
 
 #content {
