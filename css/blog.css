@@ -74,6 +74,8 @@ a:active  { color: white; background: #2196F3; }
 	margin-top: 10vh;
 	margin-bottom: 20vh;
 	margin-left: 20vw;
+	padding-top: 10mm;
+	padding-bottom: 10mm;
 	background: transparent;
 }
 
