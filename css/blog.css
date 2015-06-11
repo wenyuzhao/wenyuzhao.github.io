@@ -7,14 +7,12 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #9E9E9E;
-	opacity: 0.75;
-	/*background: transparent;
+	background: transparent;
 	-webkit-filter: blur(10px);
 	-moz-filter:    blur(10px);
 	-o-filter:      blur(10px);
 	-ms-filter:     blur(10px);
-	filter:         blur(10px);*/
+	filter:         blur(10px);
 	z-index: -10000;
 }
 
@@ -68,7 +66,8 @@ a:active  { color: white; background: #2196F3; }
 	margin-top: 10vh;
 	margin-bottom: 20vh;
 	margin-left: 20vw;
-	background: transparent;
+	background: #EEEEEE;
+	opacity: 0.8;
 }
 
 #content p, h1, h2, h3, h4, h5, h6 {
