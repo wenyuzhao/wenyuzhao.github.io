@@ -9,12 +9,12 @@
 	height: 100%;
 	background: #9E9E9E;
 	opacity: 0.62;
-	/*background: transparent;
+	/*background: transparent;*/
 	-webkit-filter: blur(10px);
 	-moz-filter:    blur(10px);
-	-o-filter:      blur(3px);
+	-o-filter:      blur(10px);
 	-ms-filter:     blur(10px);
-	filter:         blur(10px);*/
+	filter:         blur(10px);
 	z-index: -10000;
 }
 
