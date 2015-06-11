@@ -57,6 +57,7 @@ a:active  { color: white; background: #2196F3; }
 	position: relative;
 	width: 60vw;
 	height: auto;
+	margin-top: 0;
 	margin-left: 20vw;
 	background: transparent;
 	color: #2196F3;
