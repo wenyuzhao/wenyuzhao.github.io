@@ -10,9 +10,10 @@
 	background: transparent;
 	-webkit-filter: blur(10px);
 	-moz-filter:    blur(10px);
+	-o-filter:      blur(3px);
 	-ms-filter:     blur(10px);
 	filter:         blur(10px);
-	z-index: -10000;
+	/*z-index: -10000;*/
 }
 
 
@@ -26,7 +27,6 @@ body {
 	background-size: 100vw 100vh;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	-webkit-backface-visibility: hidden;
 }
 
 a         { text-decoration:none; color: #2196F3; }
