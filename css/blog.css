@@ -1,25 +1,17 @@
 /*::-webkit-scrollbar { width: 0px; }
 ::scrollbar { width: 0px; }*/
 
-.glass {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	-webkit-filter: blur(10px);
-	-moz-filter:    blur(10px);
-	-o-filter:      blur(10px);
-	-ms-filter:     blur(10px);
-	filter:         blur(10px);
-	z-index: -10000;
-	background: url(../img/bg.jpg);
-	background-size: 100vw 100vh;
-    background-position: -20vw -40vh;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-	overflow: hidden;
-}
 
+.bg {
+	position:   absolute;
+	width:      100%;
+	height:     100%;
+	left:       0;
+	top:        0;
+	background: #E0E0E0;
+	opacity:    0.8;
+	z-index:    -10000;
+}
 
 body {
 	font-family: 微软雅黑 Light, Clockopia, Droid Sans, STHeiti-Light, Arial;
@@ -70,8 +62,7 @@ a:active  { color: white; background: #2196F3; }
 	margin-top: 10vh;
 	margin-bottom: 20vh;
 	margin-left: 20vw;
-	background: #EEEEEE;
-	opacity: 0.8;
+	background: transparent;
 }
 
 #content p, h1, h2, h3, h4, h5, h6 {

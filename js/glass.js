@@ -4,7 +4,7 @@ var glass_resize = function() {
 	for(var ele in elements) {
 		var w = ele.clientWidth;
 		var h = ele.clientHeight;
-		ele.style.
+		ele.style.B
 	}
 }
 
