@@ -53,7 +53,14 @@ a:active  { color: white; background: #2196F3; }
 	color: #2196F3;
 	font-size: 10vh;
 }
-
+#date {
+	position: relative;
+	width: 60vw;
+	height: auto;
+	background: transparent;
+	color: #2196F3;
+	font-size: 5mm;
+}
 #content {
 	position: relative;
 	width: 60vw;
