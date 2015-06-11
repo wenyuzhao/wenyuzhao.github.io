@@ -35,7 +35,7 @@
 		<div id="title">{{ page.title }}</div>
 		<div id="date">
 			{% if page.date %}
-				{{ page.date }}
+				{{ page.date | date_to_string }}
 			{% endif %}
 		</div>
 		
