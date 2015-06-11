@@ -49,6 +49,8 @@ a:active  { color: white; background: #2196F3; }
 	min-height: 20vh;
 	margin-top: 15vh;
 	margin-left: 20vw;
+	margin-bottom: 0;
+	padding-bottom: 0;
 	background: transparent;
 	color: #2196F3;
 	font-size: 10vh;
@@ -57,6 +59,7 @@ a:active  { color: white; background: #2196F3; }
 	position: relative;
 	width: 60vw;
 	height: auto;
+	padding-top: 0;
 	margin-top: 0;
 	margin-left: 20vw;
 	background: transparent;

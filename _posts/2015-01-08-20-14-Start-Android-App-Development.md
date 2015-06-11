@@ -7,9 +7,7 @@ tags:
 - others
 ---
 
-#Start Android App Development
 
-####8 January 2015
 
 Because of the aspiration of making money, I decide to restart the development of mobile app.
 

@@ -8,8 +8,6 @@ tags:
 - algorithms
 ---
 
-#The Master Theory
-###6 January 2015
 
 In this article I'm going to give a brief introduction about The Master Theory(also called Master Theorem).
 
