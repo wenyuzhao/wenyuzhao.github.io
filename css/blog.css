@@ -13,11 +13,12 @@
 	-ms-filter:     blur(10px);
 	filter:         blur(10px);
 	z-index: -10000;
-	background:url(../img/bg.jpg);
+	background: url(../img/bg.jpg);
 	background-size: 100vw 100vh;
     background-position: -20vw -40vh;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	overflow: hidden;
 }
 
 
