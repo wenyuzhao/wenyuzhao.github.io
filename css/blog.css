@@ -19,10 +19,7 @@ body {
 	margin:0;
 	padding:0;
 	font-weight: lighter;
-	background:url(../img/bg.jpg);
-	background-size: 100vw 100vh;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
+	background-color: #212121;
 }
 
 a         { text-decoration:none; color: #2196F3; }
@@ -76,7 +73,7 @@ a:active  { color: white; background: #2196F3; }
 	margin-left: 20vw;
 	padding-top: 10mm;
 	padding-bottom: 10mm;
-	background: transparent;
+	background: white;
 }
 
 #content p, h1, h2, h3, h4, h5, h6 {
