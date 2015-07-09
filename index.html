@@ -1,16 +1,3 @@
----
-layout: default
-title: William Zhao
----
-<script type="text/javascript" src="{{ site.baseurl }}/js/index.js"></script>
-<img src="{{ site.baseurl }}/img/helloworld.png" width='100%'/>
-<p>Programmers are worthy of respect. How magical programmer's hands are changing the boring code to richly colorful software.</p>
-<h1 class="Button"><a href="{{ site.baseurl }}/blog.html">My Blog</a></h1>
-<h1 class="Button"><a href="{{ site.baseurl }}/par/index.html">3D-Test</a></h1>
-<h1 class="Button"><a href="https://github.com/wenyuzhao/matlab?files=1">My Matlab works</a></h1>
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,22 +18,31 @@ title: William Zhao
     </head>
     <body>
 
-        <div id="navigationBar">
-            <div id="navigator">
-                <a href="{{ site.baseurl }}/index.html"><p>Website homepage</p></a>
-                <a href="{{ site.baseurl }}/blog.html"><p>Blog - Latest articles</p></a>
-                <p>Contact to the auther</p>
-            </div>
-            <p id="title">{{ page.title }}</p>
-            <a href="https://github.com/wenyuzhao/wenyuzhao.github.io">
-                <img id="githubIcon" src="{{ site.baseurl }}/img/Octocat.jpg"/>
-            </a>
-        </div>
+        <p>Wenyu Zhao</p>
 
-        <div id="content">
+        <table class="auto-grid">
+            <tr>
+                <td>
+                    <a href="{{ site.baseurl }}/index.html"><p>Website homepage</p></a>
+                </td>
+                <td>
+                    <a href="{{ site.baseurl }}/blog.html"><p>Blog - Latest articles</p></a>
+                </td>
+                <td>
+                    <p>Contact to the auther</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="title">{{ page.title }}</p>
+                </td>
+                <td>
+                    <a href="https://github.com/wenyuzhao/wenyuzhao.github.io">
+                        <img id="githubIcon" src="{{ site.baseurl }}/img/Octocat.jpg"/>
+                    </a>
+                </td>
+            </tr>
+        </table>
 
-            {{ content }}
-
-        </div>
     </body>
 </html>

@@ -28,16 +28,6 @@ a:visited { color: #2196F3; }
 a:hover   { color: white; background: #2196F3; }
 a:active  { color: white; background: #2196F3; }
 
-
-
-#navigator {
-	position: absolute;
-	width: 20vw;
-	height: auto;
-	top: 40vh;
-	left: -20vw;
-}
-
 #title {
 	position: relative;
 	width: 60vw;
@@ -52,6 +42,7 @@ a:active  { color: white; background: #2196F3; }
 	color: white;
 	font-size: 10vh;
 }
+
 #date {
 	position: relative;
 	width: 60vw;
@@ -63,6 +54,7 @@ a:active  { color: white; background: #2196F3; }
 	color: #2196F3;
 	font-size: 5mm;
 }
+
 #content {
 	position: relative;
 	width: 60vw;
@@ -104,96 +96,17 @@ a:active  { color: white; background: #2196F3; }
 
 @media screen and (max-width: 200mm) {
 
-	body {
-		background-color: #9E9E9E;
-	}
-
-	#navigationBar {
-		position: fixed;
-		width: 94vw;
-		height: 66mm;
-		background-color: #607D8B;
-		left: 3vw;
-		top: -48mm;
-		border-radius: 3mm;
-		transition: top 1.5s;
-		-moz-transition: top 1.5s;
-		-webkit-transition: top 1.5s;
-		-o-transition: top 1.5s;
-		z-index: 10;
-	}
-	#navigationBar:hover {
-		top: -3mm;
-	}
-
-	#navigationBar #title {
-		position: absolute;
-		font-size: 10.5mm;
-		height: 15mm;
-		bottom: 0mm;
-		left: 1vw;
-		color: white;
-		width: 75%;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		overflow-x: auto;
-		white-space: nowrap;
-	}
-
-	#navigationBar #githubIcon {
-		position: absolute;
-		height: 13mm;
-		width: 13mm;
-		bottom: 3mm;
-		right: 1vw;
-		border-radius: 50%;
-		cursor: pointer;
-	}
-
-	#navigator {
-		position: absolute;
-		width: 92vw;
-		height: 24mm;
-		top: 3mm;
-		left: 1vw;
-	}
-
-	#navigator a         { text-decoration:none; color: white; }
-	#navigator a:link    { color: white; }
-	#navigator a:visited { color: white; }
-	#navigator a:hover   { color: black; }
-	#navigator a:active  { color: black; }
-
-	#navigator p {
-		font-size: 10.5mm;
-		position: relative;
-		width: 92vw;
-		height: 15mm;
-		background: transparent;
-		color: white;
-		overflow: hidden;
-		overflow-x: auto;
-		white-space: nowrap;
-	}
-
-	#navigator p:hover {
-		color: black;
-		background: white;
-		cursor: pointer;
-	}
-
 	#content {
 		position: relative;
-		width: 94vw;
-		max-width: 94vw;
+		width: 100vw;
+		max-width: 100vw;
 		height: auto;
-		margin-top: 28mm;
+        margin: 0;
+		margin-top: 61.8vh;
 		margin-bottom: 10mm;
-		margin-left: 3vw;
+        padding: 4px;
 		background-color: white;
 		z-index: 0;
-		border-radius: 3mm;
 	}
 
 	#content p, h1, h2, h3, h4, h5, h6 {
