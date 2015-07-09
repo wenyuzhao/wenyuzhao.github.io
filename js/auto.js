@@ -56,8 +56,11 @@ Auto.resize.grid = function(grid) {
     }
 
     grid.setCSS({
-        "height": Math.floor(grid.children.length-1 / cols) * (h + spacing) + h + "px"
+        "height": ( Math.floor(grid.children.length-1 / cols) * (h + spacing) + h) + "px"
     });
+
+    alert(grid.clientWidth)
+    alert(grid.clientHeight)
 
 };
 /*

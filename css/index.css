@@ -67,7 +67,7 @@ body {
 
     .auto-grid {
         position: relative;
-        width: inherit;
+        width: 100%;
         height: 100%;
         max-width: 100vw;
         margin-top: 50vh;
