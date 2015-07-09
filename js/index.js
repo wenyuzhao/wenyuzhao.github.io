@@ -4,11 +4,11 @@ $ = function() {
 
 
 function resizeTable() {
-    autoCells = $("table.auto-grid > td");
+    var autoCells = $("table.auto-grid td");
     for(var cell in autoCells) {
         cell.style.height = cell.style.width;
     }
-    cellImages = $("table.auto-grid > img");
+    var cellImages = $("table.auto-grid img");
     for(var img in cellImages) {
         img.style.maxWidth = img.parentNode.style.width;
     }
