@@ -48,7 +48,7 @@ body {
     color: black;
 }
 
-.auto-grid .auto-item a {
+.auto-grid .auto-item p {
     position: absolute;
     width: 100%;
     height: 20%;
