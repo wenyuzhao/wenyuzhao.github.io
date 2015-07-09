@@ -1,4 +1,5 @@
 body {
+    font-family: 微软雅黑 Light, Clockopia, Droid Sans, STHeiti-Light, Arial;
     background-color: #212121;
     margin: 0;
     padding: 0;
@@ -24,22 +25,21 @@ body {
     width: 90vw;
     height: 100%;
     max-width: 90vw;
-    margin: 0;
     margin-top: 10vh;
     margin-bottom: 20vh;
     margin-left: 5vw;
     margin-right: 5vw;
 }
 
-.auto-grid .item {
-    position: relative;
-    display: inline-block;
-    padding: 0;
+.auto-grid .auto-item {
+    margin: 0;
     background-color: white;
-    margin: 4px;
+    position: absolute;
+    width: 100%;
+    height:100%;
 }
 
-.auto-grid .item .logo {
+.auto-grid .auto-item .logo {
     position: absolute;
     width: 80%;
     height: 80%;
@@ -48,7 +48,7 @@ body {
     color: black;
 }
 
-.auto-grid .item a {
+.auto-grid .auto-item a {
     position: absolute;
     width: 100%;
     height: 20%;
