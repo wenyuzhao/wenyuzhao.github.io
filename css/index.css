@@ -2,6 +2,21 @@ body {
     background-color: #212121;
 }
 
+#title {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    max-width: 60vw;
+    min-height: 20vh;
+    margin-top: 15vh;
+    margin-left: 5vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background: transparent;
+    color: white;
+    font-size: 10vh;
+}
+
 table.auto-grid {
     position: relative;
     width: 90vw;

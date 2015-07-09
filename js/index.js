@@ -6,7 +6,7 @@ $ = function() {
 function resizeTable() {
     var autoCells = $("table.auto-grid td");
     for(var i in autoCells) {
-        autoCells[i].height = autoCells[i].clientWidth;
+        autoCells[i].height = autoCells[i].clientWidth + "px";
     }
     var cellImages = $("table.auto-grid img");
     for(var i in cellImages) {
