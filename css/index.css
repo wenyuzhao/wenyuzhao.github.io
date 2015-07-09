@@ -17,7 +17,7 @@
 .text {
     position: absolute;
     left: 7rem;
-    top: 1rem;
+    top: 0rem;
     height: 5rem;
     font-size: 5rem;
 }
