@@ -8,3 +8,45 @@ title: William Zhao
 <h1 class="Button"><a href="{{ site.baseurl }}/blog.html">My Blog</a></h1>
 <h1 class="Button"><a href="{{ site.baseurl }}/par/index.html">3D-Test</a></h1>
 <h1 class="Button"><a href="https://github.com/wenyuzhao/matlab?files=1">My Matlab works</a></h1>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <title>Wenyu Zhao</title>
+        <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/autogrid.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/index.css"/>
+
+        <!--<script type="text/javascript" src="{{ site.baseurl }}/js/frame.js"></script>-->
+
+        <!--[if lt IE 9]>
+            <script src="{{ site.baseurl }}/js/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+
+        <div id="navigationBar">
+            <div id="navigator">
+                <a href="{{ site.baseurl }}/index.html"><p>Website homepage</p></a>
+                <a href="{{ site.baseurl }}/blog.html"><p>Blog - Latest articles</p></a>
+                <p>Contact to the auther</p>
+            </div>
+            <p id="title">{{ page.title }}</p>
+            <a href="https://github.com/wenyuzhao/wenyuzhao.github.io">
+                <img id="githubIcon" src="{{ site.baseurl }}/img/Octocat.jpg"/>
+            </a>
+        </div>
+
+        <div id="content">
+
+            {{ content }}
+
+        </div>
+    </body>
+</html>

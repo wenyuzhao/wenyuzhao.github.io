@@ -1,0 +1,32 @@
+table.auto-grid {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.auto-grid tr {
+    padding: 0;
+    margin: 0;
+}
+
+table.auto-grid td {
+    padding: 0;
+    margin: 0;
+}
+
+/* <= 568px */
+@media screen and (max-width: 35.5em) {
+
+    table.auto-grid tr {
+        /*margin-bottom: 10px;*/
+        display: block;
+    }
+
+    table.auto-grid td {
+        display: block;
+    }
+
+}
