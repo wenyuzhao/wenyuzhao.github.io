@@ -5,12 +5,12 @@ $ = function() {
 
 function resizeTable() {
     var autoCells = $("table.auto-grid td");
-    for(var cell in autoCells) {
-        cell.style.height = cell.style.width;
+    for(var i in autoCells) {
+        autoCells[i].height = autoCells[i].clientWidth;
     }
     var cellImages = $("table.auto-grid img");
-    for(var img in cellImages) {
-        img.style.maxWidth = img.parentNode.style.width;
+    for(var i in cellImages) {
+        cellImages[i].style.maxWidth = cellImages[i].parentNode.clientWidth + "px";
     }
 }
 
