@@ -1,6 +1,6 @@
 ---
 title: Master Theorem
-layout: blog
+layout: default
 import:
 - disqus
 - latex
