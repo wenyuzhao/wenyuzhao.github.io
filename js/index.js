@@ -3,7 +3,7 @@ $ = function() {
 };
 
 
-function resizeTable {
+function resizeTable() {
     autoCells = $("table.auto-grid > td");
     for(var cell in autoCells) {
         cell.style.height = cell.style.width;
