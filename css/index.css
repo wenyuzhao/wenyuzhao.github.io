@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     border-bottom: 1px dashed #212121;
-    height: auto;
+    height: 9rem;
 }
 
 .logo {
@@ -23,7 +23,9 @@
 }
 
 .description {
-    position: relative;
-    margin: 1rem;
-    margin-top: 7rem;
+    position: absolute;
+    left: 1rem;
+    top: 7rem;
+    height: 1rem;
+    font-size: 1rem;
 }
