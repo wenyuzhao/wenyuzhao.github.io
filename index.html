@@ -9,20 +9,8 @@ layout: blog
     padding: 0;
     border-bottom: 1px dashed #212121;
 }
-.logo {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    left: 10%;
-    top: 0;
-    color: black;
-}
 .text {
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    left: 0;
-    top: 80%;
+    margin: 0;
     text-align: center;
     color: black;
 }
@@ -33,21 +21,23 @@ layout: blog
     <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
     <p class="text">Github</p>
 </a>
+
 <a class="item">
     <p class="text">AutoJS</p>
 </a>
+
 <a class="item">
     <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
     <p class="text">Github</p>
 </a>
 
 <script type="text/javascript">
-    function resize() {
+    /*function resize() {
         var items = document.querySelectorAll(".item");
         for(var i in items) {
             items[i].style.height = items[i].clientWidth + "px";
         }
     }
     window.addEventListener("load", resize);
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", resize);*/
 </script>
