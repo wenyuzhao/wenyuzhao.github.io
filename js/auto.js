@@ -35,9 +35,11 @@ Auto.resize.grid = function(grid) {
     }
     if(cols == -1) cols = columns[__i];
 
+
+    var w = (grid.clientWidth - spacing * (cols - 1)) / cols, h = w;
+
     for(var i=0; i<grid.children.length; i++) {
         var item = grid.children[i];
-        var w = (grid.clientWidth - spacing * (cols - 1)) / cols, h = w;
         var x = (i % cols) * (w + spacing);
         var y = Math.floor(i / cols) * (h + spacing);
         item.setCSS({
@@ -52,6 +54,11 @@ Auto.resize.grid = function(grid) {
             "maxHeight": h + "px"
         });
     }
+
+    grid.setCSS({
+        "height": Math.floor(grid.children.length-1 / cols) * (h + spacing) + h + "px"
+    });
+
 };
 /*
 Auto.move = function(item, x, y) {
