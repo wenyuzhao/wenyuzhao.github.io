@@ -12,7 +12,7 @@
     height: 5rem;
 }
 
-p.text {
+.text {
     position: absolute;
     left: 7rem;
     top: 1rem;
@@ -23,5 +23,5 @@ p.text {
 .description {
     margin: 1rem;
     margin-top: 7rem;
-    
+
 }
