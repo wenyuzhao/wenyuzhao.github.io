@@ -20,6 +20,8 @@
     top: 0rem;
     height: 5rem;
     font-size: 5rem;
+    text-wrap: none;
+    overflow: auto;
 }
 
 .description {
@@ -28,4 +30,6 @@
     top: 7rem;
     height: 1rem;
     font-size: 1rem;
+    text-wrap:none;
+    overflow: auto;
 }
