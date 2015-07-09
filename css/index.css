@@ -5,20 +5,23 @@
 }
 
 .logo {
-    display: inline;
-    margin: 8px;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
     width: 5rem;
-    height: auto;
+    height: 5rem;
 }
 
-.text {
-    display: inline;
-    margin: 8px;
-    white-space: nowrap;
-    font-size: 2rem
+p.text {
+    position: absolute;
+    left: 7rem;
+    top: 1rem;
+    height: 5rem;
+    font-size: 5rem;
 }
 
 .description {
-    display: block;
-    margin: 8px;
+    margin: 1rem;
+    margin-top: 7rem;
+    
 }
