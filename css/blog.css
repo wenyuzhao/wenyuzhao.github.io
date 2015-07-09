@@ -94,7 +94,36 @@ a:active  { color: white; background: #2196F3; }
 #content a:active  { background: #9C27B0; color: white; }
 
 
+
 @media screen and (max-width: 200mm) {
+
+    #title {
+        position: relative;
+        width: 90vw;
+        height: auto;
+        max-width: 90vw;
+        min-height: 20vh;
+        margin-top: 15vh;
+        margin-left: 5vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        background: transparent;
+        color: white;
+        font-size: 10vh;
+        word-wrap: break-word;
+    }
+
+    #date {
+        position: relative;
+        width: 90vw;
+        height: auto;
+        padding-top: 0;
+        margin-top: 0;
+        margin-left: 5vw;
+        background: transparent;
+        color: #2196F3;
+        font-size: 5mm;
+    }
 
 	#content {
 		position: relative;
