@@ -9,6 +9,12 @@ layout: blog
     padding: 0;
     border-bottom: 1px dashed #212121;
 }
+
+.item a {
+    margin: 0;
+    padding: 0;
+}
+
 .text {
     margin: 0;
     text-align: center;
@@ -17,19 +23,25 @@ layout: blog
 
 </style>
 
-<a class="item">
-    <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
-    <p class="text">Github</p>
-</a>
+<div class="item">
+    <a>
+        <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
+        <p class="text">Github</p>
+    </a>
+</div>
 
-<a class="item">
-    <p class="text">AutoJS</p>
-</a>
+<div class="item">
+    <a>
+        <p class="text">AutoJS</p>
+    </a>
+</div>
 
-<a class="item">
-    <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
-    <p class="text">Github</p>
-</a>
+<div class="item">
+    <a>
+        <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
+        <p class="text">Github</p>
+    </a>
+</div>
 
 <script type="text/javascript">
     /*function resize() {
