@@ -55,12 +55,12 @@ Auto.resize.grid = function(grid) {
         });
     }
 
+    console.log(Math.floor(grid.children.length-1 / cols))
+
     grid.setCSS({
         "height": ( Math.floor(grid.children.length-1 / cols) * (h + spacing) + h) + "px"
     });
 
-    alert(grid.clientWidth)
-    alert(grid.clientHeight)
 
 };
 /*
