@@ -14,9 +14,11 @@ table.auto-grid {
 }
 
 table td {
-    position: absolute;
-    left: 0;
-    top: 0;
+    padding: 0;
     background-color: white;
     margin: 4px;
+}
+
+table > img {
+    max-width: 100%;
 }
