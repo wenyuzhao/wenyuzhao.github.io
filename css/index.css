@@ -52,7 +52,7 @@ body {
     color: black;
 }
 
-.auto-grid .auto-item p {
+.auto-grid .auto-item .text {
     position: absolute;
     width: 100%;
     height: 20%;
