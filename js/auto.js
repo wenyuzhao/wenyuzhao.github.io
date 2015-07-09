@@ -53,6 +53,17 @@ Auto.resize.grid = function(grid) {
         });
     }
 };
+/*
+Auto.move = function(item, x, y) {
+    var v = 20;
+    var i = setInterval(function() {
+
+    }, 40);
+}
+*/
+
+
+
 
 
 function resizeGrids() {
