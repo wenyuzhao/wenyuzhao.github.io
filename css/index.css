@@ -21,7 +21,6 @@
     height: 5rem;
     font-size: 5rem;
     text-wrap: none;
-    overflow: auto;
 }
 
 .description {
@@ -31,5 +30,4 @@
     height: 1rem;
     font-size: 1rem;
     text-wrap:none;
-    overflow: auto;
 }
