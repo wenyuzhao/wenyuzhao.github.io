@@ -40,29 +40,20 @@ layout: default
 
     .item:first {
         border-bottom: 1px solid white;
+        background: #43A047;
     }
 
-    .te {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 80%;
-        font-size: 32px;
-        height: 32px;
-        border: 1px solid #2196F3;
+    .addBtn {
+        color: #4CAF50;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
     }
-    .btn {
-        position: absolute;
-        right: 1px;
-        top: 1px;
-        width: 19%;
-        font-size: 30px;
-        height: 32px;
-        bottom: 1px;
-        background: #4CAF50;
-        border: 0px;
-        padding: 0;
-        border-radius: 1px;
+    .clearBtn {
+        color: red;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
     }
 </style>
 
@@ -70,33 +61,38 @@ layout: default
 
 <div id="EditPanel">
     <div class="item" onclick="showDataPanel(this)">Edit...</div>
-    <div class='item' style='height: 32px;'>
-        <input type='text' class='te'/>
-        <input type='button' onclick='setRestaurant()' value='ADD' class='btn'/>
-    </div>
+    <div class='item addBtn' onclick='setRestaurant()'>ADD</div>
+    <div class="item clearBtn" onclick="clear()">clear all</div>
 </div>
  
 <script type="text/javascript">
 
-    function setRestaurant() {
-        var dom = document.querySelectorAll('input.te')[0];
-        eval('var len = ' + window.localStorage.restaurant_size)
-        window.localStorage.restaurant_size = (len + 1) + "";
-        window.localStorage[""+len] = dom.value;
+    function clear() {
+        //var r = confirm("This function will clear all restaurant records.\nAre you sure to continue?");
+        //if(r) window.localStorage.clear();
+        //.removeItem(0)
+
+        var name = prompt("Enter the restaurant name you want to delete:");
+        window.localStorage.removeItem(name);
+
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
-        
-        console.log(window.localStorage[""+len]);
+    }
+
+    function setRestaurant() {
+        var name = prompt("Enter a restaurant name:");
+        window.localStorage[name] = 1;
+
+        setPanel(document.querySelectorAll('div#EditPanel')[0]);
     }
 
     function setData(dom) {
-        eval('var len = ' + window.localStorage.restaurant_size);
-        if(len > 0) {
+        if(window.localStorage.length > 0) {
             var data = [];
-            for(var i=0; i<len; i++)
-                data.push(window.localStorage[''+i]);
-            console.log(data);
-            var currentRestaurantIndex = Math.floor(Math.random() * len);
-            var currentRestaurant = data[currentRestaurantIndex];
+            for(var i : window.localStorage)
+                data.push(i);
+
+            var index = Math.floor(Math.random() * window.localStorage.length);
+            var currentRestaurant = data[index];
             dom.innerHTML = "" + currentRestaurant;
         }
         else {
@@ -104,36 +100,26 @@ layout: default
         }
     }
 
-    function appendItem(dom, data, index) {
-        
-        dom.innerHTML += "<div class='item'>" + index + ". " + data + "</div>";
+    function appendItem(dom, data) {
+        dom.innerHTML += "<div class='item'>" + data + "</div>";
     }
 
     function setPanel(dom) {
         dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Edit...</div>";
-        if(window.localStorage.restaurant_size) {
-            eval('var len = ' + window.localStorage.restaurant_size);
-            for(var i=0; i<len; i++) {
-                appendItem(dom, window.localStorage[''+i], i);
-            }
+
+        for(var i : window.localStorage) {
+            appendItem(dom, i);
         }
-        dom.innerHTML += "<div class='item' style='height: 32px;'><input type='text' class='te'/><input type='button' onclick='setRestaurant()' value='ADD' class='btn'/></div>";
+
+        dom.innerHTML += "<div class='item addBtn' onclick='setRestaurant()'>ADD</div><div class='item clearBtn' onclick='clear()'>clear all</div>";
     }
 
     function showDataPanel(e) {
-        var dom = e.parentNode;
-        //var len = eval(window.localStorage.restaurant_size || 0);
-        setPanel(dom);
+        setPanel(e.parentNode);
     }
 
     window.onload = function() {
-        try{
-        if(window.localStorage.restaurant_size) {}
-        else { window.localStorage.restaurant_size = "0"; }
-        
-        setPanel(document.querySelectorAll('div#EditPanel')[0])
-        }catch(e){alert(e)}
-        alert('ok')
+        setPanel(document.querySelectorAll('div#EditPanel')[0]);
     };
 
 </script>
