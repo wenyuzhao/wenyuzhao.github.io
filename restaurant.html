@@ -79,7 +79,7 @@ layout: default
 
     function setRestaurant() {
         var dom = document.querySelectorAll('input.te')[0];
-        var len = Number.parseInt(window.localStorage.restaurant_size);
+        eval('var len = ' + window.localStorage.restaurant_size)
         window.localStorage.restaurant_size = (len + 1) + "";
         window.localStorage[""+len] = dom.value;
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
@@ -88,9 +88,8 @@ layout: default
     }
 
     function setData(dom) {
-        var len = Number.parseInt(window.localStorage.restaurant_size);
+        eval('var len = ' + window.localStorage.restaurant_size);
         if(len > 0) {
-            var len = Number.parseInt(window.localStorage.restaurant_size);
             var data = [];
             for(var i=0; i<len; i++)
                 data.push(window.localStorage[''+i]);
@@ -112,7 +111,7 @@ layout: default
     function setPanel(dom) {
         dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Edit...</div>";
         if(window.localStorage.restaurant_size) {
-            var len = Number.parseInt(window.localStorage.restaurant_size);
+            eval('var len = ' + window.localStorage.restaurant_size);
             for(var i=0; i<len; i++) {
                 appendItem(dom, window.localStorage[''+i], i);
             }
@@ -122,7 +121,7 @@ layout: default
 
     function showDataPanel(e) {
         var dom = e.parentNode;
-        var len = Number.parseInt(window.localStorage.restaurant_size || 0);
+        //var len = eval(window.localStorage.restaurant_size || 0);
         setPanel(dom);
     }
 
