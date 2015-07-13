@@ -69,7 +69,7 @@ layout: default
 
     function setRestaurant() {
         var dom = document.querySelectorAll('input.te')[0];
-        var len = window.localStorage.restaurant_size;
+        var len = Number.parseInt(window.localStorage.restaurant_size);
         window.localStorage.restaurant_size = (len + 1) + "";
         window.localStorage[""+len] = dom.innerHTML;
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
@@ -95,6 +95,7 @@ layout: default
     }
 
     function appendItem(dom, data, index) {
+        
         dom.innerHTML += "<div class='item'>" + index + ". " + data + "</div>";
     }
 
@@ -116,6 +117,7 @@ layout: default
     }
 
     window.onload = function() {
+        window.localStorage.restaurant_size = '0';
         if(window.localStorage.restaurant_size) {}
         else { window.localStorage.restaurant_size = "0"; }
     };
