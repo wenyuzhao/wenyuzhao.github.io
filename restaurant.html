@@ -46,14 +46,14 @@ layout: default
         left: 0;
         top: 0;
         width: 80%;
-        height: 1.5em;
+        font-size: inherit;
     }
     .btn {
         position: absolute;
         right: 0;
         top: 0;
         width: 20%;
-        height: 2.5em;
+        font-size: inherit;
     }
 </style>
 
@@ -71,6 +71,8 @@ layout: default
         window.localStorage.restaurant_size = (len + 1) + "";
         window.localStorage[""+len] = dom.innerHTML;
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
+        
+        console.log(window.localStorage[""+len]);
     }
 
     function setData(dom) {
