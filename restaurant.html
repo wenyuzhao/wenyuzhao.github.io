@@ -62,7 +62,7 @@ layout: default
 <div id="EditPanel">
     <div class="item">Restaurants:</div>
     <div class='item addBtn' onclick='setRestaurant()'>ADD</div>
-    <div class="item clearBtn" onclick="clearItem()">clear</div>
+    <div class="item clearBtn" onclick="clearItem()">Delete</div>
 </div>
  
 <script type="text/javascript">
@@ -72,7 +72,8 @@ layout: default
         //if(r) window.localStorage.clear();
         //.removeItem(0)
 
-        var name = window.prompt("Enter the restaurant name you want to delete:");
+        var name = window.prompt("Enter the restaurant name you want to delete.\nInput '__all__' will clear all.");
+        if(name == "__all__") window.localStorage.clear();
         window.localStorage.removeItem(name);
 
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
@@ -112,7 +113,7 @@ layout: default
         }
 
         dom.innerHTML += "<div class='item addBtn' onclick='setRestaurant()'>ADD</div>";
-        dom.innerHTML += "<div class='item clearBtn' onclick='clearItem()'>clear</div>";
+        dom.innerHTML += "<div class='item clearBtn' onclick='clearItem()'>Delete</div>";
     }
 
     function showDataPanel(e) {
