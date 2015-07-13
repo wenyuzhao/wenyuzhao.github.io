@@ -1,0 +1,120 @@
+---
+title: Restaurant
+layout: default
+---
+
+<style type="text/css">
+    #cuerrentRestaurant {
+        position: relative;
+        display: block;
+        margin-left: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: inherit;
+        height: 1rem;
+        background: #4CAF50;
+        color: black;
+    }
+    #EditPanel {
+        position: relative;
+        display: block;
+        margin-left: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: inherit;
+        height: 1rem;
+        background: #2196F3;
+        color: black;
+        overflow: hidden;
+    }
+
+    .item {
+        position: relative;
+        display: block;
+        margin-left: 0;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        width: inherit;
+        height: 1rem;
+        background: #2196F3;
+        color: black;
+    }
+
+    .item:first {
+        border-bottom: 1px solid white;
+    }
+
+    .te {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 1rem;
+    }
+    .btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20%;
+        height: 1rem;
+    }
+</style>
+
+<div id="currentRestaurant" onclick="setData(this)">Click me :)</div>
+
+<div id="EditPanel" onclick="showDataPanel(this)">
+    <div class="item">Edit...</div>
+</div>
+ 
+<script type="text/javascript">
+
+    function setRestaurant() {
+        var dom = document.querySelectorAll('input.te')[0];
+        var len = window.localStorage.restaurant_size;
+        window.localStorage.restaurant_size = (len + 1) + "";
+        window.localStorage[""+len] = dom.innerHTML;
+        setPanel(document.querySelectorAll('div#EditPanel')[0]);
+    }
+
+    function setData(dom) {
+        if(window.localStorage.restaurant_size) {
+            var len = Number.parse(window.localStorage.restaurant_size);
+            var data = [];
+            for(var i=0; i<len; i++)
+                data.push(window.localStorage[''+i]);
+            var currentRestaurantIndex = Math.floor(Math.random() * len);
+            var currentRestaurant = data[currentRestaurantIndex];
+            dom.innerHTML = "" + currentRestaurant;
+        }
+        else {
+            alert("Please set the fucking restaurant names first!!!");
+        }
+    }
+
+    function appendItem(dom, data, index) {
+        dom.innerHTML += "<div class='item'>" + index + ". " + data + "</div>";
+    }
+
+    function setPanel(dom) {
+        dom.innerHTML = "<div class='item'>Edit...</div>";
+        if(window.localStorage.restaurant_size) {
+            var len = Number.parse(window.localStorage.restaurant_size);
+            for(var i=0; i<len; i++) {
+                appendItem(dom, window.localStorage[''+i], i);
+            }
+        }
+        dom.innerHTML += "<div class='item'><input type='text' class='te'/><input type='button' onclick='setRestaurant()' value='ADD' class='btn'/></div>";
+    }
+
+    function showDataPanel(dom) {
+        var len = Number.parse(window.localStorage.restaurant_size || 0);
+        dom.style.height = (len + 2) + "rem";
+        setPanel(dom);
+    }
+
+    window.onload = function() {
+        if(window.localStorage.restaurant_size) {}
+        else { window.localStorage.restaurant_size = "0"; }
+    };
+
+</script>
