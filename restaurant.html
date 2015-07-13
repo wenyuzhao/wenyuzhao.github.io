@@ -62,12 +62,12 @@ layout: default
 <div id="EditPanel">
     <div class="item">Restaurants:</div>
     <div class='item addBtn' onclick='setRestaurant()'>ADD</div>
-    <div class="item clearBtn" onclick="clear()">clear</div>
+    <div class="item clearBtn" onclick="clearItem()">clear</div>
 </div>
  
 <script type="text/javascript">
 
-    function clear() {
+    function clearItem() {
         //var r = confirm("This function will clear all restaurant records.\nAre you sure to continue?");
         //if(r) window.localStorage.clear();
         //.removeItem(0)
@@ -112,7 +112,7 @@ layout: default
         }
 
         dom.innerHTML += "<div class='item addBtn' onclick='setRestaurant()'>ADD</div>";
-        dom.innerHTML += "<div class='item clearBtn' onclick='clear()'>clear</div>";
+        dom.innerHTML += "<div class='item clearBtn' onclick='clearItem()'>clear</div>";
     }
 
     function showDataPanel(e) {
