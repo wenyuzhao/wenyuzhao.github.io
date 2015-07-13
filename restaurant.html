@@ -81,6 +81,7 @@ layout: default
 
     function setRestaurant() {
         var name = window.prompt("Enter a restaurant name:");
+        if(name == undefined || name == "") return;
         window.localStorage[name] = 1;
 
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
