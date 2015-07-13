@@ -105,7 +105,7 @@ layout: default
     }
 
     function setPanel(dom) {
-        dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Edit...</div>";
+        dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Restaurants:</div>";
 
         for(var i in window.localStorage) {
             appendItem(dom, i);
