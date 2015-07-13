@@ -71,7 +71,7 @@ layout: default
         var dom = document.querySelectorAll('input.te')[0];
         var len = Number.parseInt(window.localStorage.restaurant_size);
         window.localStorage.restaurant_size = (len + 1) + "";
-        window.localStorage[""+len] = dom.getAttribute('value');
+        window.localStorage[""+len] = dom.value;
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
         
         console.log(window.localStorage[""+len]);
