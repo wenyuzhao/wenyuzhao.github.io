@@ -60,7 +60,7 @@ layout: default
 <div id="currentRestaurant" onclick="setData(this)">Click me :)</div>
 
 <div id="EditPanel">
-    <div class="item" onclick="showDataPanel(this)">Edit...</div>
+    <div class="item">Restaurants:</div>
     <div class='item addBtn' onclick='setRestaurant()'>ADD</div>
     <div class="item clearBtn" onclick="clear()">clear all</div>
 </div>
@@ -79,7 +79,7 @@ layout: default
     }
 
     function setRestaurant() {
-        var name = prompt("Enter a restaurant name:");
+        var name = window.prompt("Enter a restaurant name:");
         window.localStorage[name] = 1;
 
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
@@ -88,7 +88,7 @@ layout: default
     function setData(dom) {
         if(window.localStorage.length > 0) {
             var data = [];
-            for(var i : window.localStorage)
+            for(var i in window.localStorage)
                 data.push(i);
 
             var index = Math.floor(Math.random() * window.localStorage.length);
@@ -107,7 +107,7 @@ layout: default
     function setPanel(dom) {
         dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Edit...</div>";
 
-        for(var i : window.localStorage) {
+        for(var i in window.localStorage) {
             appendItem(dom, i);
         }
 
