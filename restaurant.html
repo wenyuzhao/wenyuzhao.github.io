@@ -69,6 +69,10 @@ layout: default
 
 <div id="EditPanel">
     <div class="item" onclick="showDataPanel(this)">Edit...</div>
+    <div class='item' style='height: 32px;'>
+        <input type='text' class='te'/>
+        <input type='button' onclick='setRestaurant()' value='ADD' class='btn'/>
+    </div>
 </div>
  
 <script type="text/javascript">
@@ -125,6 +129,8 @@ layout: default
     window.onload = function() {
         if(window.localStorage.restaurant_size) {}
         else { window.localStorage.restaurant_size = "0"; }
+        
+        setPanel(document.querySelectorAll('div#EditPanel')[0])
     };
 
 </script>
