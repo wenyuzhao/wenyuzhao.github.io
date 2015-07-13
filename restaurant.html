@@ -39,7 +39,7 @@ layout: default
         color: black;
     }
 
-    #EditPanel:first-child {
+    .rsts {
         border-bottom: 1px solid white;
         background: #43A047;
     }
@@ -61,7 +61,7 @@ layout: default
 <div id="currentRestaurant" onclick="setData(this)">Click me :)</div>
 
 <div id="EditPanel">
-    <div class="item">Restaurants:</div>
+    <div class="item rsts">Restaurants:</div>
     <div class='item addBtn' onclick='setRestaurant()'>ADD</div>
     <div class="item clearBtn" onclick="clearItem()">Delete</div>
 </div>
@@ -108,7 +108,7 @@ layout: default
     }
 
     function setPanel(dom) {
-        dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Restaurants:</div>";
+        dom.innerHTML = "<div class='item rsts'>Restaurants:</div>";
 
         for(var i in window.localStorage) {
             appendItem(dom, i);
@@ -117,11 +117,11 @@ layout: default
         dom.innerHTML += "<div class='item addBtn' onclick='setRestaurant()'>ADD</div>";
         dom.innerHTML += "<div class='item clearBtn' onclick='clearItem()'>Delete</div>";
     }
-
+/*
     function showDataPanel(e) {
         setPanel(e.parentNode);
     }
-
+*/
     window.onload = function() {
         setPanel(document.querySelectorAll('div#EditPanel')[0]);
     };
