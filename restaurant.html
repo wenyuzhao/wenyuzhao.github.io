@@ -78,7 +78,7 @@ layout: default
 
     function setData(dom) {
         if(window.localStorage.restaurant_size) {
-            var len = Number.parse(window.localStorage.restaurant_size);
+            var len = Number.parseInt(window.localStorage.restaurant_size);
             var data = [];
             for(var i=0; i<len; i++)
                 data.push(window.localStorage[''+i]);
@@ -98,7 +98,7 @@ layout: default
     function setPanel(dom) {
         dom.innerHTML = "<div class='item'>Edit...</div>";
         if(window.localStorage.restaurant_size) {
-            var len = Number.parse(window.localStorage.restaurant_size);
+            var len = Number.parseInt(window.localStorage.restaurant_size);
             for(var i=0; i<len; i++) {
                 appendItem(dom, window.localStorage[''+i], i);
             }
@@ -107,7 +107,7 @@ layout: default
     }
 
     function showDataPanel(dom) {
-        var len = Number.parse(window.localStorage.restaurant_size || 0);
+        var len = Number.parseInt(window.localStorage.restaurant_size || 0);
         dom.style.height = (len + 2) + "rem";
         setPanel(dom);
     }
