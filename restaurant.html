@@ -11,7 +11,6 @@ layout: default
         margin-top: 1em;
         margin-bottom: 1em;
         width: inherit;
-        height: 1em;
         background: #4CAF50;
         color: black;
     }
@@ -22,7 +21,6 @@ layout: default
         margin-top: 1em;
         margin-bottom: 1em;
         width: inherit;
-        height: 1em;
         background: #2196F3;
         color: black;
         overflow: hidden;
@@ -35,7 +33,6 @@ layout: default
         margin-top: 0em;
         margin-bottom: 0em;
         width: inherit;
-        height: 1em;
         background: #2196F3;
         color: black;
     }
@@ -49,14 +46,14 @@ layout: default
         left: 0;
         top: 0;
         width: 80%;
-        height: 1em;
+        height: 1.5em;
     }
     .btn {
         position: absolute;
         right: 0;
         top: 0;
         width: 20%;
-        height: 1em;
+        height: 2.5em;
     }
 </style>
 
@@ -110,7 +107,6 @@ layout: default
     function showDataPanel(e) {
         var dom = e.parentNode;
         var len = Number.parseInt(window.localStorage.restaurant_size || 0);
-        dom.style.height = (len + 2) + "em";
         setPanel(dom);
     }
 
