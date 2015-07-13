@@ -127,10 +127,13 @@ layout: default
     }
 
     window.onload = function() {
+        try{
         if(window.localStorage.restaurant_size) {}
         else { window.localStorage.restaurant_size = "0"; }
         
         setPanel(document.querySelectorAll('div#EditPanel')[0])
+        }catch(e){alert(e)}
+        alert('ok')
     };
 
 </script>
