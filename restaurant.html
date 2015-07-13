@@ -62,8 +62,8 @@ layout: default
 
 <div id="currentRestaurant" onclick="setData(this)">Click me :)</div>
 
-<div id="EditPanel" onclick="showDataPanel(this)">
-    <div class="item">Edit...</div>
+<div id="EditPanel">
+    <div class="item" onclick="showDataPanel(this)">Edit...</div>
 </div>
  
 <script type="text/javascript">
@@ -97,7 +97,7 @@ layout: default
     }
 
     function setPanel(dom) {
-        dom.innerHTML = "<div class='item'>Edit...</div>";
+        dom.innerHTML = "<div class='item' onclick='showDataPanel(this)'>Edit...</div>";
         if(window.localStorage.restaurant_size) {
             var len = Number.parseInt(window.localStorage.restaurant_size);
             for(var i=0; i<len; i++) {
@@ -107,7 +107,8 @@ layout: default
         dom.innerHTML += "<div class='item'><input type='text' class='te'/><input type='button' onclick='setRestaurant()' value='ADD' class='btn'/></div>";
     }
 
-    function showDataPanel(dom) {
+    function showDataPanel(e) {
+        var dom = e.parentNode;
         var len = Number.parseInt(window.localStorage.restaurant_size || 0);
         dom.style.height = (len + 2) + "em";
         setPanel(dom);
