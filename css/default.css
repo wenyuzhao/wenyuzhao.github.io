@@ -94,6 +94,7 @@ a:active  { color: white; background: #2196F3; }
 #content a:active  { color: #000000; }
 */
 
+#content a:visited { color: #9C27B0; }
 
 @media screen and (max-width: 200mm) {
 
