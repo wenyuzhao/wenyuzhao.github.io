@@ -93,7 +93,7 @@ React.render(
     
         <UI.AutoDiv style={ CSS.autoDiv } image={ 'img/index/autojs.jpg' }>
             <UI.Index.Item title={ 'AutoJS' } subTitle={ 'a smarter way to adjust GUI.' } href={ 'https://github.com/wenyuzhao/AutoJS' } description={
-                'AutoJS is a JavaScript library which uses mechine learning techniques to record and analyze webpage click/touch events to adjust position, size and color of each DOM node to improve user experience.'
+                'AutoJS is a JavaScript library which uses mechine learning techniques to record and analyze webpage clicking/touching events to adjust position, size and color of each DOM node to improve user experience.'
             }/>
         </UI.AutoDiv>
         <UI.AutoDiv style={ CSS.autoDiv } image={ 'img/index/num.jpg' }>
