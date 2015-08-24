@@ -57,9 +57,9 @@ UI.Index.Item = React.createClass({
     },
     render: function() {
         var dom = (
-            <UI.Surface style={{ position: 'absolute', width: '100%', height: '100%', left: '0', top: '0', overflow: 'hidden', color: 'black' }}>
+            <UI.Surface id='section' style={{ position: 'absolute', width: '100%', height: '100%', left: '0', top: '0', overflow: 'hidden', color: 'black' }}>
                 <UI.Surface style={{ position: 'absolute', width: '80%', height: '30%', left: '10%', top: '10%', overflow: 'hidden', overflowX: 'auto' }}>
-                    <UI.Label style={{ position: 'relative', display: 'inline-block', fontSize: Device.desktop? '5rem' : '1.5rem' }} text={ this.props.title }/>
+                    <UI.Label id='title' style={{ position: 'relative', display: 'inline-block', fontSize: Device.desktop? '5rem' : '1.5rem' }} text={ this.props.title }/>
                     <UI.Label style={{ position: 'relative', display: 'inline-block', fontSize: Device.desktop? '3rem' : '1rem' }} text={ this.props.subTitle ? ': ' + this.props.subTitle : '' }/>
                 </UI.Surface>
                 <UI.Label style={{ position: 'absolute', width: '80%', height: Device.desktop? '40%' : '50%', left: '10%', bottom: '10%', overflowY: 'auto', fontSize: Device.desktop? '2rem' : '1rem', wordWrap: 'break-word', wordBreak: 'normal' }} text={ this.props.description }/>
@@ -68,7 +68,7 @@ UI.Index.Item = React.createClass({
 
         if(this.props.href)
             return (
-                <UI.Link href={ this.props.href } style={{ position: 'absolute', width: '100%', height: '100%', left: '0', top: '0' }} onTouchStart={ this.handleMouseOver } onTouchCancel={ this.handleMouseOut } onTouchEnd={ this.handleMouseOut } onMouseOver={ this.handleMouseOver } onMouseOut={ this.handleMouseOut }>
+                <UI.Link id='link' href={ this.props.href } style={{ position: 'absolute', width: '100%', height: '100%', left: '0', top: '0' }} onTouchStart={ this.handleMouseOver } onTouchCancel={ this.handleMouseOut } onTouchEnd={ this.handleMouseOut } onMouseOver={ this.handleMouseOver } onMouseOut={ this.handleMouseOut }>
                     { dom }
                 </UI.Link>
             );
@@ -88,7 +88,7 @@ UI.Index.Item = React.createClass({
 
 
 React.render(
-    <UI.ListView>
+    <UI.ListView id='main'>
         <UI.Index.CoverCanvas/>
     
         <UI.AutoDiv style={ CSS.autoDiv } image={ 'img/index/autojs.jpg' }>
