@@ -2,9 +2,9 @@
 var Device = {
     desktop: document.documentElement.clientWidth > document.documentElement.clientHeight,
     mobile:  document.documentElement.clientWidth <= document.documentElement.clientHeight,
-    edge: navigator.userAgent.indexOf('Edge') >= 0 || navigator.userAgent.indexOf('MSIE') >= 0
+    edge: navigator.userAgent.indexOf('Edge') >= 0,
+    ie: navigator.userAgent.indexOf('MSIE') >= 0
 }
-
 
 
 var CSS = CSS || {};
@@ -153,7 +153,7 @@ Math.hypot = Math.hypot || function(a, b) {
         },
         text: function(x, y, str) {
             context.fillStyle = "#2196f3";
-            if(Device.edge) context.font = (rect.h / 5) + "px Arial";
+            if(Device.edge || Device.ie) context.font = (rect.h / 5) + "px Arial";
             else if(Device.desktop) context.font = "20rem Century Gothic";
             else context.font = "10rem sans-serif";
             context.textAlign = 'center';
