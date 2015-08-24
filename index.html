@@ -1,40 +1,28 @@
----
-title: Wenyu Zhao
-layout: default
----
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
+        <script src="js/react/libs/react-with-addons.js"></script>
+        <script src="js/react/libs/JSXTransformer.js"></script>
 
-<a href="{{ site.baseurl }}/blog.html">
-    <div class="item">
-        <img class="logo" src="{{ site.baseurl }}/img/icon.png"/>
-        <div class="text">Blog</div>
-        <div class="description">My Blog site.</div>
-    </div>
-</a>
+        <script type="text/javascript">
+            var ViewportMetrics = { currentScrollTop: 0 };
+            window.addEventListener('load', function(event) {
+                window.addEventListener('scroll', function(event) {
+                    ViewportMetrics.currentScrollTop = document.body.scrollTop;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <script type="text/jsx" src="js/react/mixins/ScrollListenerMixin.js"></script>
+        
+        <script type="text/jsx" src="js/react/components/ui.basic.js"></script>
+        <script type="text/jsx" src="js/react/components/ui.js"></script>
 
-<a href="{{ site.baseurl }}/js/auto.js">
-    <div class="item">
-        <img class="logo" src="{{ site.baseurl }}/img/404.jpg"/>
-        <div class="text">AutoJS</div>
-        <div class="description">My GitHub</div>
-    </div>
-</a>
-
-<a href="http://github.com/wenyuzhao">
-    <div class="item">
-        <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
-        <div class="text">Github</div>
-        <div class="description">My GitHub</div>
-    </div>
-</a>
-
-<a href="http://github.com/wenyuzhao/wenyuzhao.github.io">
-    <div class="item">
-        <img class="logo" src="{{ site.baseurl }}/img/Octocat.jpg"/>
-        <div class="text">Source code</div>
-        <div class="description">Source code of wenyuzhao.me</div>
-    </div>
-</a>
-
+        <script type="text/jsx" src="js/index.js"></script>
+    </body>
+</html>
