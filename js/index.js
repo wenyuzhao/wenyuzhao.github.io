@@ -2,7 +2,7 @@
 var Device = {
     desktop: document.documentElement.clientWidth > document.documentElement.clientHeight,
     mobile:  document.documentElement.clientWidth <= document.documentElement.clientHeight,
-    edge: navigator.userAgent.indexOf('Edge') >= 0
+    edge: navigator.userAgent.indexOf('Edge') >= 0 || navigator.userAgent.indexOf('MSIE') >= 0
 }
 
 
