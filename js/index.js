@@ -129,7 +129,12 @@ window.addEventListener('resize', function() {
 
 try {
 
+Math.hypot = Math.hypot || function(a, b) {
+    return Math.sqrt(a * a + b * b);
+};
+
 (function draw() {
+    
     var canvas = document.getElementById('cover');
     var rect = { w: document.documentElement.clientWidth * 2, h: document.documentElement.clientHeight * 2 };
     var context = canvas.getContext('2d');
