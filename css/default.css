@@ -86,13 +86,13 @@ a:active  { color: white; background: #2196F3; }
 #content p   { font-size: 5mm;   font-weight: lighter; }
 #content img { max-width: 60vw; margin: 0; /*margin-left: -2mm;*/ padding: 0; }
 #content div#disqus_thread { margin-left: 2mm; margin-right: 2mm; }
-
+/*
 #content a         { text-decoration:none; color: #2196F3; }
 #content a:link    { color: #2196F3; }
 #content a:visited { color: #9C27B0; }
 #content a:hover   { color: #2196F3; }
 #content a:active  { color: #000000; }
-
+*/
 
 
 @media screen and (max-width: 200mm) {
