@@ -103,6 +103,11 @@ React.render(
                 'Basic tools of data visualization are also provided.'
             }/>
         </UI.AutoDiv>
+        <UI.AutoDiv style={ CSS.autoDiv } image={ 'img/index/jsobjects.jpg' }>
+            <UI.Index.Item title={ 'JSObjects' } subTitle={ 'js objects in c++' } href={ 'https://github.com/wenyuzhao/JSObjects' } description={
+                'JSObjects is a small c++11 library which enables you to use JavaScript objects in c++ code. '
+            }/>
+        </UI.AutoDiv>
         <UI.AutoDiv style={ CSS.autoDiv } image={ 'img/index/blog.jpg' }>
             <UI.Index.Item title={ 'My Blog' } subTitle={ '' } href={ 'http://wenyuzhao.me/blog.html' } description={
                 'In this blog you can see how lazy I am. :)'
