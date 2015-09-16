@@ -98,7 +98,7 @@ React.render(
         </UI.AutoDiv>
         <UI.AutoDiv style={ CSS.autoDiv } image={ 'img/index/num.jpg' }>
             <UI.Index.Item title={ 'NumTL' } subTitle={ 'c++ numerical analysis library' } href={ 'https://github.com/wenyuzhao/num' } description={
-                'Num Template Library(num) is an numerical analysis library written in c++11. ' +
+                'Num Template Library(num) is a numerical analysis library written in c++11. ' +
                 'Num contains data structures and algorithms in the field of Linear Algebra, Abstract Algebra and Graph Theory. ' +
                 'Basic tools of data visualization are also provided.'
             }/>
