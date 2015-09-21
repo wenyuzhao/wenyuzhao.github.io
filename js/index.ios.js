@@ -1,51 +1,107 @@
 'use strict';
 
 var React = require('react-native');
-var {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} = React;
+var $__0=
+  
+  
+  
+  
+  
+  React,AppRegistry=$__0.AppRegistry,StyleSheet=$__0.StyleSheet,TabBarIOS=$__0.TabBarIOS,Text=$__0.Text,View=$__0.View;
+
+var base64Icon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAQAAACSR7JhAAADtUlEQVR4Ac3YA2Bj6QLH0XPT1F'+
+  'zbtm29tW3btm3bfLZtv7e2ObZnms7d8Uw098tuetPzrxv8wiISrtVudrG2JXQZ4VOv+qUfmqCGGl1mqLhoA52oZlb0mrjsnhKpgeUNEs91Z0pd1kv'+
+  'ihA3ULGVHiQO2narKSHKkEMulm9VgUyE60s1aWoMQUbpZOWE+kaqs4eLEjdIlZTcFZB0ndc1+lhB1lZrIuk5P2aib1NBpZaL+JaOGIt0ls47SKzLC7Cqr'+
+  'lGF6RZ09HGoNy1lYl2aRSWL5GuzqWU1KafRdoRp0iOQEiDzgZPnG6DbldcomadViflnl/cL93tOoVbsOLVM2jylvdWjXolWX1hmfZbGR/wjypDjFLSZIRov09'+
+  'BgYmtUqPQPlQrPapecLgTIy0jMgPKtTeob2zWtrGH3xvjUkPCtNg/tm1rjwrMa+mdUkPd3hWbH0jArPGiU9ufCsNNWFZ40wpwn+62/66R2RUtoso1OB34tnLOcy7Y'+
+  'B1fUdc9e0q3yru8PGM773vXsuZ5YIZX+5xmHwHGVvlrGPN6ZSiP1smOsMMde40wKv2VmwPPVXNut4sVpUreZiLBHi0qln/VQeI/LTMYXpsJtFiclUN+5HVZazim'+
+  '+Ky+7sAvxWnvjXrJFneVtLWLyPJu9K3cXLWeOlbMTlrIelbMDlrLenrjEQOtIF+fuI9xRp9ZBFp6+b6WT8RrxEpdK64BuvHgDk+vUy+b5hYk6zfyfs051gRoNO1us'+
+  'U12WWRWL73/MMEy9pMi9qIrR4ZpV16Rrvduxazmy1FSvuFXRkqTnE7m2kdb5U8xGjLw/spRr1uTov4uOgQE+0N/DvFrG/Jt7i/FzwxbA9kDanhf2w+t4V97G8lrT7wc0'+
+  '8aA2QNUkuTfW/KimT01wdlfK4yEw030VfT0RtZbzjeMprNq8m8tnSTASrTLti64oBNdpmMQm0eEwvfPwRbUBywG5TzjPCsdwk3IeAXjQblLCoXnDVeoAz6SfJNk5TTz'+
+  'ytCNZk/POtTSV40NwOFWzw86wNJRpubpXsn60NJFlHeqlYRbslqZm2jnEZ3qcSKgm0kTli3zZVS7y/iivZTweYXJ26Y+RTbV1zh3hYkgyFGSTKPfRVbRqWWVReaxYeS'+
+  'LarYv1Qqsmh1s95S7G+eEWK0f3jYKTbV6bOwepjfhtafsvUsqrQvrGC8YhmnO9cSCk3yuY984F1vesdHYhWJ5FvASlacshUsajFt2mUM9pqzvKGcyNJW0arTKN1GGGzQl'+
+  'H0tXwLDgQTurS8eIQAAAABJRU5ErkJggg==';
 
 var SampleApp = React.createClass({
+  statics: {
+    title: '<TabBarIOS>',
+    description: 'Tab-based navigation.',
+  },
+
+  displayName: 'TabBarExample',
+
+  getInitialState: function() {
+    return {
+      selectedTab: 'redTab',
+      notifCount: 0,
+      presses: 0,
+    };
+  },
+
+  _renderContent: function(color: string, pageText: string, num?: number) {
+    return (
+      React.createElement(View, {style: [styles.tabContent, {backgroundColor: color}]}, 
+        React.createElement(Text, {style: styles.tabText}, pageText), 
+        React.createElement(Text, {style: styles.tabText}, num, " re-renders of the ", pageText)
+      )
+    );
+  },
+
   render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to the React Native Playground! This is the sample iOS app.
-        </Text>
-        <Text style={styles.instructions}>
-          Just edit and save with Cmd+S. Changed will be reflected immediately in the simulator.
-        </Text>
-
-        <Text style={styles.instructions}>
-          To try out Android, just flip the switch and edit index.android.js!
-        </Text>
-
-      </View>
+      React.createElement(TabBarIOS, {
+        tintColor: "white", 
+        barTintColor: "darkslateblue"}, 
+        React.createElement(TabBarIOS.Item, {
+          title: "Blue Tab", 
+          icon: {uri: base64Icon, scale: 5}, 
+          selected: this.state.selectedTab === 'blueTab', 
+          onPress: function()  {
+            this.setState({
+              selectedTab: 'blueTab',
+            });
+          }.bind(this)}, 
+          this._renderContent('#414A8C', 'Blue Tab')
+        ), 
+        React.createElement(TabBarIOS.Item, {
+          systemIcon: "history", 
+          badge: this.state.notifCount > 0 ? this.state.notifCount : undefined, 
+          selected: this.state.selectedTab === 'redTab', 
+          onPress: function()  {
+            this.setState({
+              selectedTab: 'redTab',
+              notifCount: this.state.notifCount + 1,
+            });
+          }.bind(this)}, 
+          this._renderContent('#783E33', 'Red Tab', this.state.notifCount)
+        ), 
+        React.createElement(TabBarIOS.Item, {
+          systemIcon: "more", 
+          selected: this.state.selectedTab === 'greenTab', 
+          onPress: function()  {
+            this.setState({
+              selectedTab: 'greenTab',
+              presses: this.state.presses + 1
+            });
+          }.bind(this)}, 
+          this._renderContent('#21551C', 'Green Tab', this.state.presses)
+        )
+      )
     );
-  }
+  },
+
 });
 
 var styles = StyleSheet.create({
-  container: {
+  tabContent: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 28,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    fontSize: 19,
-    marginBottom: 5,
+  tabText: {
+    color: 'white',
+    margin: 50,
   },
 });
 
-AppRegistry.registerComponent('SampleApp', () => SampleApp);
+
+AppRegistry.registerComponent('SampleApp', function()  {return SampleApp;});
