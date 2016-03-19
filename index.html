@@ -1,30 +1,82 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
 
-        <title>赵文宇</title>
+        <title>William Zhao</title>
 
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
-
-        <script src="js/react/libs/react-with-addons.js"></script>
-        <script src="js/react/libs/JSXTransformer.js"></script>
-
-        <script type="text/javascript">
-            var ViewportMetrics = { currentScrollTop: 0 };
-            window.addEventListener('load', function(event) {
-                window.addEventListener('scroll', function(event) {
-                    ViewportMetrics.currentScrollTop = document.body.scrollTop;
-                });
-            });
-        </script>
+        <script src="js/fixed-image.js"></script>
     </head>
     <body>
-        <script type="text/jsx" src="js/react/mixins/ScrollListenerMixin.js"></script>
-        
-        <script type="text/jsx" src="js/react/components/ui.basic.js"></script>
-        <script type="text/jsx" src="js/react/components/ui.js"></script>
+        <header>William Zhao</header>
+        <main>
+            <section>
+                <div class='image'>
+                    <img class='fixed' src='img/index/y.jpg'>
+                    <div class='cover'></div>
+                    <div class='right_bottom' style='font-size: 1.5rem; font-family:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;'>
+                        <p>子曰: 三思而后行</p>
+                        <p>1... 2... 3...</p>
+                        <p>我喜欢你</p>
+                    </div>
+                </div>
+                <div class='content'>
+                    <p>A website of <span class='blue'>Wenyu Zhao</span></p>
+                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspA crazy person</p>
+                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe mad KING<span class='blue'>...</span></p>
+                    <p style='text-align: right;'>
+                        <a href='https://github.com/wenyuzhao'>[GitHub]</a>
+                    </p>
+                </div>
+            </section>
 
-        <script type="text/jsx" src="js/index.js"></script>
+            <section>
+                <div class='image'>
+                    <img class='fixed' src='img/index/melbourne.jpg'>
+                    <div class='cover'></div>
+                    <h1>Something <span class='blue'>crazy</span> is coming...</h1>
+                </div>
+                <div class='content'>
+                    <p>Melbourne</p>
+                    <p>It's not always easy for us</p>
+                    <p>to see your <span class='blue'>smile</span></p>
+                    <p style='text-align: right;'>
+                        <a href='https://wenyuzhao.github.io' style='color: grey'>[coming...]</a>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class='image'>
+                    <img class='fixed' src='img/index/blog.jpg'>
+                    <div class='cover'></div>
+                    <h1>Life</h1>
+                </div>
+                <div class='content'>
+                    <p>My Blog</p>
+                    <p>(Infrequently updated)</p>
+                    <p style='text-align: right;'>
+                        <a href='https://wenyuzhao.github.io/blog'>[blog]</a>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class='image'>
+                    <img class='fixed' src='img/index/x.jpg'>
+                    <div class='cover'></div>
+                    <h1>^_^</h1>
+                </div>
+                <div class='content' style='background: black; color: white'>
+                    <br/>
+                    <p>Contact me:</p>
+                    <a href='mailto:this.wenyuzhao@gmail.com'>[this.wenyuzhao@gmail.com]</a>
+                    <a href='mailto:wzha246@student.monash.edu'>[wzha246@student.monash.edu]</a>
+                    <br/>
+                </div>
+            </section>
+
+        </main>
     </body>
 </html>
