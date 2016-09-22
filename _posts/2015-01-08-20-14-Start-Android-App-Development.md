@@ -1,6 +1,6 @@
 ---
-title: Start Android App Development
 layout: x
+title: Start Android App Development
 comments: true
 category: others
 ---
