@@ -10,31 +10,30 @@ layout: x
         color: #999;
     }
     article .title {
-        color: black;
         text-decoration: none;
         padding: 1rem 0;
         font-size: 22px;
+        border-bottom: 2px solid #999;
     }
-    article .title:link    { color: black; }
-    article .title:visited { color: black; }
-    article .title:hover   { color: #2196f3; }
-    article .title:active  { color: #2196f3; }
-    article .excerpt {
-        border-top: 2px solid #999;
-        padding: 1rem 0;
+    article .title a {
+        color: black;
+        text-decoration: none;
     }
+    article .title a:link    { color: black; }
+    article .title a:visited { color: black; }
+    article .title a:hover   { color: #2196f3; }
+    article .title a:active  { color: #2196f3; }
     article .info {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        padding: 1rem 0;
     }
 </style>
 
 {% for post in site.posts %}
     <article class="t-font">
-        <a class="title" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
         <div class="excerpt">
             {{ post.excerpt }}
         </div>
