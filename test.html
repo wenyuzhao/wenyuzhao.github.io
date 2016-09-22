@@ -35,9 +35,9 @@ layout: x
 {% for post in site.posts %}
     <article class="t-font">
         <a class="title" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        <p class="excerpt">
+        <div class="excerpt">
             {{ post.excerpt }}
-        </p>
+        </div>
         <p class="info">
             <i class="material-icons">&#xE24F;</i>
             &nbsp;Published: {{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;
