@@ -1,10 +1,8 @@
 ---
 title: Start Android App Development
-layout: default
-import:
-- disqus
-tags: 
-- others
+layout: x
+comments: true
+category: others
 ---
 
 
