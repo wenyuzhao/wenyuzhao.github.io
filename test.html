@@ -8,45 +8,41 @@ layout: x
         border-radius: 6px;
         padding: 1rem;
         margin-bottom: 1rem;
+        color: #999;
     }
     article .title {
         color: black;
         text-decoration: none;
+        margin: 1rem 0;
+        border-bottom: 2px solid #999;
+    }
+    article .title:link    { color: black; }
+    article .title:visited { color: black; }
+    article .title:hover   { color: #2196f3; }
+    article .title:active  { color: #2196f3; }
+    article .excerpt {
+        margin: 1rem 0;
     }
     article .info {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        margin: 1rem 0;
     }
 </style>
-{% for post in paginator.posts %}
+
+{% for post in site.posts %}
     <article class="t-font">
         <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-        <div class="excerpt">
-            <p>{{ post.excerpt }}</p>
-        </div>
+        <p class="excerpt">{{ post.excerpt }}</p>
         <p class="info">
             <i class="material-icons">&#xE24F;</i>
-            Published: {{ post.date | date_to_string }}
+            &nbsp;Published: {{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;
             <i class="material-icons">&#xE2C7;</i>
-            Category: <a href="{{ site.url }}/categories.html#{{ post.category }}" >{{ post.category }}</a>
+            &nbsp;Category: <a href="{{ site.url }}/categories.html#{{ post.category }}" >{{ post.category }}</a>
         </p>
         </div>
     </article>
 {% endfor %}
 
-{% if paginator.total_pages > 1 %}
-    <nav class="pagination fn-clear">
-        <span class="pagination-icon"><i class=" icon-copy"></i></span>
-        <ul class="pagination-list">
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                    <li class="current"><a href="javascript:void(0);">{{ page }}</a></li>
-                {% else %}
-                    <li><a href="{{ site.baseurl }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </nav>
-{% endif %}
