@@ -1,0 +1,27 @@
+---
+title: Wenyu Zhao
+layout: x
+---
+<h1>Latest articles:</h1>
+
+{% for post in site.posts %}
+<ul>
+	<a href="{{ site.baseurl }}{{ post.url }}">
+		{{ post.date | date_to_string }}   {{ post.title }}
+	</a>
+</ul>
+{% endfor %}
+
+<h1>Tags:</h1>
+
+{% for t in site.tags %}
+  <h3>{{ t[0] }}  </h3> <!-- 输出标签 -->
+    <ul>
+      {% assign tag = t[0] %}
+      {% for post in site.tags[tag] %} <!-- site.tags.TAG里有含TAG标签的所有文章 -->
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> <!-- 输出文章的URL和标题 -->
+        </li>  
+      {% endfor %}
+    </ul>
+{% endfor %}
