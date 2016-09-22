@@ -1,10 +1,8 @@
 ---
 title: My First Blog
 layout: default
-import:
-- disqus
-tags: 
-- others
+comments: true
+category: others
 ---
 
 

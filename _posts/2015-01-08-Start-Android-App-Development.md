@@ -1,5 +1,5 @@
 ---
-layout: x
+layout: default
 title: Start Android App Development
 comments: true
 category: others

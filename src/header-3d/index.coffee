@@ -14,7 +14,7 @@ class Header3D
         @container.appendChild @renderer.domElement
         # camera
         @camera = new THREE.PerspectiveCamera 75, @container.clientWidth / @container.clientHeight, 1, 1100
-        @camera.position.z = 475;
+        @camera.position.z = 400;
         # controls
         @initOrbitControls()
         # scene
@@ -22,7 +22,7 @@ class Header3D
         @initLights()
         @initSkyBox()
         @initCylinders(150)
-        @initBirds(100)
+        @initBirds(150)
 
     initOrbitControls: ->
         @controls = new THREE.OrbitControls @camera, @renderer.domElement
@@ -30,7 +30,7 @@ class Header3D
         @controls.dampingFactor = 0.25
         @controls.enableZoom = false
         @controls.autoRotate = true
-        @controls.autoRotateSpeed = 0.5
+        @controls.autoRotateSpeed = 0.3
         window.addEventListener 'resize', @onWindowResize, false
 
     initLights: ->
@@ -88,10 +88,11 @@ class Header3D
             boid.velocity.y = Math.random() * 2 - 1
             boid.velocity.z = Math.random() * 2 - 1
             boid.setAvoidWalls true
-            boid.setWorldSize 500, 500, 400
+            boid.setWorldSize 400, 400, 400
             bird = @birds[i] = new THREE.Mesh new Bird, new THREE.MeshBasicMaterial(color: Math.random() * 0xffffff, side: THREE.DoubleSide)
             bird.phase = Math.floor(Math.random() * 62.83)
             @scene.add bird
+        @renderer.domElement.addEventListener 'mousemove', @onDocumentMouseMove, false
 
     render: =>
         requestAnimationFrame @render
@@ -107,6 +108,12 @@ class Header3D
             bird.geometry.vertices[5].y = bird.geometry.vertices[4].y = Math.sin(bird.phase) * 5
         @controls.update()
         @renderer.render @scene, @camera
+
+    onDocumentMouseMove: (event) =>
+        vector = new THREE.Vector3 event.clientX - @container.clientWidth / 2, - event.clientY + @container.clientHeight / 2, 0
+        @boids.forEach (boid) =>
+            vector.z = boid.position.z;
+            boid.repulse vector
 
     onWindowResize: =>
         @camera.aspect = @container.clientWidth / @container.clientHeight
