@@ -1,6 +1,5 @@
 username: wenyuzhao
 baseurl: 
-markdown: redcarpet
 safe: false
 pygments: true
 title: Wenyu Zhao
