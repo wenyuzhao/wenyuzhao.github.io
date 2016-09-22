@@ -1,5 +1,5 @@
 username: wenyuzhao
 baseurl: 
 safe: false
-pygments: true
+highlighter: rouge
 title: Wenyu Zhao

@@ -13,6 +13,13 @@
         	{% include latex.html %}
         {% endif %}
         <style>
+
+            .t-font {
+                font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+            }
+
+        </style>
+        <style>
             body {
                 background-color: white;
                 margin: 0px;
@@ -28,13 +35,16 @@
             }
             header h1 {
                 color: white;
+                font
             }
         </style>
     </head>
     <body>
         <header>
             {% include header-3d.html %}
-            <h1>{{ page.title }}</h1>
+            <div>
+                <h1 class="t-font">{{ page.title }}</h1>
+            </div>
         </header>
         
         <main>
