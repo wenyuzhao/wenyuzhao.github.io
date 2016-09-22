@@ -4,25 +4,23 @@ layout: x
 ---
 <style>
     article {
-        border-radius: 6px;
-        padding: 1rem;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
         color: #999;
     }
+    
     article .title {
         text-decoration: none;
         padding: 1rem 0;
         font-size: 22px;
         border-bottom: 2px solid #999;
     }
-    article .title a {
-        color: black;
-        text-decoration: none;
-    }
-    article .title a:link    { color: black; }
-    article .title a:visited { color: black; }
+    
+    article .title a  { text-decoration: none; }
+    article .title a:link    { color: #000000; }
+    article .title a:visited { color: #000000; }
     article .title a:hover   { color: #2196f3; }
     article .title a:active  { color: #2196f3; }
+    
     article .info {
         display: flex;
         flex-direction: row;
@@ -33,17 +31,14 @@ layout: x
 
 {% for post in site.posts %}
     <article class="t-font">
-        <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-        <div class="excerpt">
-            {{ post.excerpt }}
-        </div>
+        <h2 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        {{ post.excerpt }}
         <p class="info">
             <i class="material-icons">&#xE24F;</i>
             &nbsp;Published: {{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;
             <i class="material-icons">&#xE2C7;</i>
             &nbsp;Category: <a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
         </p>
-        </div>
     </article>
 {% endfor %}
 
