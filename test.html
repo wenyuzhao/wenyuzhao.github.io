@@ -35,9 +35,9 @@ layout: x
         {{ post.excerpt }}
         <p class="info">
             <i class="material-icons">&#xE24F;</i>
-            &nbsp;Published: {{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;
+            &nbsp;Published:&nbsp;{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <i class="material-icons">&#xE2C7;</i>
-            &nbsp;Category: <a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
+            &nbsp;Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
         </p>
     </section>
 {% endfor %}
