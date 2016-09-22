@@ -2,10 +2,38 @@
 title: Wenyu Zhao
 layout: x
 ---
+<style>
+    .article {
+        
+    }
+</style>
+{% for post in paginator.posts %}
+    <article>
+        <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <div class="excerpt">
+            <p>{{ post.excerpt }}</p>
+        </div>
+        <p>
+            <i class="material-icons">&#xE24F;</i>
+            Published: {{ post.date | date_to_string }}
+            <i class="material-icons">&#xE2C7;</i>
+            Category: <a href="{{ site.url }}/categories.html#{{ post.category }}" >{{ post.category }}</a>
+        </p>
+        </div>
+    </article>
+{% endfor %}
 
-<ul class="post-list">
-    {% for post in site.posts %}
-        <a href="{{site.baseurl}}{{post.url}}"> {{ post.title }}  </a>
-        {{ post.date | date: "%F" }} <br>
-    {% endfor %}
-</ul>
+{% if paginator.total_pages > 1 %}
+    <nav class="pagination fn-clear">
+        <span class="pagination-icon"><i class=" icon-copy"></i></span>
+        <ul class="pagination-list">
+            {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                    <li class="current"><a href="javascript:void(0);">{{ page }}</a></li>
+                {% else %}
+                    <li><a href="{{ site.baseurl }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}
