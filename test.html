@@ -3,17 +3,30 @@ title: Wenyu Zhao
 layout: x
 ---
 <style>
-    .article {
-        
+    article {
+        background: #B4A582;
+        border-radius: 6px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    article .title {
+        color: black;
+        text-decoration: none;
+    }
+    article .info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
     }
 </style>
 {% for post in site.posts %}
-    <article>
+    <article class="t-font">
         <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
         <div class="excerpt">
             <p>{{ post.excerpt }}</p>
         </div>
-        <p>
+        <p class="info">
             <i class="material-icons">&#xE24F;</i>
             Published: {{ post.date | date_to_string }}
             <i class="material-icons">&#xE2C7;</i>
