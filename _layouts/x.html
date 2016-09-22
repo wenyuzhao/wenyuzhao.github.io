@@ -14,7 +14,7 @@
         {% endif %}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
-            .t-font {
+            body {
                 font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
             }
         </style>
@@ -43,7 +43,10 @@
             main {
                 width: 100%;
                 max-width: 800px;
-                margin: 5rem auto;
+                margin: 2.5rem auto;
+            }
+            main article {
+                padding-bottom: 2.5rem;
             }
             
             a  { text-decoration: none; }
@@ -51,6 +54,12 @@
             a:visited { color: #000000; }
             a:hover   { color: #2196f3; }
             a:active  { color: #2196f3; }
+            
+            header .info a  { text-decoration: none; }
+            header .info a:link    { color: #ffffff; }
+            header .info a:visited { color: #ffffff; }
+            header .info a:hover   { color: #2196f3; }
+            header .info a:active  { color: #2196f3; }
             
             header .info {
                 display: flex;
@@ -70,7 +79,7 @@
                 {% if page.date %}
                     <p class="info">
                         <i class="material-icons">&#xE24F;</i>
-                        &nbsp;Published:&nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;
+                        &nbsp;Published:&nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <i class="material-icons">&#xE2C7;</i>
                         &nbsp;Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
                     </p>
@@ -79,7 +88,7 @@
         </header>
         
         <main>
-            {{ content }}
+            <article>{{ content }}</article>
             {% if page.comments %}
                 {% include disqus.html %}
             {% endif %}
