@@ -40,20 +40,6 @@
                 align-items: center;
                 justify-content: center;
             }
-            main {
-                width: 100%;
-                max-width: 800px;
-                margin: 2.5rem auto;
-            }
-            main article {
-                padding-bottom: 2.5rem;
-            }
-            
-            a  { text-decoration: none; }
-            a:link    { color: #000000; }
-            a:visited { color: #000000; }
-            a:hover   { color: #2196f3; }
-            a:active  { color: #2196f3; }
             
             header .info a  { text-decoration: none; }
             header .info a:link    { color: #ffffff; }
@@ -67,6 +53,18 @@
                 align-items: center;
                 justify-content: flex-start;
             }
+            
+            main {
+                width: 100%;
+                max-width: 800px;
+                margin: 2.5rem auto;
+            }
+            
+            a  { text-decoration: none; }
+            a:link    { color: #000000; }
+            a:visited { color: #000000; }
+            a:hover   { color: #2196f3; }
+            a:active  { color: #2196f3; }
         </style>
     </head>
     <body>
@@ -87,11 +85,11 @@
             </div>
         </header>
         
-        <main>
-            <article>{{ content }}</article>
+        <article>
+            {{ content }}
             {% if page.comments %}
                 {% include disqus.html %}
             {% endif %}
-        </main>
+        </article>
     </body>
 </html>
