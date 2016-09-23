@@ -28,7 +28,7 @@ header {
 
 header nav {
     position: absolute;
-    top: 1rem; left: 1rem;
+    top: 1rem; right: 1rem;
     max-width: calc(100vw - 2rem);
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@ header nav .text {
     transition: all 1s;
 }
 
-header nav .text:first-child {
+header nav .text:last-child {
     margin-right: 0;
     z-index: 10;
 }
