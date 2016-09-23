@@ -136,6 +136,10 @@ article a:visited { color: #03A9F4; background: transparent; }
 article a:hover   { color: #ffffff; background: #03A9F4; }
 article a:active  { color: #ffffff; background: #03A9F4; }
 
+article > p > img {
+    max-width: 100%;
+}
+
 pre.highlight {
     padding: 1rem;
     background: #EEEEEE;
