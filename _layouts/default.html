@@ -24,10 +24,14 @@
                 </h1>
                 {% if page.date %}
                     <p class="info">
-                        <i class="material-icons">&#xE24F;</i>
-                        &nbsp;Published:&nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class="material-icons">&#xE2C7;</i>
-                        &nbsp;Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
+                        <span>
+                            <i class="material-icons">&#xE24F;</i>&nbsp;
+                            Published:&nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span>
+                            <i class="material-icons">&#xE2C7;</i>&nbsp;
+                            Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
+                        </span>
                     </p>
                 {% endif %}
                 {% if page.header-buttons %}
