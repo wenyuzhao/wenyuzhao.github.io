@@ -27,6 +27,8 @@ curl -s --user 'api:key-xxxxxxxxxxxxxxxxxxxxxxxxx' \
 In your PHP server, create a class PHP file and paste the following code:
 
 ```php
+<?php
+
 class Mailgun {
     public $key = null;
     public $domain = null;
