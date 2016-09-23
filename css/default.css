@@ -74,6 +74,7 @@ header .info span {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    margin: 0.5rem;
 }
 
 header .buttons {
