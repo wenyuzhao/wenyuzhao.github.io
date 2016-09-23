@@ -11,7 +11,7 @@ title: Blog Categories
     }
 
     .categories a {
-        border-width: 1px solid #03A9F4;
+        border: 1px solid #03A9F4;
         border-radius: 6px;
         background: transparent;
         margin: 0.5rem;
@@ -33,6 +33,19 @@ title: Blog Categories
     .categories a:visited { background: transparent; color: #03A9F4; }
     .categories a:hover   { background: #03A9F4; color: #ffffff; }
     .categories a:active  { background: #03A9F4; color: #ffffff; }
+
+    .categories a * {
+        font-size: 1rem;
+    }
+
+    .category-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        border-bottom: 2px solid #999;
+    }
 </style>
 
 <div class="categories">
@@ -42,7 +55,7 @@ title: Blog Categories
 </div>
 
 {% for category in site.categories %} 
-    <h2 id="{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</h2>
+    <h2 class="category-title" id="{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</h2>
     <ul>
         {% for node in category[1] %}
             <li style="padding: 5px; margin: 5px 0;">
