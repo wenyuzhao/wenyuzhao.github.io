@@ -56,7 +56,7 @@ title: Blog Categories
 
 {% for category in site.categories %} 
     <h2 class="category-title" id="{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</h2>
-    <ul>
+    <ul style="padding-left: 60px">
         {% for node in category[1] %}
             <li style="padding: 5px; margin: 5px 0;">
                 <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
