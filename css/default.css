@@ -1,8 +1,60 @@
 
+a    {
+    text-decoration: none;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+a:link    { color: #000000; }
+a:visited { color: #000000; }
+a:hover   { color: #2196f3; }
+a:active  { color: #2196f3; }
+
 body {
     font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen HeiSharp", sans-serif;
     background-color: white;
     margin: 0px;
+}
+
+nav {
+    position: absolute;
+    top: 1rem; left: 1rem; right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; 
+    color: white;
+}
+
+nav .text {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+nav .text:first-child {
+    margin-right: 0;
+}
+
+nav .text:link    { color: #ffffff; }
+nav .text:visited { color: #ffffff; }
+nav .text:hover   { color: #2196f3; }
+nav .text:active  { color: #2196f3; }
+
+nav .icon {
+    margin: 0 0.5rem;
+    width: 2rem; height: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+nav .icon:first-child {
+    margin-right: 0;
 }
 
 header {
@@ -54,9 +106,11 @@ header .buttons {
     flex-wrap: wrap;
 }
 
-header .buttons button, header .buttons a, header .buttons input[type=button] {
+header .buttons * {
     outline: none;
-    border: 1px solid white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
     border-radius: 6px;
     background: rgba(0,0,0,0.3);
     margin: 1rem;
@@ -68,7 +122,17 @@ header .buttons button, header .buttons a, header .buttons input[type=button] {
     align-items: center;
     justify-content: center;
     flex-wrap: no-wrap;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+    text-decoration: none;
 }
+
+header .buttons *:link    { border-color: #ffffff; color: #ffffff; }
+header .buttons *:visited { border-color: #ffffff; color: #ffffff; }
+header .buttons *:hover   { border-color: #2196f3; color: #2196f3; }
+header .buttons *:active  { border-color: #2196f3; color: #2196f3; }
 
 article {
     width: calc(100% - 2rem);
@@ -77,11 +141,6 @@ article {
     padding: 0 1rem;
 }
 
-a    { text-decoration: none; }
-a:link    { color: #000000; }
-a:visited { color: #000000; }
-a:hover   { color: #2196f3; }
-a:active  { color: #2196f3; }
 
 pre.highlight {
     padding: 1rem;
