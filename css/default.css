@@ -27,8 +27,8 @@ header a    {
 
 header a:link    { color: #ffffff; }
 header a:visited { color: #ffffff; }
-header a:hover   { color: #2196f3; }
-header a:active  { color: #2196f3; }
+header a:hover   { color: #03A9F4; }
+header a:active  { color: #03A9F4; }
 
 header nav {
     position: absolute;
@@ -99,7 +99,7 @@ header .buttons * {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     cursor: pointer;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -109,8 +109,8 @@ header .buttons * {
 
 header .buttons *:link    { border-color: #ffffff; color: #ffffff; }
 header .buttons *:visited { border-color: #ffffff; color: #ffffff; }
-header .buttons *:hover   { border-color: #2196f3; color: #2196f3; }
-header .buttons *:active  { border-color: #2196f3; color: #2196f3; }
+header .buttons *:hover   { border-color: #03A9F4; color: #03A9F4; }
+header .buttons *:active  { border-color: #03A9F4; color: #03A9F4; }
 
 article {
     width: calc(100% - 2rem);
@@ -124,17 +124,17 @@ article a {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
-    color: #2196f3;
+    color: #03A9F4;
     border-radius: 3px;
-    padding: 1px;
+    padding: 3px;
     overflow: hidden;
     background: transparent;
 }
 
-article a:link    { color: #2196f3; background: transparent; }
-article a:visited { color: #2196f3; background: transparent; }
-article a:hover   { color: #ffffff; background: #2196f3; }
-article a:active  { color: #ffffff; background: #2196f3; }
+article a:link    { color: #03A9F4; background: transparent; }
+article a:visited { color: #03A9F4; background: transparent; }
+article a:hover   { color: #ffffff; background: #03A9F4; }
+article a:active  { color: #ffffff; background: #03A9F4; }
 
 pre.highlight {
     padding: 1rem;

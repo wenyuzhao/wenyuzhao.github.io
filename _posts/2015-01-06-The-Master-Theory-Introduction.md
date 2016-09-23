@@ -1,5 +1,5 @@
 ---
-title: Master Theorem
+title: The Master Theory
 layout: default
 category: Algorithms
 comments: true

@@ -2,28 +2,52 @@
 layout: default
 title: Blog Categories
 ---
+<style>
+    .categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 5rem;
+    }
 
-<h3 class="title">{{ page.title }}</h3>
-<ul class="categories">
-    {% assign categories_list = site.categories %}
-    {% for category in categories_list %}
-        <li class="categories-item"><a href="#{{ category[0] }}-ref">
-            {{ category[0] | join: "/" }}
-        </a></li>
+    .categories a {
+        border-width: 1px solid #03A9F4;
+        border-radius: 6px;
+        background: transparent;
+        margin: 0.5rem;
+        font-size: 1rem;
+        padding: 6px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .categories a:link    { background: transparent; color: #03A9F4; }
+    .categories a:visited { background: transparent; color: #03A9F4; }
+    .categories a:hover   { background: #03A9F4; color: #ffffff; }
+    .categories a:active  { background: #03A9F4; color: #ffffff; }
+</style>
+
+<div class="categories">
+    {% for category in site.categories %}
+        <a href="#{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</a>
     {% endfor %}
-</ul>
-
+</div>
 
 {% for category in site.categories %} 
-    <h2  class="article-year" id="{{ category[0] }}-ref" data-year="&diams;">{{ category[0] | join: "/" }}</h2>
-    <ul style="list-style: none">
-        {% assign pages_list = category[1] %}  
-        {% for node in pages_list %}
-            {% if node.title != null %}
-                {% if group == null or group == node.group %}
-                    <li style="background:#F2EEEC; padding:5px; margin:3px 0"><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
-                {% endif %}
-            {% endif %}
+    <h2 id="{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</h2>
+    <ul>
+        {% for node in category[1] %}
+            <li style="padding: 5px; margin: 5px 0;">
+                <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+            </li>
         {% endfor %}
     </ul>
 {% endfor %}
