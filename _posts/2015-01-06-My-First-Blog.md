@@ -20,7 +20,7 @@ The last one is that I uses Jekyll to build my blog and website. Just to coding 
 
 You can view the source code of this website in [github.com](https://github.com/wenyuzhao/wenyuzhao.github.io)
 
-####PS:
+#### PS:
 
 0. The image "hello, world" in the homepage is made by myself, using [this website](http://jayweeks.com/sketchy-structures-html5-canvas/).
 
