@@ -1,7 +1,9 @@
-THREE = window.THREE = require 'three'
-require 'three/examples/js/controls/OrbitControls'
-{ Boid } = require './Boid'
-{ Bird } = require './Bird'
+THREE = require 'three'
+
+OrbitControls = require './OrbitControls'
+
+Boid = require './Boid'
+Bird = require './Bird'
 
 class Cover3D
     constructor: (container_selector) ->
@@ -25,7 +27,7 @@ class Cover3D
         @initBirds(128)
 
     initOrbitControls: ->
-        @controls = new THREE.OrbitControls @camera, @renderer.domElement
+        @controls = new OrbitControls @camera, @renderer.domElement
         @controls.enableDamping = true
         @controls.dampingFactor = 0.25
         @controls.enableZoom = false

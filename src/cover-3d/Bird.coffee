@@ -24,4 +24,4 @@ class Bird extends THREE.Geometry
         @faces.push new THREE.Face3(a, b, c)
 
 
-exports.Bird = Bird
+module.exports = Bird

@@ -142,4 +142,4 @@ class Boid
         posSum
 
 
-exports.Boid = Boid;
+module.exports = Boid;
