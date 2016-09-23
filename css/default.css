@@ -16,17 +16,29 @@ body {
     margin: 0px;
 }
 
-nav {
+header {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+header nav {
     position: absolute;
-    top: 1rem; left: 1rem; right: 1rem;
+    top: 1rem; left: 1rem;
+    max-width: calc(100vw - 2rem);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end; 
     color: white;
+    z-index: 10;
 }
 
-nav .text {
+header nav .text {
     margin: 0 0.5rem;
     font-size: 1rem;
     cursor: pointer;
@@ -37,34 +49,25 @@ nav .text {
     transition: all 1s;
 }
 
-nav .text:first-child {
+header nav .text:first-child {
     margin-right: 0;
+    z-index: 10;
 }
 
-nav .text:link    { color: #ffffff; }
-nav .text:visited { color: #ffffff; }
-nav .text:hover   { color: #2196f3; }
-nav .text:active  { color: #2196f3; }
+header nav .text:link    { color: #ffffff; }
+header nav .text:visited { color: #ffffff; }
+header nav .text:hover   { color: #2196f3; }
+header nav .text:active  { color: #2196f3; }
 
-nav .icon {
+header nav .icon {
     margin: 0 0.5rem;
     width: 2rem; height: 2rem;
     cursor: pointer;
     color: white;
 }
 
-nav .icon:first-child {
+header nav .icon:first-child {
     margin-right: 0;
-}
-
-header {
-    position: relative;
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
 }
 
 header .title {
@@ -90,6 +93,7 @@ header .info {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+
 header .info span {
     display: flex;
     flex-direction: row;
