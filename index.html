@@ -28,7 +28,17 @@ header-buttons:
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
+    
+    section .info span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: no-wrap;
+    }
+
 </style>
 
 {% for post in site.posts %}
@@ -36,10 +46,14 @@ header-buttons:
         <h2 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
         {{ post.excerpt }}
         <p class="info">
-            <i class="material-icons">&#xE24F;</i>
-            &nbsp;Published:&nbsp;{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <i class="material-icons">&#xE2C7;</i>
-            &nbsp;Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
+            <span>
+                <i class="material-icons">&#xE24F;</i>&nbsp;
+                Published:&nbsp;{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span>
+                <i class="material-icons">&#xE2C7;</i>&nbsp;
+                Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
+            </span>
         </p>
     </section>
 {% endfor %}
