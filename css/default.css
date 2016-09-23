@@ -36,6 +36,7 @@ header .info {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 header .buttons {
