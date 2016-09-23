@@ -14,7 +14,11 @@ const BABEL_LOADER = {
     loader: 'babel',
     test: /\.jsx?$/,
     query: {
-        presets: ['es2015', 'stage-0', 'react'],
+        presets: [
+            [ 'es2015', { modules: false } ],
+            'stage-0',
+            'react',
+        ],
     },
 };
 
@@ -40,7 +44,7 @@ module.exports = {
         filename: '[name].bundle.js',
     },
     resolve: {
-        extensions: [ '', '.js', '.jsx', '.json', '.coffee' ],
+        extensions: [ '.js', '.jsx', '.json', '.coffee' ],
     },
     module: {
         loaders: [
@@ -49,7 +53,9 @@ module.exports = {
         ],
     },
     plugins: [
+        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
+        new webpack.optimize.AggressiveMergingPlugin(),
     ],
-    devtool: '#cheap-module-eval-source-map',
+    devtool: process.env.NODE_ENV === 'production' ? '#source-map' : '#cheap-module-eval-source-map',
 };

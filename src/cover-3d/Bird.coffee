@@ -1,4 +1,5 @@
-THREE = require 'three'
+
+{ Vector3 } = require 'three'
 
 class Bird extends THREE.Geometry
     constructor: ->

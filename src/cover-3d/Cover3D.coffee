@@ -16,7 +16,7 @@ class Cover3D
         @container.appendChild @renderer.domElement
         # camera
         @camera = new THREE.PerspectiveCamera 75, @container.clientWidth / @container.clientHeight, 1, 1100
-        @camera.position.z = 400;
+        @camera.position.z = 400
         # controls
         @initOrbitControls()
         # scene
