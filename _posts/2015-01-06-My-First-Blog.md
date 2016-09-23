@@ -1,8 +1,8 @@
 ---
 title: My First Blog
 layout: default
+category: Others
 comments: true
-category: others
 ---
 
 

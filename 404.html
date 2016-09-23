@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>404 Not Found :(</title>
-        <style type="text/css">
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            
-            img {
-                width: 100vw;
-            }
-        </style>
-	</head>
-	<body bgcolor="black">
-		<img src="img/404.jpg"/>
-	</body>
-</html>
+---
+title: 404 Not Found
+layout: default
+---
+<h1>You can see other pages:</h1>
+{% for post in site.posts %}
+    <section class="t-font">
+        <h2 class="title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        {{ post.excerpt }}
+        <p class="info">
+            <i class="material-icons">&#xE24F;</i>
+            &nbsp;Published:&nbsp;{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="material-icons">&#xE2C7;</i>
+            &nbsp;Category:&nbsp;<a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
+        </p>
+    </section>
+{% endfor %}
+

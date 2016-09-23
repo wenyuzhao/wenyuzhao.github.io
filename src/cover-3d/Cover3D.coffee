@@ -3,7 +3,7 @@ require 'three/examples/js/controls/OrbitControls'
 { Boid } = require './Boid'
 { Bird } = require './Bird'
 
-class Header3D
+class Cover3D
     constructor: (container_selector) ->
         # container
         @container = document.querySelector container_selector
@@ -21,8 +21,8 @@ class Header3D
         @scene = new THREE.Scene
         @initLights()
         @initSkyBox()
-        @initCylinders(150)
-        @initBirds(150)
+        @initCylinders(128)
+        @initBirds(128)
 
     initOrbitControls: ->
         @controls = new THREE.OrbitControls @camera, @renderer.domElement
@@ -122,6 +122,4 @@ class Header3D
 
 
 
-window.addEventListener 'load', ->
-    header3d = new Header3D '#header-3d'
-    header3d.render()
+exports.Cover3D = Cover3D

@@ -1,11 +1,9 @@
 ---
 title: Master Theorem
 layout: default
-import:
-- disqus
-- latex
-tags: 
-- algorithms
+category: Algorithms
+comments: true
+latex: true
 ---
 
 

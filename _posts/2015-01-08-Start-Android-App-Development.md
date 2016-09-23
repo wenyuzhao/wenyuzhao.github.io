@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Start Android App Development
+category: Others
 comments: true
-category: others
 ---
 
 
