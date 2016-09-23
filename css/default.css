@@ -1,15 +1,4 @@
 
-a    {
-    text-decoration: none;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
-}
-a:link    { color: #000000; }
-a:visited { color: #000000; }
-a:hover   { color: #2196f3; }
-a:active  { color: #2196f3; }
-
 body {
     font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen HeiSharp", sans-serif;
     background-color: white;
@@ -23,8 +12,23 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    color: white;
 }
+
+header a    {
+    text-decoration: none;
+    color: #ffffff;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+header a:link    { color: #ffffff; }
+header a:visited { color: #ffffff; }
+header a:hover   { color: #2196f3; }
+header a:active  { color: #2196f3; }
 
 header nav {
     position: absolute;
@@ -33,20 +37,13 @@ header nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end; 
-    color: white;
+    justify-content: flex-end;
     z-index: 10;
 }
 
 header nav .text {
     margin: 0 0.5rem;
     font-size: 1rem;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
 }
 
 header nav .text:last-child {
@@ -54,24 +51,7 @@ header nav .text:last-child {
     z-index: 10;
 }
 
-header nav .text:link    { color: #ffffff; }
-header nav .text:visited { color: #ffffff; }
-header nav .text:hover   { color: #2196f3; }
-header nav .text:active  { color: #2196f3; }
-
-header nav .icon {
-    margin: 0 0.5rem;
-    width: 2rem; height: 2rem;
-    cursor: pointer;
-    color: white;
-}
-
-header nav .icon:first-child {
-    margin-right: 0;
-}
-
 header .title {
-    color: white;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -79,12 +59,6 @@ header .title {
     justify-content: center;
     margin: 1rem;
 }
-
-header .info a    { text-decoration: none; }
-header .info a:link    { color: #ffffff; }
-header .info a:visited { color: #ffffff; }
-header .info a:hover   { color: #2196f3; }
-header .info a:active  { color: #2196f3; }
 
 header .info {
     display: flex;
@@ -99,7 +73,7 @@ header .info span {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
 }
 
 header .buttons {
@@ -127,9 +101,9 @@ header .buttons * {
     justify-content: center;
     flex-wrap: no-wrap;
     cursor: pointer;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
     text-decoration: none;
 }
 
@@ -145,6 +119,22 @@ article {
     padding: 0 1rem;
 }
 
+article a {
+    text-decoration: none;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    color: #2196f3;
+    border-radius: 3px;
+    padding: 3px;
+    overflow: hidden;
+    background: transparent;
+}
+
+a:link    { color: #2196f3; background: transparent; }
+a:visited { color: #2196f3; background: transparent; }
+a:hover   { color: #ffffff; background: #2196f3; }
+a:active  { color: #ffffff; background: #2196f3; }
 
 pre.highlight {
     padding: 1rem;
