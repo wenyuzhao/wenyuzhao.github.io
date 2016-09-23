@@ -22,6 +22,7 @@ header .title {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 1rem;
 }
 
 header .info a    { text-decoration: none; }
@@ -41,7 +42,24 @@ header .buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header .buttons button, header .buttons a, header .buttons input[type=button] {
+    outline: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.3);
+    margin: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: no-wrap;
 }
 
 article {
