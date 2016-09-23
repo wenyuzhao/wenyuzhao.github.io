@@ -9,7 +9,7 @@ latex: true
 
 In this article I'm going to give a brief introduction about The Master Theory(also called Master Theorem).
 
-###What is The Master Theory?
+### What is The Master Theory?
 
 The Master Theory is a way to analyse the time complexity of Divide and Conquer Algorithms. But in this article I will not talk much about the Divide and Conquer Algorithm.
 
@@ -45,7 +45,7 @@ $$T(n)\le aT(\frac{n}{b})+O(n^d)$$
 
 What The Master Theory can do is calculate the time complexity by using the recursive function above.
 
-###How to use Master Theroem?
+### How to use Master Theroem?
 
 $$
 \begin{equation}
@@ -59,10 +59,10 @@ $$
 $$
 
 
-###Proof
+### Proof
 
 Please wait, I'm lazy
 
-###The End.
+### The End.
 
 That's all for Master Theorem. Quite easy to understand.
