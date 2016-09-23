@@ -38,6 +38,13 @@ header .info {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+header .info span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: no-wrap;
+}
 
 header .buttons {
     display: flex;
