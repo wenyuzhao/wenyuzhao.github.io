@@ -82,3 +82,9 @@ a:link    { color: #000000; }
 a:visited { color: #000000; }
 a:hover   { color: #2196f3; }
 a:active  { color: #2196f3; }
+
+pre.highlight {
+    padding: 1rem;
+    background: #EEEEEE;
+    border-radius: 6px;
+}
