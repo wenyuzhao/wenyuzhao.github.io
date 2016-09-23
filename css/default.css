@@ -84,7 +84,7 @@ header .buttons {
     flex-wrap: wrap;
 }
 
-header .buttons * {
+header .buttons > * {
     outline: none;
     border-width: 1px;
     border-style: solid;
@@ -107,10 +107,10 @@ header .buttons * {
     text-decoration: none;
 }
 
-header .buttons *:link    { border-color: #ffffff; color: #ffffff; }
-header .buttons *:visited { border-color: #ffffff; color: #ffffff; }
-header .buttons *:hover   { border-color: #03A9F4; color: #03A9F4; }
-header .buttons *:active  { border-color: #03A9F4; color: #03A9F4; }
+header .buttons > *:link    { border-color: #ffffff; color: #ffffff; }
+header .buttons > *:visited { border-color: #ffffff; color: #ffffff; }
+header .buttons > *:hover   { border-color: #03A9F4; color: #03A9F4; }
+header .buttons > *:active  { border-color: #03A9F4; color: #03A9F4; }
 
 article {
     width: calc(100% - 2rem);
