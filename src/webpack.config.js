@@ -52,10 +52,10 @@ module.exports = {
             COFFEE_LOADER,
         ],
     },
-    plugins: [
+    plugins: process.env.NODE_ENV === 'production' ? [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
         new webpack.optimize.AggressiveMergingPlugin(),
-    ],
+    ] : [],
     devtool: process.env.NODE_ENV === 'production' ? '#source-map' : '#cheap-module-eval-source-map',
 };

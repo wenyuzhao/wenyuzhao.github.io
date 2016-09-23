@@ -1,7 +1,7 @@
 
-{ Vector3 } = require 'three'
+{ Geometry, Vector3, Face3 } = require 'three'
 
-class Bird extends THREE.Geometry
+class Bird extends Geometry
     constructor: ->
         super()
 
@@ -20,9 +20,9 @@ class Bird extends THREE.Geometry
         @computeFaceNormals()
 
     v: (x, y, z) ->
-        @vertices.push new THREE.Vector3(x, y, z)
+        @vertices.push new Vector3(x, y, z)
     f3: (a, b, c) ->
-        @faces.push new THREE.Face3(a, b, c)
+        @faces.push new Face3(a, b, c)
 
 
 module.exports = Bird
