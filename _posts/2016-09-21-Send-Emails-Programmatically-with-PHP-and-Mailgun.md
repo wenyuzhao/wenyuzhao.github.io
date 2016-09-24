@@ -68,6 +68,7 @@ class Mailgun {
 This PHP class encapsulates Mailgun's send email api. To use this API, you should pass your key and activated domain of your mailgun's account when instantiating this Maingun class:
 
 ```php
+<?php
 
 define('MAILGUN_KEY', 'key-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
 define('MAILGUN_DOMAIN', 'test.example.com');
