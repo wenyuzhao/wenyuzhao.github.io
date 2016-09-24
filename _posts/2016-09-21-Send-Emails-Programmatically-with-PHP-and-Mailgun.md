@@ -5,7 +5,7 @@ category: PHP
 comments: true
 ---
 
-As the title, we will use [Mailgun.com](https://mailgun.com) API
+Here, we will use [Mailgun.com](https://mailgun.com) API
 
 Mailgun is a email service which allows you to send 10000 emails every month for free.
 
@@ -16,15 +16,15 @@ Then add sending email features in your PHP server, via curl.
 The mailgun curl API looks like this:
 
 ```
-curl -s --user 'api:key-xxxxxxxxxxxxxxxxxxxxxxxxx' \
-    https://api.mailgun.net/v3/sandboxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.mailgun.org/messages \
-    -F from='Mailgun Sandbox <postmaster@sandboxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.mailgun.org>' \
+curl -s --user 'api:key-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+    https://api.mailgun.net/v3/test.example.com/messages \
+    -F from='Mailgun Sandbox <test@test.example.com>' \
     -F to='XXX <example@gmail.com>' \
     -F subject='Hello XXX' \
     -F text='Congratulations XXX, you just sent an email with Mailgun!  You are truly awesome!' 
 ```
 
-In your PHP server, create a class PHP file and paste the following code:
+In your PHP server, create a PHP file and type the following code:
 
 ```php
 <?php
@@ -64,5 +64,29 @@ class Mailgun {
     }
 }
 ```
+
+This PHP class encapsulates Mailgun's send email api. To use this API, you should pass your key and activated domain of your mailgun's account when instantiating this Maingun class:
+
+```php
+
+define('MAILGUN_KEY', 'key-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+define('MAILGUN_DOMAIN', 'test.example.com');
+
+$mailgun = new Mailgun(MAILGUN_KEY, MAILGUN_DOMAIN);
+
+$from = "test <test@example.com>";
+$to = "test2 <test2@example2.com>";
+
+// send an email of plain text
+$response1 = $mailgun->sendText($from, $to, "Some subject", "Some Text Message");
+// send an email of HTML content
+$response2 = $mailgun->sendHTML($from, $to, "Some subject", "<h1>Some HTML Message</h1>");
+
+// Response of the sendXXXX method is a string of JSON data,
+// so you may need to parse it to a PHP data structure.
+$ response_data = json_encode($response1);
+
+```
+
 
 
