@@ -54,7 +54,7 @@ header-buttons:
 </style>
 
 <div class="categories">
-    {% for category in site.categories %}
+    {% for category in site.categories | sort %}
         <a href="#{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</a>
     {% endfor %}
 </div>
