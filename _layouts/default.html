@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <head>
+        <!-- SEO -->
+        <title>{{ page.title }} | Wenyu Zhao</title>
+        
+        <meta charset="utf-8"/>
+        <meta name="author" content="赵文宇 | Wenyu Zhao | William | wenyuzhaox@gmail.com"/>
+        <meta name="description" content="赵文宇(Wenyu Zhao)'s Blog will focus on software, web & mobile apps development, computer science and mathematics. Most posts will come from experiences I get from my job as a Web / iOS developer. | {{ page.excerpt }}"/>
+        <meta name="robots" content="all"/>
+        <meta name="keywords" content="赵文宇,Wenyu Zhao,wenyuzhao,Software,Web,Server,iOS,Computer Science,Mathematics"/>
+        
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{{ page.title }} | Wenyu Zhao"/>
+        <meta property="og:description" content="赵文宇(Wenyu Zhao)'s Blog will focus on software, web & mobile apps development, computer science and mathematics. Most posts will come from experiences I get from my job as a Web / iOS developer. | {{ page.excerpt }}"/>
+        <meta property="og:url" content="http://wenyuzhao.me{{ page.url }}" />
+        <meta property="og:site_name" content="A Blog of Wenyu Zhao" />
+        
+        <meta property="article:publisher" content="https://www.facebook.com/wenyu.zhao2"/>
+        {% if page.category %}
+            <meta property="article:section" content="{{ page.category }}"/>
+            <meta property="article:tag" content="赵文宇,Wenyu Zhao,wenyuzhao,{{ page.category }}"/>
+        {% else %}
+            <meta property="article:section" content="Blog"/>
+            <meta property="article:tag" content="赵文宇,Wenyu Zhao,wenyuzhao,Software,Web,Server,iOS,Computer Science,Mathematics"/>
+        {% endif %}
+        
+        <link rel="canonical" href="http://wenyuzhao.me{{ page.url }}" />
+        <!-- /SEO -->
+        
         <!--[if lt IE 9]>
         	<script src="{{ site.baseurl }}/js/html5.js"></script>
         <![endif]-->
-        <meta charset="utf-8"/>
+        
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-        <title>{{ page.title }} | William Zhao</title>
+
         <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/default.css"/>
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/highlight.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        
         {% if page.latex %}
         	{% include latex.html %}
         {% endif %}
