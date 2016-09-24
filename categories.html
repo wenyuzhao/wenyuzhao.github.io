@@ -53,13 +53,15 @@ header-buttons:
     }
 </style>
 
+{% assign sorted_categories = site.categories | sort %}
+
 <div class="categories">
-    {% for category in site.categories | sort %}
+    {% for category in sorted_categories %}
         <a href="#{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</a>
     {% endfor %}
 </div>
 
-{% assign sorted_categories = site.categories | sort %}
+
 {% for category in sorted_categories %} 
     <h2 class="category-title" id="{{ category[0] }}"><i class="material-icons">&#xE54E;</i>&nbsp;{{ category[0] | join: " / " }}</h2>
     <ul style="padding-left: 60px; margin-bottom: 5rem;">
