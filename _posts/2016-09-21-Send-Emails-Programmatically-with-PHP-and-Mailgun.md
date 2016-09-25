@@ -85,7 +85,7 @@ $response2 = $mailgun->sendHTML($from, $to, "Some subject", "<h1>Some HTML Messa
 
 // Response of the sendXXXX method is a string of JSON data,
 // so you may need to parse it to a PHP data structure.
-$ response_data = json_encode($response1);
+$response_data = json_encode($response1);
 
 ```
 
