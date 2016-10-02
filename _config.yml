@@ -4,3 +4,5 @@ safe: false
 highlighter: rouge
 title: Wenyu Zhao
 paginate: 8
+gems:
+  - jekyll-sitemap
