@@ -1,0 +1,159 @@
+<!doctype html>
+
+
+
+<style>
+    body {
+        background: black;
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+    #sentence {
+        color: #BDBDBD;
+        margin-bottom: 100px;
+        font-weight: 100;
+    }
+    #output {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-bottom: 50px;
+        font-weight: 100;
+    }
+    #output h3 {
+        font-weight: 100;
+    }
+    #button {
+        width: 100px;
+        height: 100px;
+        border: solid lightskyblue;
+        border-radius: 50%;
+        border-width: 3px;
+        color: lightskyblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #changeButton {
+        color:gray; margin-top: 30px;
+        border: 1px solid gray;
+        padding: 5px;
+        border-radius: 5px;
+    }
+</style>
+
+
+
+
+
+
+<h1 id='sentence'>
+    
+</h1>
+
+<div id='output'>
+</div>
+
+<div id='button'>
+    Press and speak
+</div>
+
+<div style='' id='changeButton'>
+    Change a word
+</div>
+
+
+
+
+
+<script>
+'use strict';
+
+class SpeechRecognizer {
+    constructor(sentence) {
+        const grammar = `
+            #JSGF V1.0;
+            grammar sentence;
+            public <sentence> = ${sentence};
+        `;
+        const speechRecognitionList = new webkitSpeechGrammarList();
+        speechRecognitionList.addFromString(grammar, 1);
+        const recognition = new webkitSpeechRecognition();
+        recognition.grammars = speechRecognitionList;
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+        this.recognition = recognition;
+    }
+    recognize() {
+        return new Promise((resolve, reject) => {
+            this.recognition.onresult = event => {
+                console.log(event)
+                resolve(event.results[0][0]);
+            };
+            this.recognition.onnomatch = () => reject(new Error('nomatch'));
+            this.recognition.onerror = reject;
+            this.recognition.start();
+        });
+    }
+}
+
+async function recognize(sentence) {
+    try {
+        const result = await new SpeechRecognizer(sentence).recognize();
+        document.querySelector('#output').innerHTML = `
+            <h3><span style='color:lightskyblue'>Recognized:</span>&nbsp;&nbsp;&nbsp;${result.transcript}</h3>
+            <h3><span style='color:lightskyblue'>Score:</span>&nbsp;&nbsp;&nbsp;${Number.parseInt(result.transcript === sentence ? result.confidence * 100 : 0)} / 100</h3>
+        `;
+    } catch(e) {
+        console.error(e)
+    }
+}
+
+function initialize(sentence) {
+    document.querySelector('#sentence').innerText = sentence;
+    document.querySelector('#button').onclick = () => recognize(sentence);
+}
+
+
+const WORDS = [
+    'mathematics',
+    'arts',
+    'science',
+    'history',
+    'geometry',
+    'geography',
+    'geology',
+    'biology',
+    'chemistry',
+    'physics',
+    'literature',
+    'sociology',
+    'philosophy',
+    'psychology',
+    'engineering',
+    'medicine',
+    'agriculture',
+    'astronomy',
+    'economics',
+    'politics',
+    'law',
+    'architecture',
+    'finance',
+];
+window.onload = () => {
+    console.log('Ready to receive a sentence.');
+    initialize(WORDS[Math.floor(Math.random() * WORDS.length)]);
+    changeButton.onclick = () => initialize(WORDS[Math.floor(Math.random() * WORDS.length)]);
+};
+
+</script>
