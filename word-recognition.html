@@ -118,7 +118,7 @@ function recognize(sentence) {
         new SpeechRecognizer(sentence).recognize().then(result => {
             document.querySelector('#output').innerHTML = `
                 <h3><span style='color:lightskyblue'>Recognized:</span>&nbsp;&nbsp;&nbsp;${result.transcript}</h3>
-                <h3><span style='color:lightskyblue'>Score:</span>&nbsp;&nbsp;&nbsp;${Number.parseInt(result.transcript === sentence ? result.confidence * 100 : 0)} / 100</h3>
+                <h3><span style='color:lightskyblue'>Score:</span>&nbsp;&nbsp;&nbsp;${Number.parseInt(result.transcript.toLowerCase() === sentence.toLowerCase() ? result.confidence * 100 : 0)} / 100</h3>
             `;
         });
     } catch(e) {
