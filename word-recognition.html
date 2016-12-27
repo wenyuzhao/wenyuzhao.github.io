@@ -1,6 +1,12 @@
 <!doctype html>
 
-
+<script>
+    if (!window.webkitSpeechRecognition && !window.SpeechRecognition) {
+        alert(`Your browser does not support Web Speech API :(`);
+    }
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    window.SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList
+</script>
 
 <style>
     body {
@@ -67,7 +73,7 @@
     Press and speak
 </div>
 
-<div style='' id='changeButton'>
+<div id='changeButton'>
     Change a word
 </div>
 
@@ -85,9 +91,9 @@ class SpeechRecognizer {
             grammar sentence;
             public <sentence> = ${sentence};
         `;
-        const speechRecognitionList = new webkitSpeechGrammarList();
+        const speechRecognitionList = new SpeechGrammarList();
         speechRecognitionList.addFromString(grammar, 1);
-        const recognition = new webkitSpeechRecognition();
+        const recognition = new SpeechRecognition();
         recognition.grammars = speechRecognitionList;
         recognition.lang = 'en-US';
         recognition.interimResults = false;
