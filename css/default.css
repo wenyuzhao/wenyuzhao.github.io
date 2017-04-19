@@ -5,7 +5,7 @@ body {
 
 * {
     font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-    font-weight: 100;
+    /*font-weight: 100;*/
 }
 
 
@@ -27,7 +27,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
     color: #343434;
-    font-weight: 900;
+    /*font-weight: 900;*/
 }
 
 /* header */
@@ -40,7 +40,7 @@ header .title {
     font-size: 1cm;
     margin: 3cm 0cm 1.5cm 0cm;
     max-width: 17cm;
-    font-weight: 100;
+    /*font-weight: 100;*/
 }
 
 header nav {
