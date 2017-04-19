@@ -52,7 +52,7 @@
                 <nav class="nav">
                     <div>
                         <a href="{{ site.baseurl }}/index" {% if page.page == "projects" %}class="selected"{% endif %}>Projects</a>
-                        <a href="{{ site.baseurl }}/index" {% if page.page == "blog" || page.page == null %}class="selected"{% endif %}>Blog</a>
+                        <a href="{{ site.baseurl }}/index" {% if page.page == "blog" || page.page %}class="selected"{% endif %}>Blog</a>
                         <a href="{{ site.baseurl }}/index" {% if page.page == "experiments" %}class="selected"{% endif %}>Experiments</a>
                     </div>
                     <div>

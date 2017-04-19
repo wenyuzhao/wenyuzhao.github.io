@@ -82,6 +82,9 @@ article, main {
     max-width: 17cm;
 }
 
+article pre code {
+    
+}
 
 /* footer */
 
