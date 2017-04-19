@@ -91,6 +91,8 @@ article pre.highlight {
     background: #eeeeee;
     border-radius: 6px;
     overflow: auto;
+}
+article pre.highlight, article pre.highlight code, article pre.highlight code span {
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
