@@ -82,6 +82,10 @@ article, main {
     max-width: 17cm;
 }
 
+article, article * {
+    line-height: 24px;
+}
+
 article pre.highlight {
     padding: 6px;
     background: #eeeeee;
