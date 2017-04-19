@@ -48,17 +48,16 @@
                         </span>
                     </p>
                 {% endif %}
-                s{{ page.id }}s
                 -->
                 <nav class="nav">
                     <div>
-                        <a href="{{ site.baseurl }}/index" {% if page.url == "/" %}selected{% endif %}>Projects</a>
-                        <a href="{{ site.baseurl }}/index" {% if page.url == "/blog.html" %}selected{% endif %}>Blog</a>
-                        <a href="{{ site.baseurl }}/index" {% if page.url == "/experiments.html" %}selected{% endif %}>Experiments</a>
+                        <a href="{{ site.baseurl }}/index"{% if page.nav == "projects" %} selected{% endif %}>Projects</a>
+                        <a href="{{ site.baseurl }}/blog"{% if page.nav == "blog" %} selected{% endif %}>Blog</a>
+                        <a href="{{ site.baseurl }}/experiments"{% if page.nav == "experiments" %} selected{% endif %}>Experiments</a>
                     </div>
                     <div>
                         <a href="https://github.com/wenyuzhao">GitHub</a>
-                        <a href="{{ site.baseurl }}/index" {% if page.page == "about" %}class="selected"{% endif %}>About Me</a>
+                        <a href="{{ site.baseurl }}/about"{% if page.nav == "about" %} selected{% endif %}>About Me</a>
                     </div>
                 </nav>
             </header>
