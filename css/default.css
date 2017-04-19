@@ -60,6 +60,7 @@ header nav div {
 header nav a {
     margin: 0.5cm;
     color: #343434;
+    font-weight: 100;
 }
 
 header nav a[selected] {
