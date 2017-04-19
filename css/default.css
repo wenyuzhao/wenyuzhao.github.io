@@ -82,8 +82,11 @@ article, main {
     max-width: 17cm;
 }
 
-article pre code {
-    
+article pre.highlight {
+    padding: 6px;
+    background: #eeeeee;
+    border-radius: 6px;
+    overflow: auto;
 }
 
 /* footer */
