@@ -41,14 +41,16 @@
                             display: flex;
                             flex-direction: row;
                             align-items: center;
+                            justify-content: center;
+                            color: #343434;
                         }
                     </style>
-                    <p class="article-info">
+                    <div class="article-info">
                         <i class="material-icons">&#xE878;</i>
                         &nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <i class="material-icons">&#xE54E;</i>
                         &nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
-                    </p>
+                    </div>
                 {% endif %}
                 <nav class="nav">
                     <div>
