@@ -87,6 +87,7 @@ article pre.highlight {
     background: #eeeeee;
     border-radius: 6px;
     overflow: auto;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 /* footer */
