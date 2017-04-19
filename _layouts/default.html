@@ -35,7 +35,7 @@
         <center>
             <header>
                 <h1 class="title">{{ page.title }}</h1>
-                {% if page.id && post.date %}
+                {% if page.id && page.date %}
                     <style>
                         .article-info {
                             display: flex;
@@ -45,9 +45,9 @@
                     </style>
                     <p class="article-info">
                         <i class="material-icons">&#xE878;</i>
-                        &nbsp;{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <i class="material-icons">&#xE54E;</i>
-                        &nbsp;<a href="{{ site.url }}/categories.html#{{ post.category }}">{{ post.category }}</a>
+                        &nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
                     </p>
                 {% endif %}
                 <nav class="nav">
