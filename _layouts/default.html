@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <head>
-        <!-- SEO -->
         <title>{{ page.title }} | Wenyu Zhao</title>
-        
         <meta charset="utf-8"/>
         <meta name="author" content="赵文宇 | Wenyu Zhao | William | wenyuzhaox@gmail.com"/>
         <meta name="description" content="赵文宇(Wenyu Zhao)'s Blog will focus on software, web, mobile apps development, computer science and mathematics. Most posts will come from experiences I get from my job as a Web / iOS developer."/>
-        <!--<meta name="robots" content="all"/>-->
         <meta name="keywords" content="赵文宇,Wenyu Zhao,wenyuzhao,Software,Web,Server,iOS,Computer Science,Mathematics"/>
-        
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="{{ page.title }} | Wenyu Zhao"/>
         <meta property="og:description" content="赵文宇(Wenyu Zhao)'s Blog will focus on software, web, mobile apps development, computer science and mathematics. Most posts will come from experiences I get from my job as a Web / iOS developer."/>
         <meta property="og:url" content="http://wenyuzhao.me{{ page.url }}" />
         <meta property="og:site_name" content="A Blog by Wenyu Zhao" />
-        
         <meta property="article:publisher" content="https://www.facebook.com/wenyu.zhao2"/>
         {% if page.category %}
             <meta property="article:section" content="{{ page.category }}"/>
@@ -24,35 +19,23 @@
             <meta property="article:section" content="Blog"/>
             <meta property="article:tag" content="赵文宇,Wenyu Zhao,wenyuzhao,Software,Web,Server,iOS,Computer Science,Mathematics"/>
         {% endif %}
-        <!-- /SEO -->
-        
         <!--[if lt IE 9]>
         	<script src="{{ site.baseurl }}/js/html5.js"></script>
         <![endif]-->
-        
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-
         <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/default.css"/>
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/highlight.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        
         {% if page.latex %}
         	{% include latex.html %}
         {% endif %}
     </head>
     <body>
-        <header>
-            {% include cover-3d.html %}
-            <nav>
-                <a class="text" href="{{ site.baseurl }}/index">Home</a>
-                <a class="text" href="{{ site.baseurl }}/categories">Categories</a>
-                <a class="text" href="https://github.com/wenyuzhao">GitHub</a>
-            </nav>
-            <div class="title">
-                <h1 class="t-font">
-                    {{ page.title }}
-                </h1>
+        <center>
+            <header>
+                <h1 class="title">{{ page.title }}</h1>
+                <!--
                 {% if page.date %}
                     <p class="info">
                         <span>
@@ -65,21 +48,26 @@
                         </span>
                     </p>
                 {% endif %}
-                {% if page.header-buttons %}
-                    <div class="buttons">
-                        {% for button in page.header-buttons %}
-                            {{ button }}
-                        {% endfor %}
+                -->
+                <nav class="nav">
+                    <div>
+                        <a href="{{ site.baseurl }}/index" class="selected">Projects</a>
+                        <a href="{{ site.baseurl }}/index">Blog</a>
+                        <a href="{{ site.baseurl }}/index">Experiments</a>
                     </div>
-                {% endif %}
-            </div>
-        </header>
+                    <div>
+                        <a href="https://github.com/wenyuzhao">GitHub</a>
+                        <a href="{{ site.baseurl }}/index">About Me</a>
+                    </div>
+                </nav>
+            </header>
         
-        <article>
-            {{ content }}
-            {% if page.comments %}
-                {% include disqus.html %}
-            {% endif %}
-        </article>
+            <article>
+                {{ content }}
+                {% if page.comments %}
+                    {% include disqus.html %}
+                {% endif %}
+            </article>
+        </center>
     </body>
 </html>

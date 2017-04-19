@@ -1,150 +1,86 @@
 
 body {
-    font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen HeiSharp", sans-serif;
     background-color: white;
-    margin: 0px;
 }
+
+* {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    font-weight: 100;
+}
+
+
+a {
+    color: #2196f3;
+    text-decoration: none;
+    transition: all 0.5s;
+    border-radius: 4px;
+    padding: 2px 4px 2px 4px;
+}
+
+a:visited {
+    color: #2196f3;
+}
+
+a:hover {
+    background: #F5F5F5;
+}
+
+h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    color: #343434;
+    font-weight: 900;
+}
+
+/* header */
 
 header {
-    position: relative;
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-header a    {
-    text-decoration: none;
-    color: #ffffff;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-header a:link    { color: #ffffff; }
-header a:visited { color: #ffffff; }
-header a:hover   { color: #03A9F4; }
-header a:active  { color: #03A9F4; }
-
-header nav {
-    position: absolute;
-    top: 1rem; right: 1rem;
-    max-width: calc(100vw - 2rem);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 10;
-}
-
-header nav .text {
-    margin: 0 0.5rem;
-    font-size: 1rem;
-}
-
-header nav .text:last-child {
-    margin-right: 0;
-    z-index: 10;
+    margin-bottom: 2.5cm;
 }
 
 header .title {
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
+    font-size: 1cm;
+    margin: 3cm 0cm 1.5cm 0cm;
+    max-width: 17cm;
+    font-weight: 100;
 }
 
-header .info {
+header nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-header .info span {
+header nav div {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: nowrap;
-    margin: 0.5rem 1rem;
 }
 
-header .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+header nav a {
+    margin: 0.5cm;
+    color: #343434;
 }
 
-header .buttons > * {
-    outline: none;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 6px;
-    background: rgba(0,0,0,0.3);
-    margin: 1rem;
-    font-size: 1rem;
-    padding: 0.5rem;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    cursor: pointer;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    text-decoration: none;
+header nav a.selected {
+    font-weight: 900;
 }
 
-header .buttons > *:link    { border-color: #ffffff; color: #ffffff; }
-header .buttons > *:visited { border-color: #ffffff; color: #ffffff; }
-header .buttons > *:hover   { border-color: #03A9F4; color: #03A9F4; }
-header .buttons > *:active  { border-color: #03A9F4; color: #03A9F4; }
-
-article {
-    width: calc(100% - 2rem);
-    max-width: calc(800px - 2rem);
-    margin: 5rem auto;
-    padding: 0 1rem;
-    line-height: 1.6;
+header nav a:visited {
+    color: #343434;
 }
 
-article a {
-    text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    color: #03A9F4;
-    border-radius: 3px;
-    padding: 3px;
-    overflow: hidden;
-    background: transparent;
+header nav a:hover {
+    background: #F5F5F5;
 }
 
-article a:link    { color: #03A9F4; background: transparent; }
-article a:visited { color: #03A9F4; background: transparent; }
-article a:hover   { color: #ffffff; background: #03A9F4; }
-article a:active  { color: #ffffff; background: #03A9F4; }
-
-article > p > img {
-    max-width: 100%;
+footer {
+    margin: 2cm 0cm 2cm 0cm;
+    color: #8E8E93;
 }
 
-pre.highlight {
-    padding: 1rem;
-    background: #EEEEEE;
-    border-radius: 6px;
-    overflow: auto;
+article, main {
+    width: calc(100vw - 1cm);
+    text-align: left;
+    max-width: 17cm;
 }
