@@ -1,4 +1,30 @@
-<link rel="stylesheet" type="text/css" href="css/article-summary.css">
+<style>
+.article-summary {
+    margin: 1.5cm 0cm 1.5cm 0cm;
+}
+
+.article-summary .article-summary-title {
+    color: #343434;
+    text-decoration: none;
+    transition: all 0.5s;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.article-summary .article-summary-title a {
+    color: #343434;
+}
+
+.article-summary .article-summary-title a:visited {
+    color: #343434;
+}
+
+.article-summary .article-summary-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+</style>
 
 {% for post in site.posts %}
     <section class="article-summary">

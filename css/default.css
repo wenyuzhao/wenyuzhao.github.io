@@ -74,13 +74,18 @@ header nav a:hover {
     background: #F5F5F5;
 }
 
-footer {
-    margin: 2cm 0cm 2cm 0cm;
-    color: #8E8E93;
-}
+/* article */
 
 article, main {
     width: calc(100vw - 1cm);
     text-align: left;
-    max-width: 17cm;
+    max-width: 20cm;
+}
+
+
+/* footer */
+
+footer {
+    margin: 2cm 0cm 2cm 0cm;
+    color: #8E8E93;
 }
