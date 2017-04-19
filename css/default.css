@@ -79,7 +79,7 @@ header nav a:hover {
 article, main {
     width: calc(100vw - 1cm);
     text-align: left;
-    max-width: 20cm;
+    max-width: 17cm;
 }
 
 

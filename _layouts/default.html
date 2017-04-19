@@ -51,13 +51,13 @@
                 -->
                 <nav class="nav">
                     <div>
-                        <a href="{{ site.baseurl }}/index" class="selected">Projects</a>
-                        <a href="{{ site.baseurl }}/index">Blog</a>
-                        <a href="{{ site.baseurl }}/index">Experiments</a>
+                        <a href="{{ site.baseurl }}/index" {% if page.page == "projects" %}class="selected"{% endif %}>Projects</a>
+                        <a href="{{ site.baseurl }}/index" {% if page.page == "blog" || page.page == null %}class="selected"{% endif %}>Blog</a>
+                        <a href="{{ site.baseurl }}/index" {% if page.page == "experiments" %}class="selected"{% endif %}>Experiments</a>
                     </div>
                     <div>
-                        <a href="https://github.com/wenyuzhao">GitHub</a>
-                        <a href="{{ site.baseurl }}/index">About Me</a>
+                        <a href="https://github.com/wenyuzhao" {% if page.page == "github" %}class="selected"{% endif %}>GitHub</a>
+                        <a href="{{ site.baseurl }}/index" {% if page.page == "about" %}class="selected"{% endif %}>About Me</a>
                     </div>
                 </nav>
             </header>
@@ -68,6 +68,10 @@
                     {% include disqus.html %}
                 {% endif %}
             </article>
+
+            <footer>
+                &copy; 2017 Wenyu Zhao
+            </footer>
         </center>
     </body>
 </html>
