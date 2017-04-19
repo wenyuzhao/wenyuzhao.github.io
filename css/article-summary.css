@@ -5,9 +5,12 @@
     margin: 1.5cm 0cm 1.5cm 0cm;
 }
 
-
-.article-summary .summary {
-    padding: 2px 4px 2px 4px;
+.article-summary .article-summary-title {
+    color: #343434;
+    text-decoration: none;
+    transition: all 0.5s;
+    margin-left: -4px;
+    margin-right: -4px;
 }
 
 .article-summary a {
@@ -20,7 +23,7 @@
     color: #343434;
 }
 
-.article-summary .info, .article-summary .info a {
+.article-summary .article-summary-info, .article-summary .article-summary-info a {
     display: flex;
     flex-direction: row;
     align-items: center;
