@@ -1,82 +1,51 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <head>
-        <title>{{ page.title }} | Wenyu Zhao</title>
+        <title>{{ page.title }}{{ site.title_postfix }}</title>
         <meta charset="utf-8"/>
-        <meta name="author" content="赵文宇 | Wenyu Zhao | William | wenyuzhaox@gmail.com"/>
-        <meta name="description" content="赵文宇(Wenyu Zhao)'s Blog will focus on software, web, mobile apps development, computer science and mathematics. Most posts will come from experiences I get from my job as a Web / iOS developer."/>
-        <meta name="keywords" content="赵文宇,Wenyu Zhao,wenyuzhao,Software,Web,Server,iOS,Computer Science,Mathematics"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="{{ page.title }} | Wenyu Zhao"/>
-        <meta property="og:description" content="赵文宇(Wenyu Zhao)'s Blog will focus on software, web, mobile apps development, computer science and mathematics. Most posts will come from experiences I get from my job as a Web / iOS developer."/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="{{ site.author }}" />
+        <meta name="description" content="{% if page.description %}{{page.description }}{% else %}{{ site.default_description }}{% endif %}{{ site.description_postfix }}" />
+        <meta name="keywords" content="{% if page.keywords %}{{page.keywords }},{% endif %}{{ site.common_keywords }}"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="{{ page.title }}{{ site.title_postfix }}" />
+        <meta property="og:description" content="{% if page.description %}{{page.description }}{% else %}{{ site.default_description }}{% endif %}{{ site.description_postfix }}" />
         <meta property="og:url" content="http://wenyuzhao.me{{ page.url }}" />
-        <meta property="og:site_name" content="A Blog by Wenyu Zhao" />
-        <meta property="article:publisher" content="https://www.facebook.com/wenyu.zhao2"/>
+        <meta property="og:site_name" content="{{ site.title }}" />
+        <meta property="article:publisher" content="https://www.facebook.com/wenyu.zhao2" />
         {% if page.category %}
             <meta property="article:section" content="{{ page.category }}"/>
             <meta property="article:tag" content="赵文宇,Wenyu Zhao,wenyuzhao,{{ page.category }}"/>
         {% else %}
-            <meta property="article:section" content="Blog"/>
-            <meta property="article:tag" content="赵文宇,Wenyu Zhao,wenyuzhao,Software,Web,Server,iOS,Computer Science,Mathematics"/>
+            <meta property="article:section" content="X"/>
+            <meta property="article:tag" content="{% if page.keywords %}{{page.keywords }},{% endif %}{{ site.common_keywords }}"/>
         {% endif %}
         <!--[if lt IE 9]>
         	<script src="{{ site.baseurl }}/js/html5.js"></script>
         <![endif]-->
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-        <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico"/>
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/default.css"/>
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/highlight.css"/>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico" />
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/default.css" />
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/highlight.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         {% if page.latex %}
         	{% include latex.html %}
         {% endif %}
     </head>
     <body>
         <center>
-            <header>
-                <h1 class="title">{{ page.title }}</h1>
-                {% if page.id && page.date %}
-                    <style>
-                        .article-info {
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: center;
-                            color: #343434;
-                            margin-top: -0.4cm;
-                            margin-bottom: 1.1cm;
-                        }
-                    </style>
-                    <div class="article-info">
-                        <i class="material-icons">&#xE878;</i>
-                        &nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class="material-icons">&#xE54E;</i>
-                        &nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
-                    </div>
-                {% endif %}
-                <nav class="nav">
-                    <div>
-                        <a href="{{ site.baseurl }}/index"{% if page.nav == "projects" %} selected{% endif %}>Projects</a>
-                        <a href="{{ site.baseurl }}/blog"{% if page.nav == "blog" %} selected{% endif %}>Blog</a>
-                        <a href="{{ site.baseurl }}/experiments"{% if page.nav == "experiments" %} selected{% endif %}>Experiments</a>
-                    </div>
-                    <div>
-                        <a href="https://github.com/wenyuzhao">GitHub</a>
-                        <a href="{{ site.baseurl }}/resume"{% if page.nav == "about" %} selected{% endif %}>About Me</a>
-                    </div>
-                </nav>
-            </header>
+            {% include header.html %}
         
             <article>
                 {{ content }}
+
                 {% if page.comments %}
                     {% include disqus.html %}
                 {% endif %}
             </article>
 
-            <footer>
-                &copy; 2017 Wenyu Zhao
-            </footer>
+            <footer>&copy; 2017 Wenyu Zhao</footer>
         </center>
+        <script>console.info('Hi, how are you 🐨')</script>
     </body>
 </html>
