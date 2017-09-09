@@ -81,7 +81,7 @@ article, main {
     max-width: 41rem;
 }
 
-@media (max-width: 2048px) {
+@media (min-width: 2048px) {
     article, main {
         max-width: 56rem;
     }
