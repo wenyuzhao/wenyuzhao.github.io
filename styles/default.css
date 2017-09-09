@@ -81,6 +81,12 @@ article, main {
     max-width: 41rem;
 }
 
+@media (max-width: 2048px) {
+    article, main {
+        max-width: 56rem;
+    }
+}
+
 article, article * {
     line-height: 32px;
 }
