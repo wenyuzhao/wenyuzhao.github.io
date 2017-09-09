@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <head>
-        <title>{{ page.title }}{{ site.title_postfix }}</title>
+        <title>{{ page.title | strip_html }}{{ site.title_postfix }}</title>
         <meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="author" content="{{ site.author }}" />
         <meta name="description" content="{% if page.description %}{{page.description }}{% else %}{{ site.default_description }}{% endif %}{{ site.description_postfix }}" />
         <meta name="keywords" content="{% if page.keywords %}{{page.keywords }},{% endif %}{{ site.common_keywords }}"/>
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="{{ page.title }}{{ site.title_postfix }}" />
+        <meta property="og:title" content="{{ page.title | strip_html }}{{ site.title_postfix }}" />
         <meta property="og:description" content="{% if page.description %}{{page.description }}{% else %}{{ site.default_description }}{% endif %}{{ site.description_postfix }}" />
         <meta property="og:url" content="http://wenyuzhao.me{{ page.url }}" />
         <meta property="og:site_name" content="{{ site.title }}" />
