@@ -8,7 +8,7 @@ comments: true
 
 # Wenyu Zhao
 
-I am a 3rd year bechlor student at Monash University.
+I am a 3rd year bachelor student at Monash University.
 
 I am studying Computer Science and currently with 3.583 GPA and 82.273 Weighted average mark (WAM).
 
