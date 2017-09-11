@@ -13,7 +13,7 @@ Untyped [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus) interpr
 
 Example:
 ```
-# 1 + 1 = 2
+# Church encoding: 1 + 1 = 2
 (λm.λn.λf.λx.m f (n f x)) (λf.λx.f x) (λf.λx.f x)
 = (λn.λf2.λx2.(λf.λx.f x) f2 (n f2 x2)) (λf.λx.f x)
 = λf2.λx2.(λf3.λx3.f3 x3) f2 ((λf.λx.f x) f2 x2)
