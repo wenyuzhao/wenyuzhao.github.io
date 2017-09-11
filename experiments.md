@@ -1,9 +1,27 @@
 ---
 title: Play with New Techs
 nav: experiments
-description: My experiments on Parsing Expression Grammar, Machine Learning and Neural Networks.
-keywords: Experiments,New Technologies,Parser,Parsing Expression Grammar,Neural Network,Machine Learning
+description: My experiments on Lambda Calculus, Parsing Expression Grammar, Machine Learning and Neural Networks.
+keywords: Experiments,New Technologies,Lambda,Lambda Calculus,Interpreter,Ocaml,Parser,Parsing Expression Grammar,Neural Network,Machine Learning
 ---
+
+# Lambda
+
+Untyped [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus) interpreter in OCaml
+
+*See [GitHub](https://github.com/wenyuzhao/Lambda)*.
+
+Example:
+```
+# 1 + 1 = 2
+(λm.λn.λf.λx.m f (n f x)) (λf.λx.f x) (λf.λx.f x)
+= (λn.λf2.λx2.(λf.λx.f x) f2 (n f2 x2)) (λf.λx.f x)
+= λf2.λx2.(λf3.λx3.f3 x3) f2 ((λf.λx.f x) f2 x2)
+= λf2.λx2.(λx3.f2 x3) ((λx.f2 x) x2)
+= λf2.λx2.f2 ((λx.f2 x) x2)
+= λf2.λx2.f2 (f2 x2)
+```
+
 
 # Parsing Expression Grammar
 
@@ -11,6 +29,7 @@ Parsing Expression Grammar in c++14 based on parser combinators.
 
 *See [GitHub](https://github.com/wenyuzhao/PEG-Combinator)*.
 
+Example:
 ```c++
 // ...
 Number = NUMBER >> [](auto x) {
