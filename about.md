@@ -14,5 +14,5 @@ I am studying Computer Science and currently with 3.583 GPA and 82.273 Weighted 
 
 # Contact Information:
 
-* **Email**: [wenyuzhaox@gmail.com](mailto: wenyuzhaox@gmail.com)
-* **Github**: [github.com/wenyuzhao](https://github.com/wenyuzhao)
+* **Email**: [wenyuzhaox@gmail.com](mailto: wenyuzhaox@gmail.com "Email")
+* **Github**: [github.com/wenyuzhao](https://github.com/wenyuzhao "GitHub")

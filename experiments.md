@@ -7,9 +7,9 @@ keywords: Experiments,New Technologies,Lambda,Lambda Calculus,Interpreter,Ocaml,
 
 # Lambda
 
-Untyped [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus) interpreter in OCaml
+Untyped [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus "Lambda Calculus") interpreter in OCaml
 
-*See [GitHub](https://github.com/wenyuzhao/Lambda)*.
+*See [GitHub](https://github.com/wenyuzhao/Lambda "Lambda Source Code")*.
 
 Example:
 ```
@@ -27,7 +27,7 @@ Example:
 
 Parsing Expression Grammar in c++14 based on parser combinators.
 
-*See [GitHub](https://github.com/wenyuzhao/PEG-Combinator)*.
+*See [GitHub](https://github.com/wenyuzhao/PEG-Combinator "PEG-Combinator Source Code")*.
 
 Example:
 ```c++
@@ -67,4 +67,4 @@ Supported Layers:
 * LeakyReLULayer
 * DropoutLayer
 
-*See: [GitHub](https://github.com/wenyuzhao/Multilayer-Perceptron), [Example](https://github.com/wenyuzhao/Multilayer-Perceptron/blob/master/test.py).*
+*See: [GitHub](https://github.com/wenyuzhao/Multilayer-Perceptron "Multilayer-Perceptron Source Code"), [Example](https://github.com/wenyuzhao/Multilayer-Perceptron/blob/master/test.py "Multilayer-Perceptron Example").*

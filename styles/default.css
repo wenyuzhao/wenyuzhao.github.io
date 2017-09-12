@@ -3,11 +3,8 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-}
-
-.center {
     display: flex;
-    flex-direction: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -42,6 +39,9 @@ h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 
 header {
     margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header .title {
@@ -50,6 +50,7 @@ header .title {
     width: calc(100vw - 2rem);
     max-width: 41rem;
     /*font-weight: 100;*/
+    text-align: center;
 }
 
 header nav {
@@ -113,7 +114,7 @@ article pre.highlight, article pre.highlight code, article pre.highlight code sp
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-article > h1 {
+article > h1, article > h2 {
     margin-top: 5rem;
     border-bottom: 1px solid #eee;
     padding-bottom: 0.5rem;
