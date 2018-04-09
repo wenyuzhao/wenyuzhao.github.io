@@ -8,9 +8,8 @@ comments: true
 
 # Wenyu Zhao
 
-I am a 3rd year bachelor student at Monash University.
-
-I am studying Computer Science and currently with 3.583 GPA and 82.273 Weighted average mark (WAM).
+* *2015-2017* - Bachelor of Computer Science at Monash University, with a 3.625/4 GPA and 82.8 Weighted average mark (WAM).
+* *2018* - Bachelor of Computer Science (Honours) at Australian National University. Research area: Memory management & concurrent garbage collection.
 
 # Contact Information:
 
