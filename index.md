@@ -1,22 +1,10 @@
 ---
 title: Wenyu Zhao
-nav: projects
-description: My Projects. Either projects in production environments or personal projects.
-keywords: Projects,No1Delicious,React,React Native,iOS,Mobile App
+nav: home
+description: Home page of my personal website
+keywords: Wenyu,Zhao,Wenyu Zhao,ANU,Computer Science
 ---
 
-## 🎉 My Projects 🎉
+## 🌚🌚🌚
 
-Either projects in production environments or personal projects.
-
-## No1Delicious Delivery
-
-An iOS Chinese food online ordering & delivering app. Developed in [React Native](http://facebook.github.io/react-native/ "React Native"). This is an open source project and you can check it out at [here](https://github.com/wenyuzhao/No1Delicious "No1Delicious Source Code").
-
-<div style="display: flex; flex-direction: row; align-items: center; overflow: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch;">
-    {% for i in (0..4) %}
-        <div style="padding: 0.5rem;">
-            <img alt="No1Delicious app screenshot" style="height: 16.5rem; box-shadow: 0px 0px 8px #888888;" src="/images/No1Delicious/{{ i }}.jpg" />
-        </div>
-    {% endfor %}
-</div>
+* [My ANU Page](https://cs.anu.edu.au/people/wenyu-zhao)

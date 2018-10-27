@@ -9,7 +9,9 @@ comments: true
 # Wenyu Zhao
 
 * *2015-2017* - Bachelor of Computer Science at Monash University, with a 3.625/4 GPA and 82.8 Weighted average mark (WAM).
-* *2018* - Bachelor of Computer Science (Honours) at Australian National University. Research area: Memory management & concurrent garbage collection.
+* *2018* - Bachelor of Science (Honours) in Computer Science at Australian National University.
+  * Research area: Memory management & concurrent garbage collection.
+  * Thesis: [Understanding & Analyzing the Garbage-first Family of Garbage Collectors](https://wenyuzhao.me/Honours-Thesis//thesis.pdf)
 
 # Contact Information:
 
