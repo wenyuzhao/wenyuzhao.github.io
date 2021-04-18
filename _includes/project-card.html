@@ -1,0 +1,7 @@
+
+<div style="height: 100px; display: flex; flex-direction: row; align-items: center; margin: 3em 0; cursor: pointer; outline: none;" onclick="setTimeout(() => window.open('{{ include.link }}'), 0)" class="neu-card neu-card-clickable">
+    <a href="{{ include.link }}" style="display: flex; align-items: center; justify-content: center;">
+        <img style="width: 80px; height: 80px; padding: 0 10px; object-fit: contain;" src="{{ include.image }}">
+    </a>
+    <h1 style="flex: 1; text-align: center;"><a href="{{ include.link }}" style="color: #2196f3;">{{ include.title }}</a></h1>
+</div>
