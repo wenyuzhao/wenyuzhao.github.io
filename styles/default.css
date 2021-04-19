@@ -1,39 +1,49 @@
+:root {
+    --background-color: #FFFAFA;
+    --background-color-active: #eeeeee;
+    --link-color: #2196f3;
+    --link-color-active: var(--link-color);
+    --link-color-visited: var(--link-color);
+    --footer-color: #aaaaaa;
+    --text-color: #343434;
+    --line-color: #eeeeee;
+    --transition: all 0.5s;
+}
 
 body {
-    background-color: white;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #eeeeee;
+    background: var(--background-color);
 }
 
 * {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    /*font-weight: 100;*/
 }
 
 
 a {
-    color: #2196f3;
+    color: var(--link-color);
     text-decoration: none;
-    transition: all 0.5s;
+    transition: var(--transition);
     border-radius: 4px;
-    padding: 2px 2px 2px 2px;
+    padding: 2px 2px;
 }
 
 a:visited {
-    color: #2196f3;
+    color: var(--link-color-visited);
 }
 
 a:hover {
-    background: #cccccc;
+    color: var(--link-color-active);
+    background: var(--background-color-active);
+    cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
-    color: #343434;
-    /*font-weight: 900;*/
+    color: var(--text-color);
 }
 
 /* header */
@@ -50,7 +60,6 @@ header .title {
     margin: 7rem 0 3.5rem 0;
     width: calc(100vw - 2rem);
     max-width: 41rem;
-    /*font-weight: 100;*/
     text-align: center;
 }
 
@@ -65,8 +74,10 @@ header nav {
 
 header nav a {
     margin: 0.2rem;
-    color: #343434;
+    color: var(--text-color);
     font-weight: 100;
+    border-radius: 4px;
+    padding: 4px 6px;
 }
 
 header nav a[selected] {
@@ -74,17 +85,17 @@ header nav a[selected] {
 }
 
 header nav a:visited {
-    color: #343434;
+    color: var(--text-color);
 }
 
 header nav a:hover {
-    background: #cccccc;
+    color: var(--text-color);
 }
 
 /* article */
 
 article, main {
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 4rem);
     text-align: left;
     max-width: 41rem;
 }
@@ -117,7 +128,7 @@ article pre.highlight, article pre.highlight code, article pre.highlight code sp
 
 article > h1, article > h2 {
     margin-top: 5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--line-color);
     padding-bottom: 0.5rem;
 }
 
@@ -125,41 +136,5 @@ article > h1, article > h2 {
 
 footer {
     margin: 5rem 0 5rem 0;
-    color: #9e9e9e;
+    color: var(--footer-color);
 }
-
-/* THEME */
-
-.neu-card {
-    position: relative;
-    overflow: hidden;
-    background: #eeeeee;
-    transition: all 200ms ease-in-out;
-    box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
-    border-radius: 16px;
-    padding: 16px;
-}
-
-.neu-card-clickable {
-    cursor: pointer;
-}
-
-.neu-card-clickable:active {
-  box-shadow: inset -2px -2px 5px #ffffff, inset 2px 2px 5px #cacaca !important;
-}
-
-/* a.neu-link {
-    all: unset;
-    color: #2196f3;
-    text-decoration: none;
-    transition: all 0.5s;
-    border-radius: 4px;
-    padding: 2px 2px 2px 2px;
-}
-a:visited {
-    color: #2196f3;
-}
-
-a:hover {
-    background: #F5F5F5;
-} */
