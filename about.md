@@ -8,8 +8,10 @@ comments: true
 
 # Wenyu Zhao
 
+* *2021* - Academic tutor for for the course [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch).
 * *2021* - Google Software Engineering Intern, PhD.
   * Work with Chromium/V8 team.
+  * See [a list of my work](https://chromium-review.googlesource.com/q/owner:%22Wenyu+Zhao%22) on V8.
 * *2020* - PhD Student at Australian National University.
   * Research area: V8, Memory management, Garbage collection.
 * *2018* - Bachelor of Science (Honours) in Computer Science at Australian National University.

@@ -7,20 +7,16 @@ keywords: Wenyu,Zhao,Wenyu Zhao,ANU,Computer Science
 
 # Hello 🌚
 
-{% include project-card.html
-    image="https://eforms.anu.edu.au/ChatBot_StudentCentralBot/ANU_Crest_Gold_%20Crest_Gold.png"
-    title="My ANU page"
-    link="https://cs.anu.edu.au/people/wenyu-zhao"
-%}
+I am a PhD student at The Australian National University.
+I do research on computer systems, memory management and programming languages.
 
-{% include project-card.html
-    image="https://v8.dev/_img/v8.svg"
-    title="List of my work on Chromium/V8"
-    link="https://chromium-review.googlesource.com/q/owner:%22Wenyu+Zhao%22"
-%}
+I also work as a casual research assisitant at ANU and tutor for the course [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch).
 
-{% include project-card.html
-    image="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
-    title="My GitHub home page"
-    link="https://github.com/wenyuzhao"
-%}
+I am a terrible gamer as well :(
+
+_Please checkout:_
+
+* My [ANU stuff webpage](https://cecs.anu.edu.au/people/wenyu-zhao).
+* My [V8 Gerrit](https://chromium-review.googlesource.com/q/owner:%22Wenyu+Zhao%22) page for a list of my work on Google's Chromium/V8.
+* My [Github account](https://github.com/wenyuzhao) for my toy projects.
+* The MMTk project [[Website]](https://www.mmtk.io) [[GitHub]](https://github.com/mmtk) which I spend most of my effort to 🙃.
