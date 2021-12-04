@@ -1,21 +1,16 @@
+import React from "react";
+import { Utterances } from 'utterances-react-component'
+
 export default function Comments() {
-    return <>
+    return <section>
         <br />
         <br />
         <br />
-        <section
-            ref={elem => {
-                if (!elem) return;
-                const script = document.createElement("script");
-                script.src = "https://utteranc.es/client.js";
-                script.async = true;
-                script.crossOrigin = "anonymous";
-                script.setAttribute("repo", "wenyuzhao/wenyuzhao.github.io");
-                script.setAttribute("issue-term", "title");
-                script.setAttribute("label", "website-comment");
-                script.setAttribute("theme", "github-light");
-                elem.appendChild(script);
-            }}
+        <Utterances
+            repo="wenyuzhao/wenyuzhao.github.io"
+            theme="github-light"
+            issueTerm="pathname"
+            label="website-comment"
         />
-    </>;
+    </section>;
 }

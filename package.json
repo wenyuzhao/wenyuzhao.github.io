@@ -21,7 +21,8 @@
     "next-remote-watch": "^1.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "utterances-react-component": "^1.0.0"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
