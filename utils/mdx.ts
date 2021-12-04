@@ -3,6 +3,7 @@ import glob from 'glob';
 import path from 'path';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
+import { PageMeta } from '../layouts/layout';
 
 const PAGES_DIR = path.normalize(path.join(process.cwd(), 'pages'));
 
@@ -23,15 +24,10 @@ if (process.platform === 'win32') {
     );
 }
 
-export type MDXMeta = object & {
-    title?: string,
-    layout?: string,
-}
-
 export type MDXPage = {
     path: string,
     slug: string[],
-    meta: MDXMeta,
+    meta: PageMeta,
 }
 
 export type CompiledMDXPage = MDXPage & {
