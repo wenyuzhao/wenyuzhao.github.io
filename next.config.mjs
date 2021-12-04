@@ -1,8 +1,8 @@
-const mdxRendererPlugin = require('./utils/mdx-renderer');
+import mdxRendererPlugin from './utils/mdx-renderer.mjs';
+import withOptimizedImages from 'next-optimized-images';
+import MDX from '@next/mdx';
 
-const withOptimizedImages = require('next-optimized-images');
-
-const withMDX = require('@next/mdx')({
+const withMDX = MDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [mdxRendererPlugin]
@@ -10,7 +10,7 @@ const withMDX = require('@next/mdx')({
 });
 
 /** @type {import('next').NextConfig} */
-module.exports = withOptimizedImages(withMDX({
+export default withOptimizedImages(withMDX({
   reactStrictMode: true,
   optimizeImages: false,
   images: {
