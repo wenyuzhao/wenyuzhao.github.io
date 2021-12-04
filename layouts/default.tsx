@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
-import { PageProps, MetaTags, site } from './layout';
+import { PageProps, MetaTags, site, Comments } from './layout';
 
 const NavItem = ({ meta, id, name, href }: PageProps & { id: string, name: String, href: string }) => (
     <Link href={href} >
@@ -18,10 +18,10 @@ const Title = ({ title }: { title: string | string[] }) => {
             <h1 className='title'>
                 {first}
                 {
-                    segments.map(s => <>
+                    segments.map(s => <span key={s}>
                         <span style={{ color: '#BDBDBD' }}>{' ➤ '}</span>
                         {s}
-                    </>)
+                    </span>)
                 }
             </h1>
         );
@@ -56,6 +56,7 @@ export default function DefaultLayout({ meta, children }: PageProps) {
             <article>
                 {children}
             </article>
+            {meta.comments && <Comments />}
             <Footer meta={meta} />
         </div>
     );

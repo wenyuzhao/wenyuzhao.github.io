@@ -11,7 +11,6 @@ export type PageMeta = object & {
     layout?: string,
 }
 
-
 export type PageProps = {
     meta: PageMeta,
     children?: React.ReactNode,
@@ -28,4 +27,24 @@ export const MetaTags = ({ meta }: PageProps) => <>
     <meta property='og:description' content={(meta.description ?? site.default_description) + site.description_postfix} />
     <meta property='og:site_name' content={site.title} />
     <meta property='article:publisher' content='https://www.facebook.com/wenyu.zhao2' />
+</>;
+
+export const Comments = () => <>
+    <br />
+    <br />
+    <br />
+    <section
+        ref={elem => {
+            if (!elem) return;
+            const script = document.createElement("script");
+            script.src = "https://utteranc.es/client.js";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            script.setAttribute("repo", "wenyuzhao/wenyuzhao.github.io");
+            script.setAttribute("issue-term", "title");
+            script.setAttribute("label", "website-comment");
+            script.setAttribute("theme", "github-light");
+            elem.appendChild(script);
+        }}
+    />
 </>;
