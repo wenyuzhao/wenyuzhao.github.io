@@ -54,14 +54,15 @@ export default class MDXPages {
     static async get(slug: string[]): Promise<CompiledMDXPage> {
         let file = path.join(PAGES_DIR, ...slug) + '.mdx';
         if (!fs.existsSync(file)) file = `${file}.md`;
-        const source = fs.readFileSync(file, 'utf8');
+        const mdx = require(file);
+        console.log(mdx);
         const dirname = path.dirname(file);
-        const { code, frontmatter } = await MDXPages.compile(dirname, source);
+        // const { code, frontmatter } = await MDXPages.compile(dirname, source);
         return {
             path: file,
             slug: slug,
-            meta: frontmatter,
-            mdx: code,
+            meta: mdx.meta,
+            mdx: mdx,
         };
     }
 
