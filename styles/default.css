@@ -1,10 +1,10 @@
 :root {
     --background-color: #FFFAFA;
     --background-color-active: #eeeeee;
-    --link-color: #2196f3;
+    --link-color: #1976D2;
     --link-color-active: var(--link-color);
     --link-color-visited: var(--link-color);
-    --footer-color: #aaaaaa;
+    --footer-color: #616161;
     --text-color: #343434;
     --line-color: #eeeeee;
     --transition: all 0.5s;

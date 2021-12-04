@@ -1,23 +1,35 @@
 {
   "name": "wenyuzhao.github.io",
-  "version": "0.3.0",
-  "description": "Wenyu Zhao's GitHub Pages",
   "private": true,
   "scripts": {
-    "start": "bundle exec jekyll serve"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "yarn build && yarn export"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wenyuzhao/wenyuzhao.github.io.git"
+  "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^12.0.5",
+    "esbuild": "^0.14.1",
+    "glob": "^7.2.0",
+    "gray-matter": "^4.0.3",
+    "mdx-bundler": "^8.0.0",
+    "next": "12.0.4",
+    "next-optimized-images": "^2.6.2",
+    "next-remote-watch": "^1.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.3"
   },
-  "keywords": [
-    "wenyuzhao",
-    "github"
-  ],
-  "author": "Wenyu Zhao",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wenyuzhao/wenyuzhao.github.io/issues"
-  },
-  "homepage": "https://github.com/wenyuzhao/wenyuzhao.github.io#readme"
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/node": "16.11.11",
+    "@types/react": "17.0.37",
+    "@types/styled-components": "^5.1.16",
+    "eslint": "7",
+    "eslint-config-next": "12.0.4",
+    "typescript": "4.5.2"
+  }
 }
