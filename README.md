@@ -1,4 +1,4 @@
-# [wenyuzhao.me](https://wenyuzhao.me)
+# [wenyu.me](https://wenyu.me)
 
 My Website.
 
