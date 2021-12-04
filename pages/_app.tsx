@@ -1,8 +1,8 @@
 import '../styles/default.css'
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+if (globalThis.window) window.addEventListener('load', () => console.info('Hi, how are you 🐨'));

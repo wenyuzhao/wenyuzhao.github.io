@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
-import { PageProps, MetaTags, site, Comments } from './layout';
+import React from 'react';
+import Comments from '../components/Comments';
+import MetaTags from '../components/MetaTags';
+import { PageProps, site } from '../utils/page';
 
 const NavItem = ({ meta, id, name, href }: PageProps & { id: string, name: String, href: string }) => (
     <Link href={href} >
@@ -61,5 +63,3 @@ export default function DefaultLayout({ meta, children }: PageProps) {
         </div>
     );
 }
-
-if (globalThis.window) window.addEventListener('load', () => console.info('Hi, how are you 🐨'));
