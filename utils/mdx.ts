@@ -3,7 +3,7 @@ import glob from 'glob';
 import path from 'path';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
-import { PageMeta } from '../layouts/layout';
+import { PageMeta } from './page';
 
 const PAGES_DIR = path.normalize(path.join(process.cwd(), 'pages'));
 
