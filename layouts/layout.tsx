@@ -3,7 +3,7 @@ import site from '../site.json';
 export { site };
 
 export type PageMeta = object & {
-    title?: string,
+    title?: string | string[],
     description?: string,
     keywords?: string,
     nav?: string,

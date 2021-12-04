@@ -11,10 +11,28 @@ const NavItem = ({ meta, id, name, href }: PageProps & { id: string, name: Strin
     </Link>
 );
 
+const Title = ({ title }: { title: string | string[] }) => {
+    if (Array.isArray(title)) {
+        const [first, ...segments] = title;
+        return (
+            <h1 className='title'>
+                {first}
+                {
+                    segments.map(s => <>
+                        <span style={{ color: '#BDBDBD' }}>{' ➤ '}</span>
+                        {s}
+                    </>)
+                }
+            </h1>
+        );
+    } else {
+        return <h1 className='title'>{title}</h1>;
+    }
+};
 
 const Header = ({ meta }: PageProps) => <>
     <header>
-        <h1 className='title'>{meta.title}</h1>
+        <Title title={meta.title ?? ''} />
         <nav className='nav'>
             <NavItem href='/' id='home' name='Home' meta={meta} />
             <NavItem href='https://github.com/wenyuzhao' id='github' name='GitHub' meta={meta} />
