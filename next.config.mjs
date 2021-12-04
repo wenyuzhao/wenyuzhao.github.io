@@ -1,11 +1,14 @@
-import mdxRendererPlugin from './utils/mdx-renderer.mjs';
+import mdxRendererPlugin from './utils/mdx-renderer.js';
 import withOptimizedImages from 'next-optimized-images';
 import MDX from '@next/mdx';
+import { fromMarkdown } from 'mdast-util-from-markdown'
+import { mdxjs } from 'micromark-extension-mdxjs'
+import { mdxFromMarkdown } from 'mdast-util-mdx'
 
 const withMDX = MDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [mdxRendererPlugin]
+    remarkPlugins: [mdxRendererPlugin({ fromMarkdown, mdxjs, mdxFromMarkdown })]
   }
 });
 

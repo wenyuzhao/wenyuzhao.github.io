@@ -1,8 +1,5 @@
-import matter from 'gray-matter';
-import { fromMarkdown } from 'mdast-util-from-markdown'
-import { mdxjs } from 'micromark-extension-mdxjs'
-import { mdxFromMarkdown } from 'mdast-util-mdx'
-import path from 'path';
+const matter = require('gray-matter');
+const path = require('path');
 
 const LAYOUTS_DIR = path.resolve(path.resolve(), 'layouts');
 
@@ -13,7 +10,7 @@ import { ${meta.layout || 'default'} as Layout } from '${LAYOUTS_DIR}';
 <Layout meta={meta}></Layout>
 `;
 
-export default () => (tree, file) => {
+module.exports = ({ fromMarkdown, mdxjs, mdxFromMarkdown }) => () => (tree, file) => {
     // Parse frontmatter metadata
     const { data } = matter(file.value);
     // Get MDX wrapper
