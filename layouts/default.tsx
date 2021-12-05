@@ -41,7 +41,7 @@ const Header = ({ meta }: PageProps) => <>
             <NavItem href='https://github.com/wenyuzhao' id='github' name='GitHub' meta={meta} />
             <NavItem href='/about' id='about' name='About Me' meta={meta} />
         </nav>
-    </header >
+    </header>
 </>;
 
 const Footer = ({ meta }: PageProps) => <>
