@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Comments from '../components/Comments';
 import MetaTags from '../components/MetaTags';
 import { PageProps, site } from '../utils/page';
+import styles from './default.module.css';
 
 const NavItem = ({ meta, id, name, href }: PageProps & { id: string, name: String, href: string }) => (
     <Link href={href} >
@@ -48,8 +49,12 @@ const Footer = ({ meta }: PageProps) => <>
 </>;
 
 export default function DefaultLayout({ meta, children }: PageProps) {
+    useEffect(() => {
+        document.body.classList.add(styles.body);
+        return () => document.body.classList.remove(styles.body);
+    });
     return (
-        <div>
+        <main className={styles.layout}>
             <Head>
                 <title>{meta.title + site.title_postfix}</title>;
                 <MetaTags meta={meta} />
@@ -60,6 +65,6 @@ export default function DefaultLayout({ meta, children }: PageProps) {
             </article>
             {meta.comments && <Comments />}
             <Footer meta={meta} />
-        </div>
+        </main>
     );
 }

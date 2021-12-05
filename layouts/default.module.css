@@ -1,4 +1,4 @@
-:root {
+.layout:root {
     --background-color: #FFFAFA;
     --background-color-active: #eeeeee;
     --link-color: #1976D2;
@@ -10,7 +10,7 @@
     --transition: all 0.5s;
 }
 
-body {
+.body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,12 +19,11 @@ body {
     background: var(--background-color);
 }
 
-* {
+.layout * {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-a {
+.layout a {
     color: var(--link-color);
     text-decoration: none;
     transition: var(--transition);
@@ -32,30 +31,30 @@ a {
     padding: 2px 2px;
 }
 
-a:visited {
+.layout a:visited {
     color: var(--link-color-visited);
 }
 
-a:hover {
+.layout a:hover {
     color: var(--link-color-active);
     background: var(--background-color-active);
     cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+.layout h1, .layout h2, .layout h3, .layout h4, .layout h5, .layout h6, .layout h1 *, .layout h2 *, .layout h3 *, .layout h4 *, .layout h5 *, .layout h6 * {
     color: var(--text-color);
 }
 
 /* header */
 
-header {
+.layout header {
     margin-bottom: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header .title {
+.layout header .title {
     font-size: 2rem;
     margin: 7rem 0 3.5rem 0;
     width: calc(100vw - 2rem);
@@ -63,7 +62,7 @@ header .title {
     text-align: center;
 }
 
-header nav {
+.layout header nav {
     width: calc(100vw - 1rem);
     max-width: 30rem;
     display: flex;
@@ -72,7 +71,7 @@ header nav {
     flex-wrap: nowrap;
 }
 
-header nav a {
+.layout header nav a {
     margin: 0.2rem;
     color: var(--text-color);
     font-weight: 100;
@@ -80,37 +79,37 @@ header nav a {
     padding: 4px 6px;
 }
 
-header nav a[selected] {
+.layout header nav a[selected] {
     font-weight: 900;
 }
 
-header nav a:visited {
+.layout header nav a:visited {
     color: var(--text-color);
 }
 
-header nav a:hover {
+.layout header nav a:hover {
     color: var(--text-color);
 }
 
 /* article */
 
-article, main {
+.layout article, .layout main {
     width: calc(100vw - 4rem);
     text-align: left;
     max-width: 41rem;
 }
 
 @media (min-width: 2048px) {
-    article, main {
+    .layout article, .layout main {
         max-width: 56rem;
     }
 }
 
-article, article * {
+.layout article, .layout article * {
     line-height: 32px;
 }
 
-article pre.highlight {
+.layout article pre.highlight {
     padding: 6px;
     background: #eeeeee;
     border-radius: 6px;
@@ -118,15 +117,15 @@ article pre.highlight {
     line-height: 24px;
 }
 
-article pre.highlight * {
+.layout article pre.highlight * {
     line-height: 24px;
 }
 
-article pre.highlight, article pre.highlight code, article pre.highlight code span {
+.layout article pre.highlight, .layout article pre.highlight code, .layout article pre.highlight code span {
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-article > h1, article > h2 {
+.layout article > h1, .layout article > h2 {
     margin-top: 5rem;
     border-bottom: 1px solid var(--line-color);
     padding-bottom: 0.5rem;
@@ -134,7 +133,7 @@ article > h1, article > h2 {
 
 /* footer */
 
-footer {
+.layout footer {
     margin: 5rem 0 5rem 0;
     color: var(--footer-color);
 }
