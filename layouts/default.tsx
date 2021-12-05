@@ -18,7 +18,7 @@ const Title = ({ title }: { title: string | string[] }) => {
     if (Array.isArray(title)) {
         const [first, ...segments] = title;
         return (
-            <h1 className='title'>
+            <h1 className={styles.title}>
                 {first}
                 {
                     segments.map(s => <span key={s}>
@@ -29,14 +29,14 @@ const Title = ({ title }: { title: string | string[] }) => {
             </h1>
         );
     } else {
-        return <h1 className='title'>{title}</h1>;
+        return <h1 className={styles.title}>{title}</h1>;
     }
 };
 
 const Header = ({ meta }: PageProps) => <>
     <header>
         <Title title={meta.title ?? ''} />
-        <nav className='nav'>
+        <nav>
             <NavItem href='/' id='home' name='Home' meta={meta} />
             <NavItem href='https://github.com/wenyuzhao' id='github' name='GitHub' meta={meta} />
             <NavItem href='/about' id='about' name='About Me' meta={meta} />
@@ -50,8 +50,8 @@ const Footer = ({ meta }: PageProps) => <>
 
 export default function DefaultLayout({ meta, children }: PageProps) {
     useEffect(() => {
-        document.body.classList.add(styles.body, styles.vars);
-        return () => document.body.classList.remove(styles.body, styles.vars);
+        document.body.classList.add(styles.context);
+        return () => document.body.classList.remove(styles.context);
     });
     return (
         <main className={styles.layout}>
