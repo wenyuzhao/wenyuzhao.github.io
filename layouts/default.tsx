@@ -50,8 +50,8 @@ const Footer = ({ meta }: PageProps) => <>
 
 export default function DefaultLayout({ meta, children }: PageProps) {
     useEffect(() => {
-        document.body.classList.add(styles.body);
-        return () => document.body.classList.remove(styles.body);
+        document.body.classList.add(styles.body, styles.vars);
+        return () => document.body.classList.remove(styles.body, styles.vars);
     });
     return (
         <main className={styles.layout}>
