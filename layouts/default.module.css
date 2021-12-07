@@ -98,6 +98,7 @@ body.context {
     width: calc(100vw - 4rem);
     text-align: left;
     max-width: 41rem;
+    margin: auto;
 }
 
 @media (min-width: 2048px) {
