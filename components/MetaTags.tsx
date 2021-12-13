@@ -2,7 +2,7 @@ import { PageProps, site } from "../utils/page";
 
 export default function MetaTags({ meta }: PageProps) {
     return <>
-        <link rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌚</text></svg>' />
+        <link rel='icon' href='favicon.ico' />
         <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
         <meta name='author' content={site.author} />
         <meta name='description' content={(meta.description ?? site.default_description) + site.description_postfix} />
