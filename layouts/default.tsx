@@ -57,6 +57,7 @@ export default function DefaultLayout({ meta, children }: PageProps) {
         <main className={styles.layout}>
             <Head>
                 <title>{meta.title + site.title_postfix}</title>;
+                <meta name="theme-color" content="#FFFAFA" />
                 <MetaTags meta={meta} />
             </Head>
             <Header meta={meta} />
