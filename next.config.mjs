@@ -1,5 +1,5 @@
 import mdxRendererPlugin from './utils/mdx-renderer.js';
-import withOptimizedImages from 'next-optimized-images';
+import withImages from 'next-images';
 import MDX from '@next/mdx';
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { mdxjs } from 'micromark-extension-mdxjs'
@@ -13,11 +13,7 @@ const withMDX = MDX({
 });
 
 /** @type {import('next').NextConfig} */
-export default withOptimizedImages(withMDX({
+export default withImages(withMDX({
   reactStrictMode: true,
-  optimizeImages: false,
-  images: {
-    disableStaticImages: true,
-  },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 }));
