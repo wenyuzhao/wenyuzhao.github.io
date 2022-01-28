@@ -45,7 +45,7 @@ const Header = ({ meta }: PageProps) => <>
 </>;
 
 const Footer = ({ meta }: PageProps) => <>
-    <footer style={{ textAlign: 'center' }}>© 2021 Wenyu Zhao</footer>
+    <footer style={{ textAlign: 'center' }}>© 2022 Wenyu Zhao</footer>
 </>;
 
 export default function DefaultLayout({ meta, children }: PageProps) {
