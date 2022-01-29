@@ -1,6 +1,6 @@
 /* This class-name should be injected to `document.body` */
 .context {
-    --background-color: #FFFAFA;
+    --background-color: #fffcfc;
     --background-color-active: #eeeeee;
     --link-color: #1976D2;
     --link-color-active: var(--link-color);

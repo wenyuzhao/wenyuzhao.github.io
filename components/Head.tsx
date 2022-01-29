@@ -6,7 +6,7 @@ export default function Head({ meta }: PageProps) {
         <NextHead>
             <title>{meta.title + site.title_postfix}</title>;
 
-            <meta name="theme-color" content="#FFFAFA" />
+            <meta name="theme-color" content="#fffcfc" />
             <meta charSet="utf-8" />
             <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
             <meta name='author' content={site.author} />
