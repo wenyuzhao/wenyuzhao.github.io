@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import Comments from '../components/Comments';
-import MetaTags from '../components/MetaTags';
-import { PageProps, site } from '../utils/page';
+import Head from '../components/Head';
+import { PageProps } from '../utils/page';
 import styles from './default.module.css';
 
 const NavItem = ({ meta, id, name, href }: PageProps & { id: string, name: String, href: string }) => (
@@ -55,11 +54,7 @@ export default function DefaultLayout({ meta, children }: PageProps) {
     });
     return (
         <main className={styles.layout}>
-            <Head>
-                <title>{meta.title + site.title_postfix}</title>;
-                <meta name="theme-color" content="#FFFAFA" />
-                <MetaTags meta={meta} />
-            </Head>
+            <Head meta={meta} />
             <Header meta={meta} />
             <article>
                 {children}
