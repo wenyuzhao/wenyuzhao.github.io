@@ -21,7 +21,7 @@ const Title = ({ title }: { title: string | string[] }) => {
                 {first}
                 {
                     segments.map(s => <span key={s}>
-                        <span style={{ color: '#BDBDBD' }}>{' ➤ '}</span>
+                        <span style={{ color: '#BDBDBD', fontSize: '0.8em' }}>{' ➤ '}</span>
                         {s}
                     </span>)
                 }
