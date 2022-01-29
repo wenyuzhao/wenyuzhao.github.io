@@ -4,6 +4,7 @@ export { site };
 
 export type PageMeta = object & {
     title?: string | string[],
+    title_postfix?: string,
     description?: string,
     keywords?: string,
     nav?: string,
