@@ -1,5 +1,5 @@
 :root {
-    --background-color: #FFFAFA;
+    --background-color: #fffcfc;
     --background-color-active: #eeeeee;
     --link-color: #2196f3;
     --link-color-active: var(--link-color);
@@ -95,7 +95,7 @@ header nav a:hover {
 /* article */
 
 article, main {
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 3rem);
     text-align: left;
     max-width: 41rem;
 }
