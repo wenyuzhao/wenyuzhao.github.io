@@ -7,10 +7,10 @@ keywords: Wenyu,Zhao,Wenyu Zhao,ANU,Computer Science
 
 # Hello 🌚
 
-I am a PhD student at the Australian National University.
+I am a PhD student at the Australian National University, under the supervision of [Prof. Steve Blackburn](https://users.cecs.anu.edu.au/~steveb).
 I do research on computer systems, memory management and programming languages.
 
-I also work as a casual research assistant at ANU and tutor for the course [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch).
+I also work as a casual research assistant at ANU and tutor for the course [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch) (2021).
 
 I am a terrible gamer as well :(
 
