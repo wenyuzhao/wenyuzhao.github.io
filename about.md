@@ -8,6 +8,8 @@ comments: true
 
 # Wenyu Zhao
 
+* *2022* - [PLDI'22 distinguished paper award](https://twitter.com/ANUComputing/status/1537216702223503360)
+* *2022* - Academic tutor for the course [COMP2310 Systems, Networks, and Concurrency](https://comp.anu.edu.au/courses/comp2310).
 * *2021* - Academic tutor for the course [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch).
 * *2021* - Google Software Engineering Intern, PhD.
   * Work with Chromium/V8 team.

@@ -1,28 +1,29 @@
 <header>
     <h1 class="title">{{ page.title }}</h1>
     {% if page.id and page.date %}
-        <style>
-            .article-info {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                color: #343434;
-                margin-top: -0.4cm;
-                margin-bottom: 1.1cm;
-            }
-        </style>
-        <div class="article-info">
-            <i class="material-icons">&#xE878;</i>
-            &nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <i class="material-icons">&#xE54E;</i>
-            &nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
-        </div>
+    <style>
+        .article-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: #343434;
+            margin-top: -0.4cm;
+            margin-bottom: 1.1cm;
+        }
+    </style>
+    <div class="article-info">
+        <i class="material-icons">&#xE878;</i>
+        &nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="material-icons">&#xE54E;</i>
+        &nbsp;<a href="{{ site.url }}/categories.html#{{ page.category }}">{{ page.category }}</a>
+    </div>
     {% endif %}
     <nav class="nav">
-        <a href="{{ site.baseurl }}/index"{% if page.nav == "home" %} selected{% endif %}>Home</a>
+        <a href="{{ site.baseurl }}/index" {% if page.nav=="home" %} selected{% endif %}>Home</a>
+        <a href="{{ site.baseurl }}/publications" {% if page.nav=="publications" %} selected{% endif %}>Publications</a>
         <!-- <a href="{{ site.baseurl }}/experiments"{% if page.nav == "experiments" %} selected{% endif %}>Experiments</a> -->
         <a href="https://github.com/wenyuzhao">GitHub</a>
-        <a href="{{ site.baseurl }}/about"{% if page.nav == "about" %} selected{% endif %}>About Me</a>
+        <a href="{{ site.baseurl }}/about" {% if page.nav=="about" %} selected{% endif %}>About Me</a>
     </nav>
 </header>

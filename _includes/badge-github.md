@@ -1,0 +1,1 @@
+[![Repo](https://img.shields.io/github/stars/{{ include.repo }}?style=flat&logo=github&label=Stars)]({{ include.link }})

@@ -1,0 +1,1 @@
+[![DOI](https://img.shields.io/badge/🎉 {{ include.label }}-{{ include.message }}-brightgreen.svg?style=flat)]({{ include.link }})

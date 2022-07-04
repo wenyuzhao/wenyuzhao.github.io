@@ -138,3 +138,8 @@ footer {
     margin: 5rem 0 5rem 0;
     color: var(--footer-color);
 }
+
+article p a img {
+    vertical-align: middle;
+    vertical-align: sub;
+}
