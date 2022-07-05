@@ -22,4 +22,4 @@ Zhao, **Understanding & Analyzing the Garbage-first Family of Garbage Collectors
 
 *My publications are also available on:*
 
-[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-brightgreen.svg?logo=google&style=for-the-badge&logoColor=white&labelColor=5c5c5c)](https://scholar.google.com.au/citations?user=7QSb8g4AAAAJ&hl=en) [![ACM](https://img.shields.io/badge/-ACM%20Digital%20Library-brightgreen.svg?logo=acm&style=for-the-badge&logoColor=white&labelColor=5c5c5c)](https://dl.acm.org/profile/99659509405)
+[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4c8bf5.svg?logo=google&style=for-the-badge&logoColor=white&labelColor=5c5c5c)](https://scholar.google.com.au/citations?user=7QSb8g4AAAAJ&hl=en) [![ACM](https://img.shields.io/badge/-ACM%20Digital%20Library-black.svg?logo=acm&style=for-the-badge&logoColor=white&labelColor=5c5c5c)](https://dl.acm.org/profile/99659509405)
