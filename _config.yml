@@ -1,6 +1,6 @@
 username: wenyuzhao
 url: "https://wenyu.me"
-baseurl:
+baseurl: /
 title: Wenyu Zhao
 author: 赵文宇,Wenyu Zhao,wenyu.zhao@anu.edu.au,wenyuzhaox@gmail.com
 common_keywords: 赵文宇,Wenyu Zhao,wenyuzhao,Memory Management,Garbage Collection,GC,MMTk,Software,Web,Server,iOS,Computer Science,Mathematics
