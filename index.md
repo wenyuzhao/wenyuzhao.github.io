@@ -20,3 +20,4 @@ _Please check out:_
 * My [V8 Gerrit](https://chromium-review.googlesource.com/q/owner:%22Wenyu+Zhao%22) page for a list of my work on Google's Chromium/V8.
 * My [GitHub account](https://github.com/wenyuzhao) for my toy projects.
 * The MMTk project [[Website]](https://www.mmtk.io) [[GitHub]](https://github.com/mmtk), which I spend most of my effort on 🙃.
+* [LXR GC Release Page](https//lxr.wenyu.me)
