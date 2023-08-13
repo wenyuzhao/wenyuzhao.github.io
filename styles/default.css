@@ -75,7 +75,7 @@ header nav {
 header nav a {
     margin: 0.2rem;
     color: var(--text-color);
-    font-weight: 100;
+    font-weight: 200;
     border-radius: 4px;
     padding: 4px 6px;
 }
