@@ -42,7 +42,18 @@ a:hover {
     cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
     color: var(--text-color);
 }
 
@@ -94,19 +105,23 @@ header nav a:hover {
 
 /* article */
 
-article, main {
+article,
+main {
     width: calc(100vw - 3rem);
     text-align: left;
     max-width: 41rem;
 }
 
 @media (min-width: 2048px) {
-    article, main {
+
+    article,
+    main {
         max-width: 56rem;
     }
 }
 
-article, article * {
+article,
+article * {
     line-height: 32px;
 }
 
@@ -122,14 +137,22 @@ article pre.highlight * {
     line-height: 24px;
 }
 
-article pre.highlight, article pre.highlight code, article pre.highlight code span {
+article pre.highlight,
+article pre.highlight code,
+article pre.highlight code span {
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-article > h1, article > h2 {
+article>h1,
+article>h2 {
     margin-top: 5rem;
     border-bottom: 1px solid var(--line-color);
     padding-bottom: 0.5rem;
+}
+
+article p a img {
+    vertical-align: middle;
+    vertical-align: sub;
 }
 
 /* footer */
@@ -139,7 +162,15 @@ footer {
     color: var(--footer-color);
 }
 
-article p a img {
-    vertical-align: middle;
-    vertical-align: sub;
+footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: inherit;
+}
+
+footer a:hover {
+    color: inherit;
 }
