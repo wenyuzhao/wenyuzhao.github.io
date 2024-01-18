@@ -6,7 +6,7 @@ keywords: Resume,Contact,About Me
 comments: true
 ---
 
-# Wenyu Zhao
+# Wenyu Zhao (赵文宇)
 
 * *2023-2024* - Student Researcher @ Google Research Australia
 * *2023* - Student Researcher @ Google Sunnyvale, Bay Area, CA
