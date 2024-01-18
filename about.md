@@ -8,7 +8,7 @@ comments: true
 
 # Wenyu Zhao
 
-* *2023* - Student Researcher @ Google Research Australia
+* *2023-2024* - Student Researcher @ Google Research Australia
 * *2023* - Student Researcher @ Google Sunnyvale, Bay Area, CA
 * *2022* - [PLDI'22 distinguished paper award](https://twitter.com/ANUComputing/status/1537216702223503360)
 * *2022* - Academic tutor for the course [COMP2310 Systems, Networks, and Concurrency](https://comp.anu.edu.au/courses/comp2310).
