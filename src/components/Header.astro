@@ -2,10 +2,9 @@
 import NavLink from "./NavLink.astro";
 
 const title: string | string[] = Astro.props.title;
-const pathname = Astro.url.pathname;
 ---
 
-<header data-pathname={pathname}>
+<header data-route={Astro.routePattern} data-pathname={Astro.url.pathname}>
     <h1 class="title">
         {
             Array.isArray(title) ? (
