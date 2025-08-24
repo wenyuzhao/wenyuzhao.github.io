@@ -6,6 +6,9 @@ const pathname = Astro.url.pathname;
 ---
 
 <header>
+    <script>
+        console.info("Current page:", Astro.url.pathname);
+    </script>
     <h1 class="title">
         {
             Array.isArray(title) ? (
