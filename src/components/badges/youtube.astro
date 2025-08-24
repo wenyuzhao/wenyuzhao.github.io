@@ -1,6 +1,11 @@
-<a href={`https://www.youtube.com/watch?v=${Astro.props.video}`}>
-    <img
-        src={`https://img.shields.io/youtube/views/${Astro.props.video}?style=flat-square&logo=youtube&label=Views`}
-        alt="YouTube Views"
-    />
+---
+const { invalid, video } = Astro.props;
+let link = `https://img.shields.io/youtube/views/${video}?style=flat-square&logo=youtube&label=Views`;
+if (invalid) {
+    link = `https://img.shields.io/badge/-Talk Recording-red.svg?labelColor=5c5c5c&style=flat-square&logo=youtube&logoColor=white`;
+}
+---
+
+<a href={`https://www.youtube.com/watch?v=${video}`}>
+    <img src={link} alt="YouTube Views" />
 </a>
