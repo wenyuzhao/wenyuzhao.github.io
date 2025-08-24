@@ -1,0 +1,33 @@
+---
+import NavLink from "./NavLink.astro";
+
+const title: string | string[] = Astro.props.title;
+const pathname = Astro.url.pathname;
+---
+
+<header>
+    <h1 class="title">
+        {
+            Array.isArray(title) ? (
+                <>
+                    {title[0]}
+                    {title.slice(1).map((part, index) => (
+                        <>
+                            <span style="color: #9e9e9e">/</span>
+                            {part}
+                        </>
+                    ))}
+                </>
+            ) : (
+                title
+            )
+        }
+    </h1>
+
+    <nav class="nav">
+        <NavLink title="Home" href="/" />
+        <NavLink title="Publications" href="/publications" />
+        <NavLink title="GitHub" href="https://github.com/wenyuzhao" />
+        <NavLink title="About Me" href="/about" />
+    </nav>
+</header>

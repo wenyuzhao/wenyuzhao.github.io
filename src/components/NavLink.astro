@@ -1,0 +1,6 @@
+---
+const { title, href } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<a href={href} data-selected={pathname === href ? true : null}>{title}</a>

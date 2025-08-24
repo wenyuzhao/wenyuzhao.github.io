@@ -1,1 +1,0 @@
-[![DOI](https://img.shields.io/badge/DOI-{{ include.doi }}-green.svg?style=flat)](https://doi.org/{{ include.doi }})

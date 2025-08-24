@@ -1,8 +1,6 @@
 ---
-title: "Wenyu <span style='color: #9e9e9e'>/</span> About Me"
-nav: about
-description: My resume and contact information -- Wenyu Zhao 赵文宇
-keywords: Resume,Contact,About Me
+layout: ../layouts/Markdown.astro
+title: [Wenyu, About Me]
 ---
 
 # Wenyu Zhao (赵文宇)

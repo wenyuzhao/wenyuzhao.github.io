@@ -1,1 +1,0 @@
-[![PDF](https://img.shields.io/badge/-PDF-red.svg?logo=adobe&labelColor=5c5c5c&label=%20&style=flat)]({{ include.link }})

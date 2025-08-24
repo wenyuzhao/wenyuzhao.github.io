@@ -1,1 +1,0 @@
-[![Talk](https://img.shields.io/youtube/views/{{ include.video }}?style=social?style=flat&logo=youtube&label=Views)](https://www.youtube.com/watch?v={{ include.video }})
