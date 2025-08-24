@@ -5,10 +5,7 @@ const title: string | string[] = Astro.props.title;
 const pathname = Astro.url.pathname;
 ---
 
-<header>
-    <script>
-        console.info("Current page:", Astro.url.pathname);
-    </script>
+<header data-pathname={pathname}>
     <h1 class="title">
         {
             Array.isArray(title) ? (
