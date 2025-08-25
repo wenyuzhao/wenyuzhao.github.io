@@ -4,6 +4,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const { frontmatter } = Astro.props;
+let title = frontmatter.title || "Wenyu Zhao's Website";
+if (Array.isArray(title)) {
+    title = title.join(" / ");
+}
 ---
 
 <!doctype html>
@@ -20,7 +24,7 @@ const { frontmatter } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
-        <title>{frontmatter.title}</title>
+        <title>{title}</title>
     </head>
     <body>
         <Header title={frontmatter.title} />
