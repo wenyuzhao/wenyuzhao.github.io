@@ -26,9 +26,17 @@ const title: string | string[] = Astro.props.title;
     </h1>
 
     <nav class="nav">
-        <NavLink title="Home" href="/" />
-        <NavLink title="Publications" href="/publications" />
-        <NavLink title="GitHub" href="https://github.com/wenyuzhao" />
-        <NavLink title="About Me" href="/about" />
+        <div class="nav-row">
+            <NavLink title="Home" href="/" />
+            <NavLink title="Publications" href="/publications" />
+        </div>
+        <div class="nav-row">
+            <NavLink title="GitHub" href="https://github.com/wenyuzhao" />
+            <NavLink
+                title="LinkedIn"
+                href="https://www.linkedin.com/in/wenyu-zhao"
+            />
+            <NavLink title="About Me" href="/about" />
+        </div>
     </nav>
 </header>

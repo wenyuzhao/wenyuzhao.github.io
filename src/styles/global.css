@@ -69,16 +69,18 @@ header .title {
 }
 
 header nav {
-    width: calc(100vw - 1rem);
-    max-width: 30rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+}
+
+header nav .nav-row {
+    margin: 0.7rem 0;
 }
 
 header nav a {
-    margin: 0.2rem;
+    margin: 0 0.2rem;
     color: var(--text-color);
     font-weight: 200;
     border-radius: 4px;
