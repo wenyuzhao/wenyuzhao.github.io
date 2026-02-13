@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import globalStyles from "../styles/global.css?url";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -8,6 +8,8 @@ let title = frontmatter.title || "Wenyu Zhao's Website";
 if (Array.isArray(title)) {
     title = title.join(" / ");
 }
+
+const faq = frontmatter.faq ? JSON.stringify(frontmatter.faq) : null;
 ---
 
 <!doctype html>
@@ -23,8 +25,12 @@ if (Array.isArray(title)) {
 
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+
+        <link rel="preload" href={globalStyles} as="style" />
+        <link rel="stylesheet" href={globalStyles} />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        {faq && <script type="application/ld+json" set:html={faq} is:inline />}
     </head>
     <body>
         <Header title={frontmatter.title} />

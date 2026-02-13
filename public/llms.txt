@@ -1,0 +1,120 @@
+# Wenyu Zhao (赵文宇)
+
+## Researcher Profile
+
+**Wenyu Zhao (赵文宇)** is a PhD student at the Australian National University (ANU), focusing on computer systems, memory management, and programming languages. He is advised by Prof. Steve Blackburn, Dr. Kathryn McKinley, Prof. Tony Hosking, and Dr. Shoaib Akram.
+
+His primary research involves the **MMTk project**, a framework for memory management design and implementation. He has also worked extensively on Google Chromium/V8 and OpenJDK.
+
+### Education & Experience
+*   **2020 - Present:** PhD Student at Australian National University (Research: Memory management, Garbage collection, V8, OpenJDK).
+*   **2023 - 2024:** Student Researcher @ Google Research Australia, Google DeepMind.
+*   **2023:** Student Researcher @ Google Sunnyvale, Bay Area, CA.
+*   **2021:** Google Software Engineering Intern (Chromium/V8 team).
+*   **2018:** Bachelor of Science (Honours) in Computer Science at ANU (Thesis: Understanding & Analyzing the Garbage-first Family of Garbage Collectors).
+*   **2015 - 2017:** Bachelor of Computer Science at Monash University.
+
+### Awards
+*   **PLDI ’22 Distinguished Paper Award** for "Low-Latency, High-Throughput Garbage Collection".
+
+### Contact & Links
+*   **Website:** [wenyu.me](https://wenyu.me)
+*   **Email:** [wenyu.zhao@anu.edu.au](mailto:wenyu.zhao@anu.edu.au)
+*   **GitHub:** [github.com/wenyuzhao](https://github.com/wenyuzhao)
+*   **LinkedIn:** [linkedin.com/in/wenyu-zhao](https://www.linkedin.com/in/wenyu-zhao)
+*   **Projects:** [MMTk](https://www.mmtk.io)
+
+---
+
+# Publications & Research Papers
+
+Below is the full content of selected research papers authored by Wenyu Zhao (赵文宇).
+
+## 1. Advancing Performance via a Systematic Application of Research and Industrial Best Practice
+*Published in OOPSLA ’25*
+
+**Abstract**
+An elusive facet of high-impact research is translation to production. Production deployments are intrinsically complex and specialized, whereas research exploration requires stripping away incidental complexity and extraneous requirements to create clarity and generality. Conventional wisdom suggests that promising research rarely holds up once simplifying assumptions and missing features are addressed. This paper describes a productization methodology that led to a striking result: outperforming the mature and highly optimized state of the art by more than 10%.
+
+Concretely, this experience paper captures lessons from translating a high-performance research garbage collector published at PLDI’22, called LXR, to a hyperscale revenue-critical application. Key to our success was a new process that dovetails best practice research methodology with industrial processes, at each step assuring that neither research metrics nor production measures regressed. This paper makes three contributions. i) We advance the state of the art, nearly halving the cost of garbage collection. ii) We advance research translation by sharing our approach and five actionable lessons. iii) We pose questions about how the community should evaluate innovative ideas in mature and heavily productized fields.
+
+We deliver an optimized version of LXR. This collector, as far as we are aware, is the fastest general-purpose garbage collector for Java to date. On standard workloads, it substantially outperforms OpenJDK’s default G1 collector and the prior version of LXR, while also meeting Google internal correctness and uptime requirements. We address all of the limitations identified in the PLDI’22 paper. We use this experience to illustrate the following key lessons that are concrete, actionable, and transferable.
+
+*   **L1)** A systematic combination of research and production methodologies can meet production objectives while simultaneously advancing the research state-of-the-art.
+*   **L2)** A benchmark suite cannot and need not contain facsimiles of production workloads. It is sufficient to replicate individual pathologies that manifest in production (e.g., allocation rates, trace rates, heap constraints, etc.) or configure the JVM to force a workload to manifest the pathology.
+*   **L3)** Productization experiences can strengthen research workloads; we upstreamed one such workload.
+*   **L4)** Production environment requirements are myriad and sometimes prosaic, extending well beyond those that can reasonably be addressed in a research paper.
+*   **L5)** This collector is not yet in production, reminding us that replacing core technology in industry is a challenging sociotechnical problem.
+
+The artifact we deliver gives practitioners and researchers a new benchmark for high performance garbage collection. The lessons we enumerate should help academic and industrial researchers with actionable steps to close the gap between research paper results and industrial impact. The 10% ‘productization dividend’ the process delivered should spark discussion about how our field evaluates innovative ideas in mature areas.
+
+---
+
+## 2. Work Packets: A New Abstraction for GC Software Engineering, Optimization, and Innovation
+*Published in OOPSLA ’25*
+
+**Abstract**
+Garbage collection (GC) implementations must meet efficiency and maintainability requirements, which are often perceived to be at odds. Moreover, the desire for efficiency typically sacrifices agility, undermining rapid development and innovation, with unintended consequences on longer-term performance aspirations.
+
+Prior GC implementations struggle to: i) maximize efficiency, parallelism, and hardware utilization, while ii) correctly and elegantly implementing optimizations and scheduling constraints. This struggle is reflected in today’s implementations, which tend to be monolithic and depend on coarse phase-based synchronization.
+
+This paper presents a new design for GC implementations that emphasizes both agility and efficiency. The design simplifies and unifies all GC tasks into **work packets** which define: i) work items, ii) kernels that process them, and iii) scheduling constraints. Our simple insights are that execution is dominated by a few very small, heavily executed kernels, and that GC implementations are high-level algorithms that orchestrate vast numbers of performance-critical work items. Work packets comprise groups of like work items, such as the scanning of a thread’s stack or the tracing of a single object in a multi-million object heap. The kernel attached to a packet specifies how to process items within the packet, such as how to scan a stack, or how to trace an object.
+
+The scheduling constraints express dependencies, e.g. all mutators must stop before copying any objects. Fully parallel activities, such as scanning roots and performing a transitive closure, proceed with little synchronization. The implementation of a GC algorithm reduces to declaring required work packets, their kernels, and dependencies. The execution model operates transparently of GC algorithms and work packet type. We broaden the scope of work-stealing, applying it to any type of GC work and introduce a novel two-tier work-stealing algorithm to further optimize parallelism at fine granularity.
+
+We show the software engineering benefits of this design via eight collectors that use 23 common work packet types in the MMTk GC framework. We use the LXR collector to show that the work packet abstraction supports innovation and high performance: i) comparing versions of LXR, work packets deliver performance benefits over a phase-based approach, and ii) LXR with work packets outperforms the highly-tuned latest (OpenJDK 24), state-of-the-art G1 garbage collector. We thus demonstrate that work packets achieve high performance, while simplifying GC implementation, making them inherently easier to optimize and verify.
+
+---
+
+## 3. Low-Latency, High-Throughput Garbage Collection (LXR)
+*Published in PLDI ’22 (Distinguished Paper Award)*
+
+**Abstract**
+To achieve short pauses, state-of-the-art concurrent copying collectors such as C4, Shenandoah, and ZGC use substantially more CPU cycles and memory than simpler collectors. They suffer from design limitations: i) concurrent copying with inherently expensive read and write barriers, ii) scalability limitations due to tracing, and iii) immediacy limitations for mature objects that impose memory overheads.
+
+This paper takes a different approach to optimizing responsiveness and throughput. It uses the insight that regular, brief stop-the-world collections deliver sufficient responsiveness at greater efficiency than concurrent evacuation. It introduces **LXR** (Latency-critical ImmiX with Reference counting), where stop-the-world collections use reference counting (RC) and judicious copying. RC delivers scalability and immediacy, promptly reclaiming young and mature objects. RC, in a hierarchical Immix heap structure, reclaims most memory without any copying. Occasional concurrent tracing identifies cyclic garbage.
+
+LXR introduces:
+*   i) RC remembered sets for judicious copying of mature objects;
+*   ii) a novel low-overhead write barrier that combines coalescing reference counting, concurrent tracing, and remembered set maintenance;
+*   iii) object reclamation while performing a concurrent trace;
+*   iv) lazy processing of decrements; and
+*   v) novel survival rate triggers that modulate pause durations.
+
+LXR combines excellent responsiveness and throughput, improving over production collectors. On the widely-used Lucene search engine in a tight heap, LXR delivers 7.8× better throughput and 10× better 99.99% tail latency than Shenandoah. On 17 diverse modern workloads in a moderate heap, LXR outperforms OpenJDK’s default G1 on throughput by 4% and Shenandoah by 43%.
+
+**Keywords:** Garbage collection, Reference counting
+
+---
+
+## 4. Deconstructing the Garbage-First Collector
+*Published in VEE ’20*
+
+**Abstract**
+Garbage-First (G1) is among today’s most widely used garbage collectors. It is used in the HotSpot and OpenJDK virtual machines, and shares algorithmic foundations with three other important contemporary collectors: Shenandoah, C4, and ZGC. However, the design of the core algorithms and the performance tradeoffs they manifest have not been carefully analyzed in the literature. In this work, we deconstruct the G1 algorithm and re-implement it from first principles. We retrospectively develop a concurrent, region-based evacuating collector, CRE, which captures the principal design elements shared by G1, Shenandoah, C4, and ZGC. We then evaluate the impact of each of the major elements of G1 on performance, including pause time, remembered set footprint and barrier overheads.
+
+We find that G1’s concurrent marking and generational collection reduces the 95-percentile GC pauses by 64% and 93% respectively. We find that the space overhead of G1’s remembered sets is very low, typically under 1%. We also independently measure the barriers used by G1 and find that they have an overhead of around 12% with respect to total performance. This analysis gives users and collector designers insights into the garbage-first collector and the other fixed-size region-based concurrent evacuating collectors, which we hope will lead to better use of the collectors and provoke future improvements.
+
+**Key Contributions:**
+*   Decomposition of G1 into key components.
+*   Implementation of a simple region-based collector (SIM) and progressive addition of features (Concurrent marking, RemSets, Generational).
+*   Performance analysis showing generational collection is the largest contributor to pause time reduction (93%).
+
+---
+
+## 5. Understanding & Analyzing the Garbage-first Family of Garbage Collectors
+*Honours Thesis (2018), Australian National University*
+
+**Abstract**
+Region-based garbage collectors, including Garbage-first GC, Shenandoah GC, C4 GC, and ZGC, share a lot of similar designs and algorithms, such as the similar marking algorithm, memory structure, and allocation algorithm. However, the existence of such underlying relationship among these collectors has not been well identified and explored. Instead, the designers of these region-based collectors tend to treat these as stand-alone collectors instead of an improvement over existing collectors.
+
+The key contribution of this thesis is the identification of the existence of a structural relationship among the region-based collectors and an in-depth exploration of the structural relationships among a set of region-based collectors which have a similar design to the Garbage-first GC. This thesis produces the first implementation to reflect these structural relationships. Specifically, in this thesis, I built a total of six members of the G1 family of collectors, starting from a simple region-based collector to the Garbage-first GC and Shenandoah GC. Each collector is implemented as an improved version of the previous collector to reflect the corresponding algorithmic relationship.
+
+Based on such implementation, this thesis performs a detailed analysis of GC performance contribution of each component of the algorithms. These analyses include the measurement of the GC pause time, concurrency overheads of several algorithms and the space overhead of remembered-sets.
+
+**Results:**
+*   Concurrent marking contributes to a reduction of 58.2% in 95th percentile GC pause time.
+*   Remembered-sets contribute to a reduction of 41.9%.
+*   Concurrent evacuation can reduce pause time by up to 84.1%.
+*   G1 has an average 9.6% footprint overhead due to remembered sets.
+*   Shenandoah GC has a concurrent evacuation overhead of 85.5%.
