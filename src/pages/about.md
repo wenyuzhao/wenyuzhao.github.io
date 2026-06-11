@@ -5,8 +5,9 @@ title: [Wenyu, About Me]
 
 # Wenyu Zhao (赵文宇)
 
-* *2023-2024* - Student Researcher @ Google Research Australia, Google DeepMind
-* *2023* - Student Researcher @ Google Sunnyvale, Bay Area, CA
+* *2026* - Research Software Engineer (AI and Systems Research), Google Sydney
+* *2023-2024* - Student Researcher, Google DeepMind Sydney
+* *2023* - Student Researcher, Google Sunnyvale, Bay Area, CA
 * *2022* - [PLDI'22 distinguished paper award](https://twitter.com/ANUComputing/status/1537216702223503360)
 * *2022* - Academic tutor for the course [COMP2310 Systems, Networks, and Concurrency](https://comp.anu.edu.au/courses/comp2310).
 * *2021* - Academic tutor for the course [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch).
