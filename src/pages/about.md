@@ -6,6 +6,7 @@ title: [Wenyu, About Me]
 # Wenyu Zhao (赵文宇)
 
 * *2026* - Research Software Engineer (AI and Systems Research), Google Sydney
+  * LLMs, long-horizon agentic coding, systems, and programming languages
 * *2023-2024* - Student Researcher, Google DeepMind Sydney
 * *2023* - Student Researcher, Google Sunnyvale, Bay Area, CA
 * *2022* - [PLDI'22 distinguished paper award](https://twitter.com/ANUComputing/status/1537216702223503360)
