@@ -1,13 +1,15 @@
 ---
 layout: ../layouts/Markdown.astro
 title: Wenyu Zhao
-description: I am Wenyu Zhao (赵文宇), a PhD student at the Australian National University. My research focuses on computer systems, memory management, and programming languages.
+description: I am Wenyu Zhao (赵文宇), a Research Software Engineer (AI and Systems Research) at SystemResearch@Google. My research focuses on AI, computer systems, memory management, and programming languages.
 ---
 
 # Hello 🌚
 
-I am a PhD student at the Australian National University, advised by [Prof. Steve Blackburn](https://users.cecs.anu.edu.au/~steveb), [Dr. Kathryn McKinley](https://www.cs.utexas.edu/~mckinley/), [Prof. Tony Hosking](https://hosking.github.io/), and [Dr. Shoaib Akram](https://shbakram.github.io/).
-My research focuses on computer systems, memory management, and programming languages.
+I am a Research Software Engineer at [SystemResearch@Google](https://techsysinfra.google/research/srg/), working at the intersection of AI and systems, with a current focus on long-horizon agentic coding.
+
+I did my PhD at the Australian National University, advised by [Prof. Steve Blackburn](https://users.cecs.anu.edu.au/~steveb), [Dr. Kathryn McKinley](https://www.cs.utexas.edu/~mckinley/), [Prof. Tony Hosking](https://hosking.github.io/), and [Dr. Shoaib Akram](https://shbakram.github.io/).
+My research focuses on AI, computer systems, memory management, and programming languages.
 
 I have also worked as a casual research assistant at ANU and have tutored for [COMP3710 Computer Microarchitecture](https://cs.anu.edu.au/courses/comp3710-uarch) (2021) and [COMP2310 Systems, Networks, and Concurrency](https://comp.anu.edu.au/courses/comp2310) (2022).
 
