@@ -1,9 +1,14 @@
 ---
 layout: ../layouts/Markdown.astro
 title: [Wenyu, About Me]
+seoTitle: "About Wenyu Zhao (赵文宇) — Experience, Awards, and Contact"
+description: >-
+  Biography and career timeline of Wenyu Zhao (赵文宇): Research Software Engineer at
+  Google Sydney, PhD from the Australian National University, PLDI '22 Distinguished
+  Paper Award, and past roles at Google DeepMind and the Chromium/V8 team.
 ---
 
-# Wenyu Zhao (赵文宇)
+## Wenyu Zhao (赵文宇)
 
 * *2026* - Research Software Engineer (AI and Systems Research), Google Sydney
   * LLMs, long-horizon agentic coding, systems, and programming languages
@@ -22,7 +27,7 @@ title: [Wenyu, About Me]
   * Thesis: [Understanding & Analyzing the Garbage-first Family of Garbage Collectors](https://wenyu.me/Honours-Thesis/thesis.pdf)
 * *2015-2017* - Bachelor of Computer Science at Monash University.
 
-# Contact Me:
+## Contact Me
 
 * **Email**: [wenyu.zhao@anu.edu.au](mailto:wenyu.zhao@anu.edu.au "Email")
 * **GitHub**: [github.com/wenyuzhao](https://github.com/wenyuzhao "GitHub")

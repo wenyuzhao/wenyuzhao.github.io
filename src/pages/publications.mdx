@@ -1,6 +1,74 @@
 ---
 layout: ../layouts/Markdown.astro
 title: [Wenyu, Publications]
+seoTitle: "Publications — Wenyu Zhao (赵文宇)"
+description: >-
+  Peer-reviewed publications by Wenyu Zhao (赵文宇) on garbage collection, memory
+  management, and programming language runtimes, including LXR (PLDI '22
+  Distinguished Paper) and Work Packets (OOPSLA '25).
+# Machine-readable copies of the list below, so search engines can surface each
+# paper individually. Keep in sync when adding a publication.
+schema:
+  - "@type": ScholarlyArticle
+    name: "Advancing Performance via a Systematic Application of Research and Industrial Best Practice"
+    author:
+      - "@id": "https://wenyu.me/#person"
+      - { "@type": Person, name: "Steve Blackburn" }
+      - { "@type": Person, name: "Kathryn S. McKinley" }
+      - { "@type": Person, familyName: "Cao" }
+      - { "@type": Person, familyName: "Hamouda" }
+    datePublished: "2025-10-12"
+    publication: "Proceedings of the ACM on Programming Languages (OOPSLA '25)"
+    award: "OOPSLA '25 Distinguished Artifact Award"
+    identifier: "https://doi.org/10.1145/3764118"
+    sameAs: "https://doi.org/10.1145/3764118"
+    url: "https://www.steveblackburn.org/pubs/papers/prod-oopsla-2025.pdf"
+    about: ["Garbage collection", "Research translation", "Performance engineering"]
+  - "@type": ScholarlyArticle
+    name: "Work Packets: A New Abstraction for GC Software Engineering, Optimization, and Innovation"
+    author:
+      - "@id": "https://wenyu.me/#person"
+      - { "@type": Person, name: "Steve Blackburn" }
+      - { "@type": Person, name: "Kathryn S. McKinley" }
+    datePublished: "2025-10-12"
+    publication: "Proceedings of the ACM on Programming Languages (OOPSLA '25)"
+    award: "OOPSLA '25 Distinguished Artifact Award"
+    identifier: "https://doi.org/10.1145/3763139"
+    sameAs: "https://doi.org/10.1145/3763139"
+    url: "https://www.steveblackburn.org/pubs/papers/packet-oopsla-2025.pdf"
+    about: ["Garbage collection", "Parallel work scheduling", "Work stealing"]
+  - "@type": ScholarlyArticle
+    name: "Low-Latency, High-Throughput Garbage Collection"
+    alternateName: "LXR"
+    author:
+      - "@id": "https://wenyu.me/#person"
+      - { "@type": Person, name: "Steve Blackburn" }
+      - { "@type": Person, name: "Kathryn S. McKinley" }
+    datePublished: "2022-06-13"
+    publication: "PLDI '22: ACM SIGPLAN Conference on Programming Language Design and Implementation"
+    award: "PLDI '22 Distinguished Paper Award"
+    identifier: "https://doi.org/10.1145/3519939.3523440"
+    sameAs: ["https://doi.org/10.1145/3519939.3523440", "https://arxiv.org/abs/2210.17175"]
+    url: "https://www.steveblackburn.org/pubs/papers/lxr-pldi-2022.pdf"
+    keywords: ["Garbage collection", "Reference counting", "Immix", "Pause time"]
+  - "@type": ScholarlyArticle
+    name: "Deconstructing the Garbage-First Collector"
+    author:
+      - "@id": "https://wenyu.me/#person"
+      - { "@type": Person, name: "Steve Blackburn" }
+    datePublished: "2020-03-17"
+    publication: "VEE '20: ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments"
+    identifier: "https://doi.org/10.1145/3381052.3381320"
+    sameAs: "https://doi.org/10.1145/3381052.3381320"
+    url: "https://www.steveblackburn.org/pubs/papers/g1-vee-2020.pdf"
+    keywords: ["Garbage-First", "G1", "Concurrent marking", "Remembered sets"]
+  - "@type": Thesis
+    name: "Understanding and Analyzing the Garbage-first Family of Garbage Collectors"
+    author: { "@id": "https://wenyu.me/#person" }
+    datePublished: "2018"
+    inSupportOf: "Bachelor of Science (Honours) in Computer Science"
+    sourceOrganization: { "@type": CollegeOrUniversity, name: "Australian National University" }
+    url: "https://www.steveblackburn.org/pubs/theses/zhao-2018.pdf"
 ---
 
 import PDF from "../components/badges/pdf.astro"
@@ -10,7 +78,7 @@ import DOI from "../components/badges/doi.astro"
 import Award from "../components/badges/award.astro"
 
 
-# Publications
+## Publications
 
 <u>Zhao</u>, Blackburn, McKinley, Cao, Hamouda, **Advancing Performance via a Systematic Application of Research and Industrial Best Practice**, in *OOPSLA ’25, Singapore, October 12-18, 2025*. <PDF href="https://www.steveblackburn.org/pubs/papers/prod-oopsla-2025.pdf"/> <GitHub repo="wenyuzhao/mmtk-core" href="https://github.com/wenyuzhao/mmtk-core/tree/lxr"/> <DOI doi="10.1145/3764118"/> <Award label="OOPSLA'25" title="Distinguished Artifact Award" href="https://2025.splashcon.org/track/splash-2025-oopsla-artifacts#distinguished-artifacts"/>
 

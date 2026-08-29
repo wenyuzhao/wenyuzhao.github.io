@@ -2,14 +2,70 @@
 import globalStyles from "../styles/global.css?url";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { SITE_URL, PERSON, DEFAULT_DESCRIPTION } from "../consts";
 
 const { frontmatter } = Astro.props;
-let title = frontmatter.title || "Wenyu Zhao's Website";
-if (Array.isArray(title)) {
-    title = title.join(" / ");
+
+// The visual header title may be an array (rendered as "Wenyu / Publications").
+// The <title> tag is a separate, search-facing string.
+let headerTitle = frontmatter.title || PERSON.name;
+const flatTitle = Array.isArray(headerTitle)
+    ? headerTitle.join(" / ")
+    : headerTitle;
+const title = frontmatter.seoTitle || flatTitle;
+
+const description = frontmatter.description || DEFAULT_DESCRIPTION;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE_URL).href;
+const ogImage = new URL("/og.png", Astro.site ?? SITE_URL).href;
+const isProfilePage = Astro.url.pathname.replace(/\/+$/, "") === "";
+
+const person = {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
+    name: PERSON.name,
+    alternateName: PERSON.alternateName,
+    url: SITE_URL,
+    email: `mailto:${PERSON.email}`,
+    jobTitle: PERSON.jobTitle,
+    worksFor: { "@type": "Organization", name: PERSON.worksFor },
+    alumniOf: PERSON.alumniOf.map((name) => ({
+        "@type": "CollegeOrUniversity",
+        name,
+    })),
+    knowsAbout: PERSON.knowsAbout,
+    sameAs: PERSON.sameAs,
+};
+
+const graph: unknown[] = [
+    person,
+    {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: `${PERSON.name} (${PERSON.alternateName[0]})`,
+        description: DEFAULT_DESCRIPTION,
+        inLanguage: "en",
+        publisher: { "@id": `${SITE_URL}/#person` },
+    },
+    {
+        "@type": isProfilePage ? "ProfilePage" : "WebPage",
+        "@id": `${canonical}#webpage`,
+        url: canonical,
+        name: title,
+        description,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#person` },
+        ...(isProfilePage ? { mainEntity: { "@id": `${SITE_URL}/#person` } } : {}),
+    },
+];
+
+// Pages may contribute extra entities (e.g. ScholarlyArticle, FAQPage) via frontmatter.
+for (const extra of [frontmatter.schema, frontmatter.faq].flat()) {
+    if (extra) graph.push(extra);
 }
 
-const faq = frontmatter.faq ? JSON.stringify(frontmatter.faq) : null;
+const jsonLd = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
 ---
 
 <!doctype html>
@@ -17,23 +73,41 @@ const faq = frontmatter.faq ? JSON.stringify(frontmatter.faq) : null;
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="author" content="Wenyu Zhao" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="author" content={PERSON.name} />
+        <link rel="canonical" href={canonical} />
         <meta
-            name="description"
-            content={frontmatter.description || "Wenyu Zhao's website"}
+            name="robots"
+            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         />
 
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta property="og:type" content={isProfilePage ? "profile" : "website"} />
+        <meta property="og:site_name" content={PERSON.name} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${PERSON.name} (${PERSON.alternateName[0]}) — ${PERSON.jobTitle} at ${PERSON.worksFor}`} />
+        <meta property="og:locale" content="en" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
         <link rel="preload" href={globalStyles} as="style" />
         <link rel="stylesheet" href={globalStyles} />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-        {faq && <script type="application/ld+json" set:html={faq} is:inline />}
+        <script type="application/ld+json" set:html={jsonLd} is:inline />
     </head>
     <body>
-        <Header title={frontmatter.title} />
+        <Header title={headerTitle} />
 
         <article>
             <slot />

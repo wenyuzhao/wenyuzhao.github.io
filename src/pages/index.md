@@ -1,10 +1,11 @@
 ---
 layout: ../layouts/Markdown.astro
 title: Wenyu Zhao
+seoTitle: "Wenyu Zhao (赵文宇) — Research Software Engineer at Google"
 description: I am Wenyu Zhao (赵文宇), a Research Software Engineer (AI and Systems Research) at SystemResearch@Google. My research focuses on AI, computer systems, memory management, and programming languages.
 ---
 
-# Hello 🤯
+## Hello 🤯
 
 I am a Research Software Engineer at [SystemResearch@Google](https://techsysinfra.google/research/srg/), working at the intersection of AI and systems, with a current focus on long-horizon agentic coding.
 
