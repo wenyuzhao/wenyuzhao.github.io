@@ -7,7 +7,7 @@ export const PERSON = {
     alternateName: ["赵文宇", "Wenyu Zhao (赵文宇)"],
     jobTitle: "Research Software Engineer",
     worksFor: "Google",
-    email: "wenyu.zhao@anu.edu.au",
+    email: "wenyuzhao@google.com",
     /** Profiles Google uses to reconcile this page with the same person elsewhere. */
     sameAs: [
         "https://github.com/wenyuzhao",

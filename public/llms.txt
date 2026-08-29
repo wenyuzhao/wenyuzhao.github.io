@@ -19,7 +19,7 @@ His primary research involves the **MMTk project**, a framework for memory manag
 
 ### Contact & Links
 *   **Website:** [wenyu.me](https://wenyu.me)
-*   **Email:** [wenyu.zhao@anu.edu.au](mailto:wenyu.zhao@anu.edu.au)
+*   **Email:** [wenyuzhao@google.com](mailto:wenyuzhao@google.com)
 *   **GitHub:** [github.com/wenyuzhao](https://github.com/wenyuzhao)
 *   **LinkedIn:** [linkedin.com/in/wenyu-zhao](https://www.linkedin.com/in/wenyu-zhao)
 *   **Projects:** [MMTk](https://www.mmtk.io)
